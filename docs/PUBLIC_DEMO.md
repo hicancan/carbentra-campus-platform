@@ -157,8 +157,9 @@ caches have reduced budgets. Default simulation periods are 60s (general) / 120s
 must be load-tested at the chosen hardware size and expected audience.
 
 `CARBENTRA_PUBLIC_DEMO_MAX_DATABASE_MB` defaults to 4096 (512–16384 allowed). Every
-supervisor checks `pg_database_size` at most 15 seconds apart and terminates its child
-on exhaustion or database-check failure; no more than three automatic retries occur.
+supervisor waits 15 seconds between `pg_database_size` checks and terminates its child
+on exhaustion or database-check failure; slow database responses can delay a check.
+No more than three automatic retries occur.
 This is a **soft application database budget**, not a filesystem quota: an in-flight
 transaction can overshoot, and WAL/images/logs are extra. Configure a host volume
 quota/reserved headroom separately and alert on 70%/85% volume use plus failed service
@@ -190,9 +191,17 @@ exercise the configuration gates, migrations/marker checks, initializer, real ha
 login, viewer/operator role isolation, CSRF and expiry. The small integration fixture
 is synthetic test data and does not establish a full-campus load benchmark.
 
+On 2026-10-01 a separate native full-campus run also passed initialization, trusted
+local-test-CA HTTPS through official nginx 1.30.5, hashed authentication, secure
+cookies/CSRF/RBAC, simulated controls, supervised restart, physical fail-closed checks
+and login throttling. Its snapshot was 688,551,603 bytes (about 656.65 MiB), with
+185,106 telemetry records and 449,941 channel observations after a brief simulation.
+This is a measured starting point, not a retention-growth or concurrent-load benchmark.
+
 Native PostgreSQL here is **17.11 / PostGIS 3.5.2**, distinct from the pinned production
-image's PostGIS 3.6. Local Docker Engine, the official images, mounted production TLS,
-public DNS/network reachability, and the actual browser journey must be accepted on
-the chosen target. Read the release evidence for exact executed results; absent stages
+image's PostGIS 3.6. This native test used explicit test ports and a trusted local test
+CA; it was not Docker or a public deployment. Docker Engine cold start, the official
+images, target-mounted production TLS, public DNS/network reachability, and the actual
+browser journey must still be accepted on the chosen target. Read the release evidence for exact executed results; absent stages
 are not passes. This document/package is preparation, not a claim that a public URL
 has been provisioned or that any physical hardware has been released.
