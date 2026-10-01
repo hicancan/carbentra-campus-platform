@@ -88,7 +88,7 @@ class ChannelTransport:
             # Conservative deadline from last observed uptime. Do not extrapolate an
             # offline cached device clock; short latency only consumes the window.
             ttl_ms = min(30000, int(remaining * 1000))
-            if ttl_ms <= int(snapshot['age_seconds'] * 1000):
+            if ttl_ms <= int(snapshot['control_age_seconds'] * 1000):
                 raise ValueError('insufficient_fresh_ttl')
             return f'carbentra/switch/{e.device_id}/command', {
                 'id': command['id'], 'boot_id': command['boot_id'], 'seq': command['sequence'],

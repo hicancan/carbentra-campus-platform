@@ -3,10 +3,26 @@ import json
 from pathlib import Path
 import unittest
 from fixtures import *
-from contract import validate_event, validate_descriptor, PRODUCTS
+from contract import validate_command, validate_event, validate_descriptor, PRODUCTS
 from adapters import descriptor
 
 class ContractConsistencyTests(unittest.TestCase):
+    def test_command_ids_match_each_concrete_firmware_boundary(self):
+        for enrollment, maximum in ((SWITCH, 48), (PLUG, 47)):
+            for size in (1, maximum, maximum+1, 64):
+                value = command(device=enrollment)
+                value['id'] = 'a'*size
+                with self.subTest(family=enrollment.product_family, size=size):
+                    if size <= maximum:
+                        self.assertIs(validate_command(value), value)
+                    else:
+                        with self.assertRaises(ValueError): validate_command(value)
+            for invalid in ('', 'id\n', 'id with space', '非ASCII'):
+                value = command(device=enrollment)
+                value['id'] = invalid
+                with self.subTest(family=enrollment.product_family, invalid=invalid), self.assertRaises(ValueError):
+                    validate_command(value)
+
     def test_wrong_channel_family_and_unsupported_feedback_rejected(self):
         value=SwitchAdapter.telemetry(SWITCH,switch_raw(),NOW)
         value['readings'][0]['channel_id']='relay.4'

@@ -6,13 +6,13 @@
     "protocols/presence-gatt-v1.json": "f511bc91e67dffc77f3539c5d68a0274e69fd01874fd1eb0549b8f82d60908b2",
     "python/carbentra_iot_contract/__init__.py": "694aacd6fad540905cb571efc8dd2ecda0860c4d976e08654c36f5473c6f8e7e",
     "python/carbentra_iot_contract/plug_wire.py": "77ddea1fec33b20d82dea33ac9f4eeb3f9e39919c81fd8567a507622b5807008",
-    "schemas/command.schema.json": "24fa515d8b7fb05b97322ce08912114162e736c2ae1479bd598251cf37fd4df7",
+    "schemas/command.schema.json": "1d5bc04831b1b92f323f9e0b6ac5ea374c9d5c9d5d2d17174dd5a48b2bccbdf6",
     "schemas/descriptor.schema.json": "3b023afe0b711e3aefe66967755aeacc170d83c485002e62bc0a6d49c120dcb9",
     "schemas/event.schema.json": "663176a7b316a88510093b89a984ad055d7763d188df3c8f7e40e49afed9f165",
     "schemas/switch-ack.schema.json": "21006aa7a5c99254daf0928394dc10bfeb45f1c7ade518eda170e91b5681fbe9",
     "schemas/wire/device-ack-v2.schema.json": "1ec9ee0216c20682614b27ad5e8ea404a9e517bb2a490b614eeb33dcc2046558",
     "schemas/wire/device-command.schema.json": "b739516e3a9bad01bf26ba2af16de79eb21e180408a24def19dcd9b39c47d52d",
     "schemas/wire/device-wire-v2.schema.json": "5b701b998774de08eb28dd82411fc779d4aa98215828f04b86b6a9e93f1a49ca",
-    "typescript/index.ts": "a1d8d53b0f908d7fcb8ca6e2be279248588d0558c8cb66ae41a0c3833375953a"
+    "typescript/index.ts": "d148de97ec06cd64bfd75bf9ee83103c5ccfaf37c95042e273f4e835a3220352"
   }
 }

@@ -82,9 +82,17 @@ def transition(db, command, status, reason, evidence=None, now=None):
     if status not in TRANSITIONS.get(command.status, set()):
         raise DomainError("invalid_transition", f"Cannot transition {command.status} to {status}", 409)
     now = now or utcnow()
+    evidence = dict(evidence or {})
+    # Ledger transitions are causal even if the host clock is corrected backwards.
+    # Preserve the measured processing time as evidence instead of silently claiming
+    # the transition preceded the request or a previously persisted transition.
+    causal_floor = max(command.issued_at, command.updated_at or command.issued_at)
+    if now < causal_floor:
+        evidence["processing_clock_at"] = iso(now)
+        now = causal_floor
     command.status = status
     command.updated_at = now
-    command.history = [*command.history, {"status": status, "at": iso(now), "reason": reason, "evidence": evidence or {}}]
+    command.history = [*command.history, {"status": status, "at": iso(now), "reason": reason, "evidence": evidence}]
     audit(db, "control-service", status, "command", command.id, {"device_id": command.device_id, "simulated": command.source_mode == "SIMULATED", "reason": reason})
 
 
@@ -160,6 +168,13 @@ def create_command(db, body, key, actor, now=None, settings=None):
 
 def advance_commands(db, now=None, settings=None):
     from .simulation import dispatch_simulated, accept_simulated, observe_simulated
+    explicit_now = now
+    # Session creation is lazy. Acquiring the connection starts the transaction and
+    # waits for SQLite's BEGIN IMMEDIATE before reading the processing clock. A
+    # pre-lock timestamp can otherwise reject newly committed evidence as future
+    # data and write command history earlier than issued_at. Explicit test clocks
+    # remain deterministic; production callers must leave now unset.
+    db.connection()
     now = now or utcnow()
     batch_size = settings.control_batch_size if settings else 32
     expired = list(db.scalars(select(Command).where(Command.status.not_in(TERMINAL), Command.expires_at <= now).order_by(Command.expires_at, Command.id).with_for_update(skip_locked=True).limit(64)))
@@ -169,6 +184,10 @@ def advance_commands(db, now=None, settings=None):
     commands = expired + active
     for command in commands:
         device = db.get(Device, command.device_id)
+        if explicit_now is None:
+            # An earlier command or database query can consume this batch's time
+            # budget. Recheck expiry and evidence with the current processing time.
+            now = utcnow()
         if now >= command.expires_at:
             transition(db, command, "timed_out", "Command expired without verified evidence; actual state may be unknown", now=now)
             continue

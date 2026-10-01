@@ -164,6 +164,28 @@ class SpatialPackageContracts(unittest.TestCase):
             with self.assertRaises(ValueError):path_in(DIST,relative)
         with self.assertRaises(ValueError):build(DIST/'map',DIST/'search',DIST)
 
+    def test_native_manifest_is_hash_listed_and_content_addressed(self):
+        original=read(DIST/'map/manifest.json')
+        native=original['source'].get('native_blender') or {}
+        if not native.get('manifest_url'):
+            self.skipTest('This explicit lightweight fixture has no native detail package')
+        relative=native['manifest_url']
+        self.assertIn(relative,original['artifacts'])
+        with tempfile.TemporaryDirectory() as tmp:
+            source=Path(tmp)/'map';shutil.copytree(DIST/'map',source)
+            missing=copy.deepcopy(original)
+            missing['artifacts'].pop(relative)
+            missing['version']=hashlib.sha256(canonical({k:v for k,v in missing.items() if k!='version'})).hexdigest()
+            (source/'manifest.json').write_bytes(canonical(missing)+b'\n')
+            with self.assertRaisesRegex(ValueError,'Unverified native detail manifest'):
+                load_sources(source,DIST/'search')
+            mismatched=copy.deepcopy(original)
+            mismatched['source']['native_blender']['package_version']='0'*64
+            mismatched['version']=hashlib.sha256(canonical({k:v for k,v in mismatched.items() if k!='version'})).hexdigest()
+            (source/'manifest.json').write_bytes(canonical(mismatched)+b'\n')
+            with self.assertRaisesRegex(ValueError,'Native detail manifest identity/source mismatch'):
+                load_sources(source,DIST/'search')
+
     def test_rehashed_reference_geometry_cannot_enter_public_metadata(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)/'search';shutil.copytree(DIST/'search',root)

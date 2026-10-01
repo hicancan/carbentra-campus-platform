@@ -19,11 +19,12 @@ parser.add_argument('--release', action='store_true')
 parser.add_argument('--output', type=Path, required=True)
 args = parser.parse_args()
 if args.release:
-    for name in ('CARBENTRA_STARTUP_TEST_BINARY', 'CARBENTRA_TIME_TEST_BINARY', 'CARBENTRA_CERT_TEST_BINARY'):
+    for name in ('CARBENTRA_STARTUP_TEST_BINARY', 'CARBENTRA_TIME_TEST_BINARY', 'CARBENTRA_CERT_TEST_BINARY',
+                 'CARBENTRA_SWITCH_COMMAND_TEST_BINARY'):
         if not Path(os.environ.get(name, '/nonexistent')).is_file():
             raise SystemExit('Required compiled host gate missing: ' + name)
 
-sources = [*ROOT.glob('*.py'), *ROOT.glob('tests/*.py'), *ROOT.glob('tools/*.py'),
+sources = [*ROOT.glob('*.py'), *ROOT.glob('tests/*.py'), *ROOT.glob('tests/c/*.c'), *ROOT.glob('tools/*.py'),
            REPO / 'uv.lock', REPO / 'pyproject.toml',
            *(REPO / 'packages/iot-contract').rglob('*.json'),
            *(REPO / 'packages/iot-contract/python').rglob('*.py')]

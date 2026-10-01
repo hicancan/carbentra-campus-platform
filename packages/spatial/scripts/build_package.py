@@ -64,6 +64,17 @@ def load_sources(map_root,search_root):
         for key in ('mesh_url','detail_mesh_url','detail_report_url'):
             if building.get(key) and building[key] not in m['artifacts']:
                 raise ValueError(f'Unverified map building resource: {key}')
+    native=m['source'].get('native_blender') or {}
+    if native.get('status')=='authored_exterior_lod2' or native.get('manifest_url'):
+        relative=native.get('manifest_url')
+        if not relative or relative not in m['artifacts']:
+            raise ValueError('Unverified native detail manifest resource')
+        detail=read(path_in(map_root,relative))
+        identity=hashlib.sha256(canonical({k:v for k,v in detail.items() if k!='version'})).hexdigest()
+        if (detail.get('format')!='njupt-map-native-exteriors' or detail.get('schema_version')!=1
+                or detail.get('version')!=identity or native.get('package_version')!=identity
+                or detail.get('source_gpkg_sha256')!=m['source']['source_gpkg_sha256']):
+            raise ValueError('Native detail manifest identity/source mismatch')
     s,documents=public_snapshot(search_root)
     collections={}
     for name in ['campuses','buildings','floors','space_families','aliases','connectors']:

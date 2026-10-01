@@ -11,6 +11,7 @@ import json
 import sqlite3
 import time
 from contract import canonical, timestamp, validate_event
+from freshness import MONOTONIC_RATE_FLOOR, observation_freshness
 
 
 class EdgeStore:
@@ -37,6 +38,9 @@ class EdgeStore:
         CREATE TABLE IF NOT EXISTS current_snapshots(
             device TEXT PRIMARY KEY, boot TEXT NOT NULL, sequence TEXT NOT NULL,
             event_id TEXT NOT NULL, received REAL NOT NULL, payload TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS observation_clocks(
+            device TEXT NOT NULL, boot TEXT NOT NULL, origin_upper REAL NOT NULL,
+            monotonic_highwater INTEGER NOT NULL, utc_low_highwater REAL, PRIMARY KEY(device,boot));
         CREATE TABLE IF NOT EXISTS known_boots(
             device TEXT NOT NULL, boot TEXT NOT NULL, retired INTEGER NOT NULL DEFAULT 0,
             PRIMARY KEY(device,boot));
@@ -94,6 +98,11 @@ class EdgeStore:
             self.db.execute('INSERT INTO iot_events VALUES(?,?,?,?,?,?,?)', (value['event_id'], device, boot, sequence, received, fingerprint, payload))
             self.enqueue('event', device, payload, value['event_id'])
             current = self.db.execute('SELECT boot,sequence,payload FROM current_snapshots WHERE device=?', (device,)).fetchone()
+            # Seed from the original cached receipt when upgrading an existing
+            # database; neither upgrades nor restarts renew a boot's age bound.
+            if current:
+                self._record_observation_clock(json.loads(current[2]))
+            self._record_observation_clock(value)
             retired = self.db.execute('SELECT retired FROM known_boots WHERE device=? AND boot=?', (device, boot)).fetchone()
             self.db.execute('INSERT OR IGNORE INTO known_boots(device,boot) VALUES(?,?)', (device, boot))
             authenticated_current = current and json.loads(current[2])['source_protocol'] == 'presence-gatt-v1'
@@ -123,10 +132,30 @@ class EdgeStore:
         if not row:
             return None
         now = time.time() if now is None else now
+        if (type(now) not in (int, float) or not math.isfinite(now)
+                or type(maximum_age) not in (int, float) or not math.isfinite(maximum_age) or maximum_age <= 0):
+            raise ValueError('finite time and positive maximum age required')
         value = json.loads(row[1])
-        age = now - row[0]
-        return {'event': value, 'age_seconds': max(0, age), 'fresh': 0 <= age <= maximum_age,
-                'clock_reversed': age < 0}
+        bound = self.db.execute('SELECT origin_upper,monotonic_highwater,utc_low_highwater FROM observation_clocks WHERE device=? AND boot=?',
+                                (device, value['boot_id'])).fetchone()
+        return {'event': value, **observation_freshness(value, now, maximum_age, bound)}
+
+    def _record_observation_clock(self, value):
+        mono = value['monotonic_ms']
+        if value['product_family'] not in {'PLUG', 'SWITCH'} or mono is None:
+            return
+        origin = timestamp(value['received_at']).timestamp() - mono / 1000 / MONOTONIC_RATE_FLOOR
+        low = value['raw'].get('unix_lower_s') if value['time_quality'] == 'authenticated' else None
+        if type(low) not in (int, float):
+            low = None
+        self.db.execute('''INSERT INTO observation_clocks VALUES(?,?,?,?,?)
+            ON CONFLICT(device,boot) DO UPDATE SET
+            origin_upper=min(origin_upper,excluded.origin_upper),
+            monotonic_highwater=max(monotonic_highwater,excluded.monotonic_highwater),
+            utc_low_highwater=CASE WHEN utc_low_highwater IS NULL THEN excluded.utc_low_highwater
+                WHEN excluded.utc_low_highwater IS NULL THEN utc_low_highwater
+                ELSE max(utc_low_highwater,excluded.utc_low_highwater) END''',
+            (value['device_id'], value['boot_id'], origin, mono, low))
 
     def active_manual_hold(self, device, channel, now=None):
         now=time.time() if now is None else now

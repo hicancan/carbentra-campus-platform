@@ -17,15 +17,15 @@ def plug_raw(seq=1, boot='a'*32, on=True):
         last_local_input={'channel':1,'event_seq':'0','uptime_ms':'0','pressed':False,'result':'none'})
     return value
 
-def switch_raw(seq=1, boot='b'*32, on=False):
+def switch_raw(seq=1, boot='b'*32, on=False, uptime_ms=100000):
     return {'schema_version':1, 'device_type':'smart_switch', 'device_id':SWITCH.device_id, 'boot_id':boot,
-        'sample_seq':str(seq), 'uptime_ms':'100000', 'last_seq':'0', 'source_mode':'SIMULATED',
+        'sample_seq':str(seq), 'uptime_ms':str(uptime_ms), 'last_seq':'0', 'source_mode':'SIMULATED',
         'actuation_enabled':False, 'fault_latched':False, 'maintenance':False, 'protected_channel_mask':0,
         'channels':[{'channel':i,'channel_id':f'lighting-{i}', 'commanded_on':on, 'physically_verified_on':None,
             'feedback_quality':'unavailable_no_independent_sensor', 'control_mode':'auto', 'manual_hold_until_uptime_ms':'0'} for i in range(1,4)],
         'last_local_input':{'channel':0,'event_seq':'0','uptime_ms':'0','pressed':False,'result':'none'},
         'aggregate_meter':{'scope':'three_lighting_outputs_total','quality':'calibrated_readback','calibration_id':'TEST-FIXTURE',
-            'observed_uptime_ms':'100000','status_bits':0,'voltage_v':230.0,'current_a':0.3,'active_power_w':60.0,
+            'observed_uptime_ms':str(uptime_ms),'status_bits':0,'voltage_v':230.0,'current_a':0.3,'active_power_w':60.0,
             'known_energy_wh':'123.000','energy_quality':'partial_lower_bound','persistent_storage_ok':True,'unknown_intervals':2,'checkpoint_interval_seconds':60}}
 
 def presence_frame(seq=1, radar=2, boot=0x90abcdef, flags=208):

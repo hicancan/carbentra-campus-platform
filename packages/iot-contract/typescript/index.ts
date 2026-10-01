@@ -19,6 +19,7 @@ export interface DeviceEvent {
   quality: Quality; readings: Reading[]; raw: Record<string, unknown>
 }
 export interface DeviceCommand {
+  /** ASCII [A-Za-z0-9_-]: SWITCH 1–48, PLUG 1–47; enforce the JSON Schema at boundaries. */
   schema_version: 1; id: string; device_id: string; product_family: 'PLUG' | 'SWITCH';
   channel_id: 'relay.1' | 'relay.2' | 'relay.3'; capability: 'relay.commanded'; value: boolean;
   sequence: string; issued_at: string; expires_at: string; boot_id: string; manual_hold_seconds?: number;

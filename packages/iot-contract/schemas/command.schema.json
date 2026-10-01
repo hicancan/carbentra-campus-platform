@@ -10,7 +10,8 @@
     },
     "id": {
       "type": "string",
-      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+      "pattern": "^[A-Za-z0-9_-]{1,64}$",
+      "not": {"pattern": "[^A-Za-z0-9_-]"}
     },
     "device_id": {
       "type": "string",
@@ -98,6 +99,13 @@
       "maximum": 86400
     }
   },
+  "allOf": [
+    {
+      "if": {"properties": {"product_family": {"const": "SWITCH"}}},
+      "then": {"properties": {"id": {"maxLength": 48}}},
+      "else": {"properties": {"id": {"maxLength": 47}}}
+    }
+  ],
   "required": [
     "schema_version",
     "id",

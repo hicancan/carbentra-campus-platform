@@ -17,6 +17,10 @@ def run_migrations_offline():
 def run_migrations_online():
     engine = make_engine(settings.database_url)
     with engine.connect() as connection:
+        from app.public_demo import preflight_database_mode
+        preflight_database_mode(connection, settings)
+        # The preflight SELECT starts a transaction; migrations own the next one.
+        connection.rollback()
         context.configure(connection=connection, target_metadata=target_metadata, compare_type=True, render_as_batch=engine.dialect.name == "sqlite")
         with context.begin_transaction():
             context.run_migrations()

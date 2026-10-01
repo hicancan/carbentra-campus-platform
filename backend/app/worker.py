@@ -35,7 +35,7 @@ def control_tick(factory, settings):
         if not lock(db, 48392715):
             state = db.get(State, "worker")
             return state.value.get("last_tick_epoch") if state else None
-        checked = advance_commands(db, utcnow(), settings)
+        checked = advance_commands(db, settings=settings)
         now = utcnow()
         previous = db.get(State, "worker")
         if checked or not previous or now.timestamp()-previous.value.get("last_tick_epoch", 0) >= 1:
@@ -142,6 +142,11 @@ def main():
     settings = Settings(worker_enabled=False)
     logging.basicConfig(level=logging.INFO)
     factory = make_session_factory(make_engine(settings.database_url))
+    # A direct worker/analysis invocation must respect the same database identity
+    # boundary as API startup, even if the public-demo supervisor was not used.
+    from .public_demo import validate_database_mode
+    with factory() as db:
+        validate_database_mode(db, settings)
     if args.health:
         with factory() as db:
             key = "analysis_worker" if args.role == "analysis" else "simulation_worker" if args.role == "simulation" else "worker"

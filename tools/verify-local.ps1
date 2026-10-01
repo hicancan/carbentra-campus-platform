@@ -19,7 +19,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Docker Desktop with Linux containers is requir
 if ($Existing) { throw "Project $ProjectName already exists. Choose a separate disposable project name." }
 $Names = @('TEMP','TMP','PYTHONUTF8','PYTHONDONTWRITEBYTECODE','CARBENTRA_TEST_PG_PORT',
     'ACCEPTANCE_DATABASE_URL','ACCEPTANCE_DOMAIN_DATABASE_URL','PRICING_TEST_DATABASE_URL',
-    'FORECAST_TEST_POSTGRES_URL','SYSTEM_UPGRADE_DATABASE_URL','CARBENTRA_DATABASE_URL')
+    'FORECAST_TEST_POSTGRES_URL','SYSTEM_UPGRADE_DATABASE_URL','CARBENTRA_DATABASE_URL','CARBENTRA_PUBLIC_DEMO_TEST_DATABASE_URL')
 $Previous = @{}
 foreach ($Name in $Names) { $Previous[$Name] = [Environment]::GetEnvironmentVariable($Name, 'Process') }
 $Started = $false
@@ -45,8 +45,10 @@ try {
         Invoke-Check 'migration-check' 'uv' @('run','--locked','alembic','check')
     } finally { Pop-Location }
     Remove-Item Env:CARBENTRA_DATABASE_URL
+    $env:CARBENTRA_PUBLIC_DEMO_TEST_DATABASE_URL="postgresql+psycopg://carbentra_public_demo@127.0.0.1:$PostgresPort/carbentra_public_demo"
+    Invoke-Check 'public-demo-test-db' 'uv' @('run','--locked','python','tools/public-demo-test-database.py','--confirm-disposable-local-test')
     Invoke-Check 'python-tests' 'uv' @('run','--locked','--all-groups','pytest','--tb=short','backend/tests','tests/acceptance',
-        'tests/system_upgrade/test_classrooms_postgres.py','tests/test_infrastructure.py','tests/system_upgrade/test_packaging.py',
+        'tests/system_upgrade/test_classrooms_postgres.py','tests/test_infrastructure.py','tests/test_public_demo_deployment.py','tests/system_upgrade/test_packaging.py',
         '--basetemp',(Join-Path $OutputDirectory 'pytest'),'-o',"cache_dir=$OutputDirectory/pytest-cache",'-r','a')
     Invoke-Check 'edge-tests' 'uv' @('run','--locked','--all-groups','pytest','--tb=short','edge/tests',
         '--basetemp',(Join-Path $OutputDirectory 'edge-pytest'),'-o',"cache_dir=$OutputDirectory/pytest-cache",'-r','s')

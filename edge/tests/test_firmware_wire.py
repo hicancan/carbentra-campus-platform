@@ -13,6 +13,32 @@ from ingress import Ingress
 from adapters import Enrollment
 
 class FirmwareWireTests(unittest.TestCase):
+ def test_actual_switch_decoder_and_canonical_command_id_boundaries(self):
+  from channel_transport import ChannelTransport
+  from contract import validate_command
+  from fixtures import SWITCH, NOW, SwitchAdapter, command, switch_raw
+  import tempfile
+  executable=os.environ.get('CARBENTRA_SWITCH_COMMAND_TEST_BINARY')
+  if not executable:self.skipTest('Switch command decoder host binary not supplied; separately required integration gate')
+  with tempfile.TemporaryDirectory() as directory:
+   database=str(Path(directory)/'edge.sqlite');store=EdgeStore(database)
+   try:
+    store.accept_event(SwitchAdapter.telemetry(SWITCH,switch_raw(),NOW))
+    published=[];transport=ChannelTransport(database,[SWITCH],lambda *args:published.append(args) or True,enable_virtual=True)
+    cmd=command();cmd['id']='a'*48
+    validate_command(cmd)
+    self.assertEqual(transport.process(cmd,NOW)['status'],'published')
+    wire=json.loads(published[0][1])
+    self.assertEqual(subprocess.run([executable,json.dumps(wire)],capture_output=True,text=True).returncode,0)
+    for invalid in ('a'*49, 'id\n', ''):
+     cmd['id']=invalid;wire['id']=invalid
+     with self.subTest(id=repr(invalid)):
+      with self.assertRaises(ValueError):validate_command(cmd)
+      with self.assertRaises(ValueError):transport.process(cmd,NOW)
+      self.assertEqual(subprocess.run([executable,json.dumps(wire)],capture_output=True,text=True).returncode,1)
+    self.assertEqual(len(published),1)
+   finally:store.close()
+
  def test_actual_firmware_encoding(self):
   executable=os.environ.get('CARBENTRA_STARTUP_TEST_BINARY')
   if not executable:self.skipTest('firmware startup host binary not supplied; separately required integration gate')

@@ -70,3 +70,7 @@ Edge 的认证 Sense 私钥权限校验在 Linux 运行；Windows 可以运行�
 - [参考材料取舍](docs/REFERENCE_DECISIONS.md)：三份演示文稿和来源工程如何影响设计
 
 实际部署前仍需现场计量校准、网络与设备身份配置、负载适配、硬件安全检验和机构审批。软件测试、仿真闭环和三维模型不等于真实 220 V 硬件合格或已经实现节能收益。
+
+## Isolated public simulation
+
+For an authenticated, read-only public visitor demo with a separate simulation operator, see [the isolated HTTPS deployment guide](docs/PUBLIC_DEMO.md). Use the standalone `compose.public-demo.yaml`; deployment requires an approved host, DNS/TLS, budget and target acceptance. Development Compose must not be exposed publicly.

@@ -91,12 +91,17 @@ def create_app(settings=None):
 
     @asynccontextmanager
     async def lifespan(app):
+        from .public_demo import preflight_database_mode
+        with engine.connect() as connection:
+            preflight_database_mode(connection, settings)
         if settings.auto_migrate:
             Base.metadata.create_all(engine)
             with engine.begin() as connection:
                 install_database_invariants(connection)
         with factory() as db:
             db.execute(select(State).limit(1))
+            from .public_demo import validate_database_mode
+            validate_database_mode(db, settings)
             bootstrap_users(db, settings)
             if settings.seed_demo:
                 seed_demo(db, settings)
@@ -121,6 +126,17 @@ def create_app(settings=None):
     @app.middleware("http")
     async def security_headers(request, call_next):
         request.state.request_id = uuid4().hex
+        if settings.deployment_mode == "public_simulation":
+            from .public_demo import allowed_request, require_live_marker
+            if not allowed_request(request.method, request.url.path):
+                return JSONResponse({"error": {"code": "public_simulation_restricted", "message": "Public simulation cannot modify identities, topology, commissioning or external ingestion", "request_id": request.state.request_id}}, status_code=403)
+            def check_demo_marker():
+                with factory() as db:
+                    require_live_marker(db, settings)
+            try:
+                await asyncio.to_thread(check_demo_marker)
+            except RuntimeError:
+                return JSONResponse({"error": {"code": "public_simulation_closed", "message": "This bounded simulation instance is closed", "request_id": request.state.request_id}}, status_code=503)
         origin = request.headers.get("Origin")
         if request.method not in {"GET", "HEAD", "OPTIONS"} and origin and origin not in settings.allowed_origins:
             return JSONResponse({"error": {"code": "origin_denied", "message": "Request origin is not permitted", "request_id": request.state.request_id}}, status_code=403)

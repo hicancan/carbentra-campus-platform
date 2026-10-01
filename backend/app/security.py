@@ -60,6 +60,9 @@ def current_user(request: Request, db=Depends(get_db)):
     user = db.get(User, session.user_id)
     if not user or not user.enabled or user.role not in {"admin", "operator", "analyst", "viewer"} or (user.is_dev_fixture and not request.app.state.settings.dev_auth):
         raise DomainError("unauthenticated", "Session is no longer valid", 401)
+    if (request.app.state.settings.deployment_mode == "public_simulation" and user.role == "viewer"
+            and request.method not in SAFE_METHODS and request.url.path != "/api/v1/auth/logout"):
+        raise DomainError("forbidden", "Public simulation visitors have read-only access", 403)
     if request.method not in SAFE_METHODS:
         csrf = request.headers.get("X-CSRF-Token", "")
         if not csrf or not hmac.compare_digest(csrf.encode("utf-8"), session.csrf_token.encode("utf-8")):

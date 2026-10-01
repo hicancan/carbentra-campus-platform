@@ -71,6 +71,34 @@ backend signed-observation timeline.
 Restart/reconnect re-subscribes and waits for fresh observations. It does not
 resend the cached relay intent. Pending HTTP events reconcile by immutable IDs.
 
+Receipt age and control freshness are separate. A REAL Plug control snapshot
+requires authenticated device UTC, its consistent at-most-five-second uncertainty
+interval, and fresh sample/measurement monotonic times. The oldest plausible
+measurement time must fit the caller's age limit (ten seconds for transport, at
+most five for local rules). A newly received 300-second-old buffered sample stays
+durable and is forwarded as history, but cannot authorize a rule or dispatch.
+Unknown/untrusted Plug time, wholly future observation intervals, reversed gateway
+time, same-boot monotonic/UTC rollback, and REPLAYED sources fail closed.
+
+`observation_clocks` persists same-boot monotonic highwater and conservative receipt
+bounds. Higher sequence numbers with stalled uptime cannot continually refresh a
+snapshot. The relative bound allows a deliberately generous one-percent slow-clock
+drift and is tightened by subsequent receipts; it survives restart and seeds from
+the original snapshot when upgrading. New boot IDs reset only that boot's timing
+bounds; a retired boot still cannot replace the current snapshot.
+
+Switch does not provide authenticated UTC: its live, non-retained state publication,
+receipt age and same-boot monotonic progress remain the supported timing evidence.
+These cannot prove an unknown first publication's absolute generation time. Its
+device-side boot-relative expiry remains mandatory; the gateway never invents an
+`observed_at`. SIMULATED unknown-clock fixtures remain explicitly simulated, while
+any supplied authenticated Plug timestamps are subject to the same age checks.
+Snapshot `age_seconds`/`arrival_age_seconds` preserve receipt age for signed sensor
+age calculations; `observation_age_seconds` is null without usable device UTC,
+not a fabricated zero. `control_age_seconds` combines available arrival,
+relative-clock and observation bounds; `freshness_reason` explains refusal.
+None of these checks rewrites immutable event payloads.
+
 The durable command inbox is committed before publish. Crash or ambiguous PUBACK
 becomes `mqtt_delivery_uncertain`, never a blind resend. Expiry and lease are
 checked before inbox admission and again immediately before publish. Broker
@@ -132,8 +160,14 @@ python edge/tools/check_mqtt_multidevice.py --mosquitto /path/to/mosquitto
 ```
 
 Release checks require prebuilt actual firmware host encoders/verifiers via
-`CARBENTRA_STARTUP_TEST_BINARY`, `CARBENTRA_TIME_TEST_BINARY`, and
-`CARBENTRA_CERT_TEST_BINARY`; missing compiled gates are a hard release failure.
+`CARBENTRA_STARTUP_TEST_BINARY`, `CARBENTRA_TIME_TEST_BINARY`,
+`CARBENTRA_CERT_TEST_BINARY`, and `CARBENTRA_SWITCH_COMMAND_TEST_BINARY`; missing
+compiled gates are a hard release failure. The last binary links
+`tests/c/switch_command_decoder.c` with the actual Switch `core/switch_core.c`,
+`main/command_json.c`, and its approved cJSON source. It takes one JSON argument
+and returns 0 for accepted, 1 for rejected, 2 for invalid harness invocation. The
+cross-language test proves canonical/transport/C agreement at 48/49-character
+Switch command IDs, including rejection before any publisher call.
 In ptrace-managed environments the existing firmware harness uses
 `ASAN_OPTIONS=detect_leaks=0`; address/undefined sanitizers remain enabled, but leak
 checking is not claimed. The requested output JSON records source hashes, platform exclusions, dependency-lock checks and exact outcome.

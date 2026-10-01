@@ -9,6 +9,14 @@ ROOT = Path(__file__).resolve().parents[2]
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="CARBENTRA_", extra="ignore", hide_input_in_errors=True)
     env: Literal["development", "test", "production"] = "development"
+    deployment_mode: Literal["standard", "public_simulation"] = "standard"
+    public_demo_id: str | None = Field(default=None, pattern=r"^[a-z0-9][a-z0-9-]{7,47}$")
+    public_demo_lifetime_hours: int = Field(default=0, ge=0, le=720)
+    public_demo_max_database_mb: int = Field(default=4096, ge=512, le=16384)
+    public_demo_visitor_username: str = Field(default="visitor", min_length=1, max_length=80)
+    public_demo_operator_username: str = Field(default="simulation-operator", min_length=1, max_length=80)
+    public_demo_visitor_password: SecretStr | None = None
+    public_demo_operator_password: SecretStr | None = None
     database_url: str = f"sqlite:///{ROOT / 'backend' / 'campus-dev.db'}"
     dev_auth: bool = False
     admin_username: str = "admin"
@@ -71,8 +79,27 @@ class Settings(BaseSettings):
                 raise ValueError("Run explicit migrations before production startup")
             if self.seed_demo:
                 raise ValueError("Demo seeding is prohibited in production")
+            if self.simulation_enabled and self.deployment_mode != "public_simulation":
+                raise ValueError("Production simulation requires the isolated public_simulation deployment mode")
             if not self.allowed_origins or any(not x.startswith("https://") for x in self.allowed_origins):
                 raise ValueError("Production requires explicit HTTPS origins")
+        if self.deployment_mode == "public_simulation":
+            from sqlalchemy.engine import make_url
+            url = make_url(self.database_url)
+            if self.env != "production" or not self.public_demo_id:
+                raise ValueError("Public simulation requires production security and an explicit deployment ID")
+            if url.database != "carbentra_public_demo" or url.username != "carbentra_public_demo":
+                raise ValueError("Public simulation requires its dedicated database and non-production application role")
+            if not self.simulation_enabled or self.worker_enabled:
+                raise ValueError("Public simulation requires explicit simulation and supervised separate workers")
+            if self.physical_dispatch_enabled or self.physical_release_ids or self.adapter_token or self.adapter_allowed_device_ids:
+                raise ValueError("Public simulation permanently prohibits physical dispatch and external adapters")
+            if len({self.admin_username, self.public_demo_visitor_username, self.public_demo_operator_username}) != 3:
+                raise ValueError("Public simulation administrator, operator and visitor must be separate accounts")
+            for secret in (self.public_demo_visitor_password, self.public_demo_operator_password):
+                if secret and (len(secret.get_secret_value()) < 20 or secret.get_secret_value().lower() in {
+                    "development-only", "change-me-please-now", "your-password-here"}):
+                    raise ValueError("Public simulation passwords must be independently supplied and >=20 characters")
         if self.admin_password:
             value = self.admin_password.get_secret_value()
             if len(value) < 16 or value.lower() in {"development-only", "change-me-please-now", "your-password-here"}:

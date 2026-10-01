@@ -19,7 +19,7 @@ class RuleTests(unittest.TestCase):
     def tearDown(self):self.store.close();self.tmp.cleanup()
     def feed(self,seq,now,radar=2,on=False):
         self.store.accept_event(sense_event(seq,now,radar),authenticated=True)
-        self.store.accept_event(SwitchAdapter.telemetry(SWITCH,switch_raw(seq,on=on),now))
+        self.store.accept_event(SwitchAdapter.telemetry(SWITCH,switch_raw(seq,on=on,uptime_ms=100000+int((now-NOW)*1000)),now))
     def test_bounded_virtual_candidate_and_no_replay(self):
         result=self.engine.once(now=NOW)[0];self.assertEqual(result['reason'],'authorized_candidate')
         self.assertEqual(result['command']['sequence'],'100');self.assertEqual(result['command']['channel_id'],'relay.1')
@@ -30,7 +30,7 @@ class RuleTests(unittest.TestCase):
         self.assertEqual(self.engine.once(now=NOW+6)[0]['reason'],'target_unknown_or_stale')
         self.feed(2,NOW+51)
         self.assertEqual(self.engine.once(now=NOW+51)[0]['reason'],'authority_expired_or_not_started')
-        raw=switch_raw(3);raw['channels'][0]['control_mode']='manual'
+        raw=switch_raw(3,uptime_ms=152000);raw['channels'][0]['control_mode']='manual'
         self.store.accept_event(SwitchAdapter.telemetry(SWITCH,raw,NOW+52))
         self.assertEqual(self.engine.once(now=NOW+52)[0]['reason'],'manual_or_maintenance_or_protected')
     def test_untrusted_real_broadcast_never_authorizes(self):

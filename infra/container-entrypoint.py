@@ -3,7 +3,8 @@ import os
 from pathlib import Path
 import sys
 
-for name in ("CARBENTRA_DATABASE_URL", "CARBENTRA_ADMIN_PASSWORD", "CARBENTRA_ADAPTER_TOKEN"):
+for name in ("CARBENTRA_DATABASE_URL", "CARBENTRA_ADMIN_PASSWORD", "CARBENTRA_ADAPTER_TOKEN",
+             "CARBENTRA_PUBLIC_DEMO_VISITOR_PASSWORD", "CARBENTRA_PUBLIC_DEMO_OPERATOR_PASSWORD"):
     filename = os.environ.pop(name + "_FILE", None)
     if filename:
         if name in os.environ:

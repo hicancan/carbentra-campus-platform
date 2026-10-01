@@ -55,6 +55,7 @@ jobs:
       ACCEPTANCE_DOMAIN_DATABASE_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
       PRICING_TEST_DATABASE_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
       FORECAST_TEST_POSTGRES_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
+      CARBENTRA_PUBLIC_DEMO_TEST_DATABASE_URL: postgresql+psycopg://carbentra_public_demo@127.0.0.1:5432/carbentra_public_demo
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
@@ -66,6 +67,7 @@ jobs:
           enable-cache: true
       - run: uv venv --python 3.12 .venv
       - run: uv sync --locked --all-groups
-      - run: uv run --locked --all-groups pytest backend/tests tests/acceptance tests/test_infrastructure.py tests/system_upgrade/test_packaging.py
+      - run: uv run --locked python tools/public-demo-test-database.py --confirm-disposable-local-test
+      - run: uv run --locked --all-groups pytest backend/tests tests/acceptance tests/test_infrastructure.py tests/test_public_demo_deployment.py tests/system_upgrade/test_packaging.py
       - run: uv run --locked --all-groups pytest edge/tests -r s
       - run: uv run --locked python -m unittest discover -s packages/spatial/tests -p 'test_*.py' -v

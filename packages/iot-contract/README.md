@@ -31,11 +31,24 @@ unsigned 64-bit decimal string. `event_id` is SHA256 of UTF-8
 identity is a conflict, never an overwrite. Edge receipt time is not intrinsic
 sample identity: duplicate arrivals retain the first committed receipt time.
 
+Command IDs contain only ASCII letters, digits, underscore and hyphen. Canonical
+commands enforce each existing firmware wire boundary: 1–48 characters for
+Switch (also its ACK limit), 1–47 for Plug. The JSON Schema is authoritative;
+the gateway must reject oversized IDs before translation or publication. Ordinary
+platform `cmd_` IDs (36 characters) and Edge `local-` IDs (38) fit both products.
+
 `received_at` is the gateway's timestamp. The backend adds its own receipt time.
 `observed_at` remains null without a device wall clock; gateway receipt does not
 invent measurement time. GATT carries authenticated per-sensor monotonic ages;
 the gateway conservatively adds the whole challenge round-trip to those ages.
 A restarted gateway does not make its cached sample fresh.
+For buffered REAL Plug observations, fresh arrival does not establish fresh
+measurement: Edge control also requires authenticated UTC and the oldest endpoint
+of the original `unix_lower_s`/`unix_upper_s` interval (maximum width five seconds),
+including measurement age relative to captured same-boot uptime. Unknown clock,
+time rollback, delayed samples and stale measurement evidence remain historical
+data and cannot authorize control. Clockless live Switch transport retains its
+explicit receipt/monotonic limitations and device-side boot-relative expiry.
 
 `REAL`, `SIMULATED`, and `REPLAYED` remain separate all the way to the UI. Unknown,
 invalid and unavailable readings carry null. Stale/partial/raw readings retain

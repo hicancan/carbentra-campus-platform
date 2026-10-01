@@ -21,6 +21,6 @@ carbentra-campus-api = { workspace = true }
 carbentra-iot-contract = { workspace = true }
 
 [tool.pytest.ini_options]
-testpaths = ["backend/tests", "tests/acceptance", "tests/test_infrastructure.py", "tests/system_upgrade/test_packaging.py"]
+testpaths = ["backend/tests", "tests/acceptance", "tests/test_infrastructure.py", "tests/test_public_demo_deployment.py", "tests/system_upgrade/test_packaging.py"]
 pythonpath = ["backend"]
 addopts = "-q"
