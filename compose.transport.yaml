@@ -1,0 +1,116 @@
+# Optional overlay: explicitly provisioned certificates, ACL and adapter token are required.
+# Use with compose.yaml OR compose.prod.yaml, and --profile transport.
+services:
+  api:
+    environment:
+      CARBENTRA_ADAPTER_TOKEN_FILE: /run/secrets/adapter_token
+      CARBENTRA_ADAPTER_ALLOWED_DEVICE_IDS: ${CARBENTRA_ADAPTER_ALLOWED_DEVICE_IDS:?Set the exact JSON enrolled-device allowlist}
+    secrets: [adapter_token]
+  broker:
+    image: eclipse-mosquitto:2.0.22-openssl@sha256:199ea8ef2e35ec2b1b37e59cfd1dbae538ed4dfa4a2251a121a52215a6248a21
+    profiles: [transport]
+    user: "1883:1883"
+    entrypoint: [sh, /etc/carbentra/mosquitto-entrypoint.sh]
+    ports: ["127.0.0.1:18883:8883"]
+    volumes:
+      - ./infra/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./infra/mosquitto-entrypoint.sh:/etc/carbentra/mosquitto-entrypoint.sh:ro
+      - mqtt_data:/mosquitto/data
+    secrets: [mqtt_ca, mqtt_server_certificate, mqtt_server_key, mqtt_acl]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD-SHELL, 'test -s /mosquitto/data/mosquitto.pid && kill -0 "$$(cat /mosquitto/data/mosquitto.pid)"']
+      interval: 15s
+      timeout: 5s
+      retries: 4
+    networks: [transport, broker_ingress]
+    restart: unless-stopped
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+  platform-tls:
+    image: nginx:1.30.5-alpine3.24@sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94
+    profiles: [transport]
+    user: "101:101"
+    entrypoint: [nginx, -g, "daemon off;"]
+    volumes:
+      - ./infra/nginx-transport.conf:/etc/nginx/nginx.conf:ro
+    secrets: [platform_server_certificate, platform_server_key]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, nginx, -t, -q]
+      interval: 15s
+      timeout: 5s
+      retries: 4
+      start_period: 10s
+    networks: [private, transport]
+    restart: unless-stopped
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+  edge:
+    image: carbentra-campus-edge:${CARBENTRA_IMAGE_TAG:-local}
+    profiles: [transport]
+    build:
+      context: .
+      dockerfile: infra/edge.Dockerfile
+    environment:
+      CARBENTRA_ADAPTER_TOKEN_FILE: /run/secrets/adapter_token
+      SSL_CERT_FILE: /run/secrets/platform_ca
+      CARBENTRA_ENABLE_PHYSICAL_DISPATCH: "false"
+      CARBENTRA_PHYSICAL_RELEASES_JSON: '{}'
+    command: [python, service.py, --broker, broker, --port, "8883", --ca, /run/secrets/mqtt_ca, --certificate, /run/secrets/edge_certificate, --key, /run/secrets/edge_key, --devices, /run/secrets/edge_devices, --database, /data/edge.sqlite3, --platform-url, "https://platform-tls:8443"]
+    secrets: [adapter_token, mqtt_ca, edge_certificate, edge_key, edge_devices, platform_ca]
+    volumes: [edge_data:/data]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    depends_on:
+      broker: {condition: service_healthy}
+      platform-tls: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import sqlite3; db=sqlite3.connect('file:/data/edge.sqlite3?mode=ro', uri=True); assert db.execute('PRAGMA quick_check').fetchone()[0] == 'ok'"]
+      interval: 30s
+      timeout: 10s
+      retries: 4
+      start_period: 20s
+    networks: [transport]
+    restart: unless-stopped
+    init: true
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+networks:
+  transport:
+    internal: true
+  broker_ingress:
+    driver: bridge
+volumes:
+  mqtt_data:
+  edge_data:
+secrets:
+  adapter_token:
+    file: ${CARBENTRA_TRANSPORT_DIR:?Set the private transport configuration directory}/adapter_token
+  mqtt_ca:
+    file: ${CARBENTRA_TRANSPORT_DIR}/mqtt-ca.crt
+  mqtt_server_certificate:
+    file: ${CARBENTRA_TRANSPORT_DIR}/broker.crt
+  mqtt_server_key:
+    file: ${CARBENTRA_TRANSPORT_DIR}/broker.key
+  mqtt_acl:
+    file: ${CARBENTRA_TRANSPORT_DIR}/mosquitto.acl
+  edge_certificate:
+    file: ${CARBENTRA_TRANSPORT_DIR}/edge.crt
+  edge_key:
+    file: ${CARBENTRA_TRANSPORT_DIR}/edge.key
+  edge_devices:
+    file: ${CARBENTRA_TRANSPORT_DIR}/devices.json
+  platform_ca:
+    file: ${CARBENTRA_TRANSPORT_DIR}/platform-ca.crt
+  platform_server_certificate:
+    file: ${CARBENTRA_TRANSPORT_DIR}/platform.crt
+  platform_server_key:
+    file: ${CARBENTRA_TRANSPORT_DIR}/platform.key

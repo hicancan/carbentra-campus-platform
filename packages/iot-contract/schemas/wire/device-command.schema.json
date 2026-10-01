@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbentra.invalid/contracts/device-command.schema.json",
+  "title": "CARBENTRA bounded device command",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "device_id",
+    "profile_id",
+    "seq",
+    "issued_s",
+    "expires_s",
+    "action"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "seq": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{0,19}$"
+    },
+    "issued_s": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "expires_s": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "action": {
+      "enum": [
+        "hold",
+        "shed",
+        "restore"
+      ]
+    }
+  },
+  "$comment": "Existing exact seven-field command inside the v2 contract bundle; no implicit schema_version field. uint64 sequence maximum and 0<expires_s-issued_s<=60 are additional semantic gates. Device enforces authenticated time interval, local policy, per-unit profile and durable replay journal. Broker topic prefix remains carbentra/v1."
+}

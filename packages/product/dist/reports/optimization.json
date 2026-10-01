@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "candidate_requires_independent_validation",
+  "source_sha256": "dc25e3965a9e653eb5c91a4514fcc1a3e051ffa47593778d7e70a71071e439d0",
+  "display_sha256": "920e1c0de851eb64bcf4b36a4838bc83ed4820f0e833a0a4457fb3ce125f3277",
+  "source_bytes": 30337768,
+  "display_bytes": 22318016,
+  "bytes_saved": 8019752,
+  "tool": "@gltf-transform/functions",
+  "tool_version": "4.3.0",
+  "operation": "quantize",
+  "removed_unreferenced_accessors": 456,
+  "options": {
+    "quantizePosition": 16,
+    "quantizeNormal": 16,
+    "quantizationVolume": "mesh",
+    "cleanup": false,
+    "pattern": "^(POSITION|NORMAL)$"
+  },
+  "forbidden_operations": [
+    "join",
+    "flatten",
+    "simplify",
+    "prune",
+    "dedup"
+  ],
+  "required_extensions": [
+    "KHR_mesh_quantization"
+  ],
+  "source_node_count": 227,
+  "display_node_count": 227,
+  "physical_geometry_claim": false
+}

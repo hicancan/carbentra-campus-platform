@@ -1,0 +1,341 @@
+{
+  "PLUG": {
+    "model": "CARBENTRA-P16-EVT-B",
+    "channels": [
+      {
+        "channel_id": "relay.1",
+        "label": "回路 1",
+        "capabilities": [
+          {
+            "capability": "relay.commanded",
+            "access": "read_write",
+            "unit": "boolean",
+            "available": true
+          },
+          {
+            "capability": "relay.feedback",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          },
+          {
+            "capability": "control.mode",
+            "access": "read",
+            "unit": "mode",
+            "available": true
+          },
+          {
+            "capability": "control.manual_hold_until",
+            "access": "read",
+            "unit": "monotonic_ms",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "meter.aggregate",
+        "label": "设备总表（不按回路拆分）",
+        "capabilities": [
+          {
+            "capability": "power.active",
+            "access": "read",
+            "unit": "W",
+            "available": true
+          },
+          {
+            "capability": "voltage.rms",
+            "access": "read",
+            "unit": "V",
+            "available": true
+          },
+          {
+            "capability": "current.rms",
+            "access": "read",
+            "unit": "A",
+            "available": true
+          },
+          {
+            "capability": "energy.import",
+            "access": "read",
+            "unit": "Wh",
+            "available": true
+          },
+          {
+            "capability": "energy.export",
+            "access": "read",
+            "unit": "Wh",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "button.1",
+        "label": "本地按键",
+        "capabilities": [
+          {
+            "capability": "button.local",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "device",
+        "label": "设备健康",
+        "capabilities": [
+          {
+            "capability": "device.health",
+            "access": "read",
+            "unit": "status",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  "SWITCH": {
+    "model": "CARBENTRA-SWITCH-3CH",
+    "channels": [
+      {
+        "channel_id": "relay.1",
+        "label": "回路 1",
+        "capabilities": [
+          {
+            "capability": "relay.commanded",
+            "access": "read_write",
+            "unit": "boolean",
+            "available": true
+          },
+          {
+            "capability": "relay.feedback",
+            "access": "read",
+            "unit": "boolean",
+            "available": false
+          },
+          {
+            "capability": "control.mode",
+            "access": "read",
+            "unit": "mode",
+            "available": true
+          },
+          {
+            "capability": "control.manual_hold_until",
+            "access": "read",
+            "unit": "monotonic_ms",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "relay.2",
+        "label": "回路 2",
+        "capabilities": [
+          {
+            "capability": "relay.commanded",
+            "access": "read_write",
+            "unit": "boolean",
+            "available": true
+          },
+          {
+            "capability": "relay.feedback",
+            "access": "read",
+            "unit": "boolean",
+            "available": false
+          },
+          {
+            "capability": "control.mode",
+            "access": "read",
+            "unit": "mode",
+            "available": true
+          },
+          {
+            "capability": "control.manual_hold_until",
+            "access": "read",
+            "unit": "monotonic_ms",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "relay.3",
+        "label": "回路 3",
+        "capabilities": [
+          {
+            "capability": "relay.commanded",
+            "access": "read_write",
+            "unit": "boolean",
+            "available": true
+          },
+          {
+            "capability": "relay.feedback",
+            "access": "read",
+            "unit": "boolean",
+            "available": false
+          },
+          {
+            "capability": "control.mode",
+            "access": "read",
+            "unit": "mode",
+            "available": true
+          },
+          {
+            "capability": "control.manual_hold_until",
+            "access": "read",
+            "unit": "monotonic_ms",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "meter.aggregate",
+        "label": "设备总表（不按回路拆分）",
+        "capabilities": [
+          {
+            "capability": "power.active",
+            "access": "read",
+            "unit": "W",
+            "available": true
+          },
+          {
+            "capability": "voltage.rms",
+            "access": "read",
+            "unit": "V",
+            "available": true
+          },
+          {
+            "capability": "current.rms",
+            "access": "read",
+            "unit": "A",
+            "available": true
+          },
+          {
+            "capability": "energy.import",
+            "access": "read",
+            "unit": "Wh",
+            "available": true
+          },
+          {
+            "capability": "energy.export",
+            "access": "read",
+            "unit": "Wh",
+            "available": false
+          }
+        ]
+      },
+      {
+        "channel_id": "button.1",
+        "label": "本地按键 1",
+        "capabilities": [
+          {
+            "capability": "button.local",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "button.2",
+        "label": "本地按键 2",
+        "capabilities": [
+          {
+            "capability": "button.local",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "button.3",
+        "label": "本地按键 3",
+        "capabilities": [
+          {
+            "capability": "button.local",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "device",
+        "label": "设备健康",
+        "capabilities": [
+          {
+            "capability": "device.health",
+            "access": "read",
+            "unit": "status",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  "PRESENCE": {
+    "model": "CARBENTRA-PRESENCE",
+    "channels": [
+      {
+        "channel_id": "sensor.radar",
+        "label": "雷达瞬时样本",
+        "capabilities": [
+          {
+            "capability": "presence.radar",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "sensor.light",
+        "label": "未校准原始光照",
+        "capabilities": [
+          {
+            "capability": "illuminance.raw",
+            "access": "read",
+            "unit": "raw_count",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "sensor.buffer",
+        "label": "设备供电电压",
+        "capabilities": [
+          {
+            "capability": "buffer.voltage",
+            "access": "read",
+            "unit": "mV",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "button.1",
+        "label": "本地按键",
+        "capabilities": [
+          {
+            "capability": "button.local",
+            "access": "read",
+            "unit": "boolean",
+            "available": true
+          }
+        ]
+      },
+      {
+        "channel_id": "device",
+        "label": "设备健康",
+        "capabilities": [
+          {
+            "capability": "device.health",
+            "access": "read",
+            "unit": "status",
+            "available": true
+          }
+        ]
+      }
+    ]
+  }
+}

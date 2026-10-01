@@ -1,0 +1,20 @@
+/** Types generated from the actual authenticated classroom OpenAPI contract. */
+import type { components } from './generated-api'
+export type ChannelValue = components['schemas']['ChannelValue']
+export type ChannelSnapshot = components['schemas']['ChannelSnapshot']
+export type RoomSnapshot = components['schemas']['RoomSnapshot']
+export type RoomInterval = components['schemas']['RoomInterval']
+export type StateDurations = components['schemas']['StateDurations']
+export type TimelineResponse = components['schemas']['TimelineResponse']
+export type DistributionGroup = components['schemas']['DistributionGroup']
+export type DistributionResponse = components['schemas']['DistributionResponse']
+export type ModeResponse = components['schemas']['ModeResponse']
+export type PolicyResponse = components['schemas']['PolicyResponse']
+export type EvaluationResponse = components['schemas']['EvaluationResponse']
+export type AnomalyResponse = components['schemas']['AnomalyResponse']
+export type RoomTimelineEvent = components['schemas']['TimelineEvent']
+export type Occupancy = RoomSnapshot['occupancy']
+export type LoadState = RoomSnapshot['lighting']
+export type OperationMode = RoomSnapshot['mode']
+
+export type AnomalyRuleResponse = components['schemas']['AnomalyRuleResponse']

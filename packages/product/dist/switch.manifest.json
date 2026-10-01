@@ -1,0 +1,632 @@
+{
+  "version": 2,
+  "family": "SWITCH",
+  "product_name": "CARBENTRA Switch",
+  "name": "CARBENTRA Switch · Engineering reference",
+  "source_mode": "REFERENCE",
+  "source_repository": "carbentra-smart-switch",
+  "source_commit": "c2f7c1be17ef57504ad0ec48179ca89681366996",
+  "source_path": "mechanical/exports/carbentra_smart_switch.glb",
+  "source_sha256": "4cbe6d5bf6d67c2692ce19090c8489d3af16b1a62e9bb12adbf726966ef046e6",
+  "display_sha256": "4cbe6d5bf6d67c2692ce19090c8489d3af16b1a62e9bb12adbf726966ef046e6",
+  "model_url": "/api/v1/assets/product/model?family=SWITCH",
+  "hero_url": "/api/v1/assets/product/hero?family=SWITCH",
+  "hero_sha256": "9f76cba1ab9b79236a4d571df23968fb6127672d27a242e7bbb05b69a4ffdb2b",
+  "hero_bytes": 132017,
+  "source_hero_path": "presentation/model_01_exterior_hero_light.png",
+  "source_hero_sha256": "87c21223b2f3566c3129f3e2f5c65632812d30ce83588910c5b9d65ed817d1c8",
+  "source_hero_bytes": 495314,
+  "hero_derivation": {
+    "operation": "bounded_thumbnail",
+    "max_dimension_px": 640,
+    "resampling": "LANCZOS",
+    "tool": "Pillow 12.3.0",
+    "source_size_px": [
+      1280,
+      1280
+    ],
+    "size_px": [
+      640,
+      640
+    ]
+  },
+  "bytes": 2960256,
+  "source_bytes": 2960256,
+  "mime": "model/gltf-binary",
+  "units": "m",
+  "axis": "Y-up",
+  "node_count": 87,
+  "mesh_count": 87,
+  "triangle_count": 52168,
+  "parts": [
+    {
+      "id": "Antenna trace visualization",
+      "name": "Antenna trace visualization",
+      "node_index": 0,
+      "provenance": {}
+    },
+    {
+      "id": "Antenna trace visualization.001",
+      "name": "Antenna trace visualization.001",
+      "node_index": 1,
+      "provenance": {}
+    },
+    {
+      "id": "C15 aluminum end",
+      "name": "C15 aluminum end",
+      "node_index": 2,
+      "provenance": {}
+    },
+    {
+      "id": "C15 | capacitor maximum envelope",
+      "name": "C15 | capacitor maximum envelope",
+      "node_index": 3,
+      "provenance": {}
+    },
+    {
+      "id": "C16 aluminum end",
+      "name": "C16 aluminum end",
+      "node_index": 4,
+      "provenance": {}
+    },
+    {
+      "id": "C16 | capacitor maximum envelope",
+      "name": "C16 | capacitor maximum envelope",
+      "node_index": 5,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 1",
+      "name": "Cold eight-wire harness 1",
+      "node_index": 6,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 2",
+      "name": "Cold eight-wire harness 2",
+      "node_index": 7,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 3",
+      "name": "Cold eight-wire harness 3",
+      "node_index": 8,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 4",
+      "name": "Cold eight-wire harness 4",
+      "node_index": 9,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 5",
+      "name": "Cold eight-wire harness 5",
+      "node_index": 10,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 6",
+      "name": "Cold eight-wire harness 6",
+      "node_index": 11,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 7",
+      "name": "Cold eight-wire harness 7",
+      "node_index": 12,
+      "provenance": {}
+    },
+    {
+      "id": "Cold eight-wire harness 8",
+      "name": "Cold eight-wire harness 8",
+      "node_index": 13,
+      "provenance": {}
+    },
+    {
+      "id": "Cold-side rocker support carrier",
+      "name": "Cold-side rocker support carrier",
+      "node_index": 14,
+      "provenance": {}
+    },
+    {
+      "id": "control actual B.Cu trace paths",
+      "name": "control actual B.Cu trace paths",
+      "node_index": 15,
+      "provenance": {}
+    },
+    {
+      "id": "control actual F.Cu trace paths",
+      "name": "control actual F.Cu trace paths",
+      "node_index": 16,
+      "provenance": {}
+    },
+    {
+      "id": "control PCB legend",
+      "name": "control PCB legend",
+      "node_index": 17,
+      "provenance": {}
+    },
+    {
+      "id": "Control PCB | actual envelope",
+      "name": "Control PCB | actual envelope",
+      "node_index": 18,
+      "provenance": {}
+    },
+    {
+      "id": "F1 | SCHURTER 3403.0277.23",
+      "name": "F1 | SCHURTER 3403.0277.23",
+      "node_index": 19,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "Face rim | 86 x 86",
+      "name": "Face rim | 86 x 86",
+      "node_index": 20,
+      "provenance": {}
+    },
+    {
+      "id": "J1 | 5-way 5.08 mm terminal",
+      "name": "J1 | 5-way 5.08 mm terminal",
+      "node_index": 21,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "J2 mated cold harness plug",
+      "name": "J2 mated cold harness plug",
+      "node_index": 22,
+      "provenance": {}
+    },
+    {
+      "id": "J2 | JST B8B-PH-K-S",
+      "name": "J2 | JST B8B-PH-K-S",
+      "node_index": 23,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP",
+        "isolation": "Cold-side only; not a mains header"
+      }
+    },
+    {
+      "id": "J3 mated cold harness plug",
+      "name": "J3 mated cold harness plug",
+      "node_index": 24,
+      "provenance": {}
+    },
+    {
+      "id": "J3 | JST B8B-PH-K-S",
+      "name": "J3 | JST B8B-PH-K-S",
+      "node_index": 25,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP",
+        "isolation": "Cold-side only; not a mains header"
+      }
+    },
+    {
+      "id": "K1 marking",
+      "name": "K1 marking",
+      "node_index": 26,
+      "provenance": {}
+    },
+    {
+      "id": "K1 solder pin",
+      "name": "K1 solder pin",
+      "node_index": 27,
+      "provenance": {}
+    },
+    {
+      "id": "K1 solder pin.001",
+      "name": "K1 solder pin.001",
+      "node_index": 28,
+      "provenance": {}
+    },
+    {
+      "id": "K1 solder pin.002",
+      "name": "K1 solder pin.002",
+      "node_index": 29,
+      "provenance": {}
+    },
+    {
+      "id": "K1 solder pin.003",
+      "name": "K1 solder pin.003",
+      "node_index": 30,
+      "provenance": {}
+    },
+    {
+      "id": "K1 | Omron G5Q-1A DC5",
+      "name": "K1 | Omron G5Q-1A DC5",
+      "node_index": 31,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "K2 marking",
+      "name": "K2 marking",
+      "node_index": 32,
+      "provenance": {}
+    },
+    {
+      "id": "K2 solder pin",
+      "name": "K2 solder pin",
+      "node_index": 33,
+      "provenance": {}
+    },
+    {
+      "id": "K2 solder pin.001",
+      "name": "K2 solder pin.001",
+      "node_index": 34,
+      "provenance": {}
+    },
+    {
+      "id": "K2 solder pin.002",
+      "name": "K2 solder pin.002",
+      "node_index": 35,
+      "provenance": {}
+    },
+    {
+      "id": "K2 solder pin.003",
+      "name": "K2 solder pin.003",
+      "node_index": 36,
+      "provenance": {}
+    },
+    {
+      "id": "K2 | Omron G5Q-1A DC5",
+      "name": "K2 | Omron G5Q-1A DC5",
+      "node_index": 37,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "K3 marking",
+      "name": "K3 marking",
+      "node_index": 38,
+      "provenance": {}
+    },
+    {
+      "id": "K3 solder pin",
+      "name": "K3 solder pin",
+      "node_index": 39,
+      "provenance": {}
+    },
+    {
+      "id": "K3 solder pin.001",
+      "name": "K3 solder pin.001",
+      "node_index": 40,
+      "provenance": {}
+    },
+    {
+      "id": "K3 solder pin.002",
+      "name": "K3 solder pin.002",
+      "node_index": 41,
+      "provenance": {}
+    },
+    {
+      "id": "K3 solder pin.003",
+      "name": "K3 solder pin.003",
+      "node_index": 42,
+      "provenance": {}
+    },
+    {
+      "id": "K3 | Omron G5Q-1A DC5",
+      "name": "K3 | Omron G5Q-1A DC5",
+      "node_index": 43,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "Mains terminal legend",
+      "name": "Mains terminal legend",
+      "node_index": 44,
+      "provenance": {}
+    },
+    {
+      "id": "Mount screw slot",
+      "name": "Mount screw slot",
+      "node_index": 45,
+      "provenance": {}
+    },
+    {
+      "id": "Mount screw slot.001",
+      "name": "Mount screw slot.001",
+      "node_index": 46,
+      "provenance": {}
+    },
+    {
+      "id": "Mounting screw head",
+      "name": "Mounting screw head",
+      "node_index": 47,
+      "provenance": {}
+    },
+    {
+      "id": "Mounting screw head.001",
+      "name": "Mounting screw head.001",
+      "node_index": 48,
+      "provenance": {}
+    },
+    {
+      "id": "Mounting screw shaft concept",
+      "name": "Mounting screw shaft concept",
+      "node_index": 49,
+      "provenance": {}
+    },
+    {
+      "id": "Mounting screw shaft concept.001",
+      "name": "Mounting screw shaft concept.001",
+      "node_index": 50,
+      "provenance": {}
+    },
+    {
+      "id": "power actual B.Cu trace paths",
+      "name": "power actual B.Cu trace paths",
+      "node_index": 51,
+      "provenance": {}
+    },
+    {
+      "id": "power actual F.Cu trace paths",
+      "name": "power actual F.Cu trace paths",
+      "node_index": 52,
+      "provenance": {}
+    },
+    {
+      "id": "power PCB legend",
+      "name": "power PCB legend",
+      "node_index": 53,
+      "provenance": {}
+    },
+    {
+      "id": "Power PCB | actual envelope",
+      "name": "Power PCB | actual envelope",
+      "node_index": 54,
+      "provenance": {}
+    },
+    {
+      "id": "Protective insulating partition | 1.8 nominal",
+      "name": "Protective insulating partition | 1.8 nominal",
+      "node_index": 55,
+      "provenance": {
+        "safety": "Solid protective partition plus certified component isolation are required; thickness/material/creepage qualification pending"
+      }
+    },
+    {
+      "id": "PS1 | RECOM RAC05-05SK/277",
+      "name": "PS1 | RECOM RAC05-05SK/277",
+      "node_index": 56,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "PSU marking",
+      "name": "PSU marking",
+      "node_index": 57,
+      "provenance": {}
+    },
+    {
+      "id": "PSU secondary marking",
+      "name": "PSU secondary marking",
+      "node_index": 58,
+      "provenance": {}
+    },
+    {
+      "id": "Radio shield appearance",
+      "name": "Radio shield appearance",
+      "node_index": 59,
+      "provenance": {}
+    },
+    {
+      "id": "Radio shield marking",
+      "name": "Radio shield marking",
+      "node_index": 60,
+      "provenance": {}
+    },
+    {
+      "id": "Recessed backbox | integral 2 mm walls and floor",
+      "name": "Recessed backbox | integral 2 mm walls and floor",
+      "node_index": 61,
+      "provenance": {}
+    },
+    {
+      "id": "Rocker 1 | 26.3 x 79.4",
+      "name": "Rocker 1 | 26.3 x 79.4",
+      "node_index": 62,
+      "provenance": {
+        "mechanism": "Momentary rocker concept; travel, force, pivot and retention need tool/tolerance validation"
+      }
+    },
+    {
+      "id": "Rocker 2 | 26.3 x 79.4",
+      "name": "Rocker 2 | 26.3 x 79.4",
+      "node_index": 63,
+      "provenance": {
+        "mechanism": "Momentary rocker concept; travel, force, pivot and retention need tool/tolerance validation"
+      }
+    },
+    {
+      "id": "Rocker 3 | 26.3 x 79.4",
+      "name": "Rocker 3 | 26.3 x 79.4",
+      "node_index": 64,
+      "provenance": {
+        "mechanism": "Momentary rocker concept; travel, force, pivot and retention need tool/tolerance validation"
+      }
+    },
+    {
+      "id": "RV1 lead",
+      "name": "RV1 lead",
+      "node_index": 65,
+      "provenance": {}
+    },
+    {
+      "id": "RV1 lead.001",
+      "name": "RV1 lead.001",
+      "node_index": 66,
+      "provenance": {}
+    },
+    {
+      "id": "RV1 | thermally protected MOV envelope",
+      "name": "RV1 | thermally protected MOV envelope",
+      "node_index": 67,
+      "provenance": {}
+    },
+    {
+      "id": "SW1 actuator",
+      "name": "SW1 actuator",
+      "node_index": 68,
+      "provenance": {}
+    },
+    {
+      "id": "SW1 | Omron B3U-1000P",
+      "name": "SW1 | Omron B3U-1000P",
+      "node_index": 69,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "SW2 actuator",
+      "name": "SW2 actuator",
+      "node_index": 70,
+      "provenance": {}
+    },
+    {
+      "id": "SW2 | Omron B3U-1000P",
+      "name": "SW2 | Omron B3U-1000P",
+      "node_index": 71,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "SW3 actuator",
+      "name": "SW3 actuator",
+      "node_index": 72,
+      "provenance": {}
+    },
+    {
+      "id": "SW3 | Omron B3U-1000P",
+      "name": "SW3 | Omron B3U-1000P",
+      "node_index": 73,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "Terminal captive screw",
+      "name": "Terminal captive screw",
+      "node_index": 74,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal captive screw.001",
+      "name": "Terminal captive screw.001",
+      "node_index": 75,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal captive screw.002",
+      "name": "Terminal captive screw.002",
+      "node_index": 76,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal captive screw.003",
+      "name": "Terminal captive screw.003",
+      "node_index": 77,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal captive screw.004",
+      "name": "Terminal captive screw.004",
+      "node_index": 78,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal screw slot",
+      "name": "Terminal screw slot",
+      "node_index": 79,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal screw slot.001",
+      "name": "Terminal screw slot.001",
+      "node_index": 80,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal screw slot.002",
+      "name": "Terminal screw slot.002",
+      "node_index": 81,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal screw slot.003",
+      "name": "Terminal screw slot.003",
+      "node_index": 82,
+      "provenance": {}
+    },
+    {
+      "id": "Terminal screw slot.004",
+      "name": "Terminal screw slot.004",
+      "node_index": 83,
+      "provenance": {}
+    },
+    {
+      "id": "U1 | ESP32-C3-MINI-1-N4X",
+      "name": "U1 | ESP32-C3-MINI-1-N4X",
+      "node_index": 84,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "U2 | MCP39F511A",
+      "name": "U2 | MCP39F511A",
+      "node_index": 85,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    },
+    {
+      "id": "U3 | ISOW7821DWER",
+      "name": "U3 | ISOW7821DWER",
+      "node_index": 86,
+      "provenance": {
+        "source_contract": "electronics/mechanical_interface.json",
+        "simplification": "Vendor body envelope; cosmetic detail simplified, not vendor STEP"
+      }
+    }
+  ],
+  "optimized": false,
+  "optimization": null,
+  "materials_preserved": true,
+  "extensions": [],
+  "physical_qualification": false,
+  "device_binding": false,
+  "provenance": "Byte-identical display artifact from the pinned source; authoritative CAD/ECAD remains upstream",
+  "license": "No repository-wide redistribution license was declared in the inspected source; review before external redistribution",
+  "limitations": [
+    "Product reference only; not the placement of a registered device",
+    "Engineering development; physical verification remains pending",
+    "No mains safety, calibration or voltage-absence proof",
+    "Optional display asset; load only after an explicit user action",
+    "No frame-rate or browser-memory claim without a measured viewer test"
+  ]
+}

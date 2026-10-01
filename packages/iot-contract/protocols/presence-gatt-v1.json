@@ -1,0 +1,19 @@
+{
+  "protocol":"presence-gatt-v1",
+  "response_version":1,
+  "response_bytes":86,
+  "signed_body_bytes":54,
+  "challenge_bytes":16,
+  "challenge_timeout_ms":5000,
+  "key_bytes":32,
+  "mac_algorithm":"HMAC-SHA256",
+  "mac_domain_hex":"43415242454e5452412d53454e53452d474154542d763100",
+  "service_uuid":"4c410001-7d6b-4c8f-a092-47b965150001",
+  "challenge_uuid":"4c410002-7d6b-4c8f-a092-47b965150001",
+  "response_uuid":"4c410003-7d6b-4c8f-a092-47b965150001",
+  "offsets":{"version":0,"manufacturer_frame":1,"nonce":25,"reserved_pir_age_ms":41,"radar_age_ms":45,"light_age_ms":49,"evidence_flags":53,"mac":54},
+  "evidence_flags":{"continuous_occupancy":1,"reserved_pir_valid":2,"radar_valid":4,"light_valid":8,"supply_valid":16},
+  "maximum_measurement_age_ms":{"radar":5000,"light":120000},
+  "unknown_age":4294967295,
+  "reserved_pir_required":true
+}

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2280" viewBox="0 0 3000 2280" role="img" aria-labelledby="title desc"><title id="title">02  Docker 云边部署与五仓库责任</title><desc id="desc">碳迹未来当前软件实现架构。工程交付版  ·  实物待验收。物理执行默认关闭，现场资质与投运另行核验。数据路径、控制路径、运行角色及仓库责任以不同区域表示。</desc><defs>
+<marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 12 6 L 0 12 Z" fill="#008B80"/></marker>
+<marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 12 6 L 0 12 Z" fill="#B96621"/></marker>
+<marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 12 6 L 0 12 Z" fill="#1E6594"/></marker>
+<marker id="arrow-muted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 12 6 L 0 12 Z" fill="#587082"/></marker>
+<marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 12 6 L 0 12 Z" fill="#68579A"/></marker>
+</defs>
+<rect width="3000" height="2280" fill="#F3F7F9"/>
+<text x="80" y="105" fill="#163447" font-family="Noto Sans CJK SC, sans-serif" font-size="66" font-weight="700" text-anchor="start">碳迹未来</text>
+<text x="82" y="165" fill="#163447" font-family="Noto Sans CJK SC, sans-serif" font-size="38" font-weight="400" text-anchor="start">基于 AIoT 云边端协同的高校智慧能碳管理平台</text>
+<text x="84" y="212" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" text-anchor="start">Powered by CARBENTRA · AIoT Campus Energy Orchestration Platform</text>
+<rect x="2200" y="57" width="720" height="68" rx="34" fill="#FFF3E7"/>
+<text x="2560" y="102" fill="#B96621" font-family="Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" text-anchor="middle">工程交付版  ·  实物待验收</text>
+<text x="80" y="285" fill="#163447" font-family="Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" text-anchor="start">02  Docker 云边部署与五仓库责任</text>
+<text x="2915" y="284" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" text-anchor="end">ARCHITECTURE  /  02</text>
+<rect x="80" y="335" width="850" height="945" rx="22" fill="#E8F6F2" stroke="#008B80" stroke-width="2"/>
+<text x="115" y="390" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="38" font-weight="700" text-anchor="start">可选边缘传输  /  transport overlay</text>
+<text x="115" y="432" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" text-anchor="start">默认不启用；运维提供证书、身份与允许列表</text>
+<rect x="120" y="468" width="770" height="160" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="145" y="518" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">broker / Mosquitto</text>
+<text x="145" y="566" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">mTLS 证书身份 → 精确设备主题 ACL</text>
+<text x="145" y="610" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">模板仅绑定 127.0.0.1:18883，非校园网入口</text>
+<path d="M505 632 L505 674" fill="none" stroke="#008B80" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="120" y="685" width="770" height="285" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="145" y="735" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">edge / 平台仓库唯一共享服务</text>
+<text x="145" y="783" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">同源 edge/ + packages/iot-contract</text>
+<text x="145" y="827" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">Plug / Switch / Sense 的具体线协议适配</text>
+<text x="145" y="871" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">SQLite 收据 / outbox → HTTPS 提交确认</text>
+<text x="145" y="915" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">默认只转发；虚拟命令需单独 opt-in</text>
+<path d="M505 974 L505 1010" fill="none" stroke="#008B80" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="120" y="1024" width="770" height="160" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="145" y="1074" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">持久卷  /  edge_data</text>
+<text x="145" y="1122" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">SQLite + 原始证据 + outbox + 传输状态</text>
+<text x="145" y="1166" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">私钥 / 允许列表外置；卷不可随意删除</text>
+<text x="120" y="1235" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" text-anchor="start">platform-tls：私有 HTTPS 网关；edge 不直连 DB</text>
+<rect x="1050" y="335" width="1870" height="945" rx="22" fill="#EAF2F9" stroke="#1E6594" stroke-width="2"/>
+<text x="1085" y="390" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="38" font-weight="700" text-anchor="start">平台服务  /  Docker Compose（Linux containers）</text>
+<text x="1085" y="432" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" text-anchor="start">构建与服务健康检查通过；界面操作和实物验证边界见交付报告</text>
+<rect x="1090" y="468" width="1790" height="147" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="1115" y="518" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">web  /  React + TypeScript + nginx</text>
+<text x="1115" y="566" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" text-anchor="start">仅发布 127.0.0.1:8080；生产 HTTPS 反代由运维另设；静态资源 / 同源 API / SSE</text>
+<text x="1105" y="655" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" text-anchor="start">启动顺序：db 健康 → migrate 完成 → api 健康 → worker / analysis / web</text>
+<rect x="1090" y="680" width="650" height="243" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="1115" y="730" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">api / FastAPI 模块化核心</text>
+<text x="1115" y="778" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">教室状态 / 能力通道 / 时序绑定</text>
+<text x="1115" y="822" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">身份 / 核算 / 策略 / 幂等入库</text>
+<text x="1115" y="866" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">HTTP 读预测快照 / 去重入队</text>
+<rect x="1780" y="680" width="515" height="243" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="1805" y="730" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">worker / 控制与模拟</text>
+<text x="1805" y="778" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">control：命令 / 核验 / 超时</text>
+<text x="1805" y="822" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">simulation：独立模拟循环</text>
+<text x="1805" y="866" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">--role 可分进程；生产停模拟</text>
+<rect x="2335" y="680" width="545" height="243" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="2360" y="730" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">analysis / 独立分析角色</text>
+<text x="2360" y="778" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">小时派生修订 / 有界重建</text>
+<text x="2360" y="822" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">预测任务租约 / 授权范围缓存</text>
+<text x="2360" y="866" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">同后端镜像，不占控制循环</text>
+<path d="M 1420 928 L 1420 960 L 2025 960" fill="none" stroke="#1E6594" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2025 928 L 2025 993" fill="none" stroke="#1E6594" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M 2600 928 L 2600 960 L 2025 960" fill="none" stroke="#1E6594" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1090" y="1006" width="1070" height="178" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="1115" y="1056" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">db / PostgreSQL + PostGIS</text>
+<text x="1115" y="1104" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">原始遥测 / 时序绑定 / 命令与审计 / 小时修订 / 预测缓存</text>
+<text x="1115" y="1148" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">持久卷 database；migrate 一次性迁移成功后启动 API</text>
+<rect x="2200" y="1006" width="680" height="178" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="2225" y="1056" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">随镜像固定的只读资源</text>
+<text x="2225" y="1104" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">共享合同 / 空间包 / 三类产品模型</text>
+<text x="2225" y="1148" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" text-anchor="start">报告快照与权限记录存 PostgreSQL</text>
+<text x="1090" y="1235" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" text-anchor="start">API / worker / analysis 共用后端镜像与私网；没有另设 ingestion 微服务或 Redis</text>
+<path d="M934 765 L1043 765" fill="none" stroke="#008B80" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="955.4453125" y="719" width="65.109375" height="36" rx="6" fill="#F3F7F9"/>
+<text x="988" y="743" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" text-anchor="middle">TLS</text>
+<path d="M1043 854 L934 854" fill="none" stroke="#B96621" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-orange)"/>
+<rect x="952.0" y="868" width="72.0" height="36" rx="6" fill="#F3F7F9"/>
+<text x="988" y="892" fill="#B96621" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" text-anchor="middle">租约</text>
+<text x="957" y="953" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" text-anchor="start">边缘</text>
+<text x="957" y="990" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" text-anchor="start">发起</text>
+<text x="952" y="1027" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" text-anchor="start">HTTPS</text>
+<rect x="80" y="1340" width="850" height="211" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="105" y="1390" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">三类端设备  /  不容器化</text>
+<text x="105" y="1438" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" text-anchor="start">Plug / Switch：ESP32-C3；Sense B：nRF52832</text>
+<text x="105" y="1482" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" text-anchor="start">端侧保护 / 手动保持优先；Sense 只读、无 PIR</text>
+<text x="105" y="1526" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" text-anchor="start">MCU 不运行 Docker；RF / 市电 / 标定待实物验收</text>
+<path d="M505 1335 L505 1287" fill="none" stroke="#008B80" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="1050" y="1340" width="1870" height="211" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="1085" y="1392" fill="#163447" font-family="Noto Sans CJK SC, sans-serif" font-size="35" font-weight="700" text-anchor="start">运行底线</text>
+<text x="1295" y="1391" fill="#B96621" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" text-anchor="start">Secrets 不进镜像或仓库</text>
+<text x="1085" y="1445" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">独立心跳 / 健康检查 · 容器日志 · 持久化 / 备份恢复脚本 · 迁移与回滚说明</text>
+<text x="1085" y="1500" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" text-anchor="start">生产禁止样例身份 / 自动种子 / 模拟；物理开关 OFF + 放行列表为空；现场资质另行核验</text>
+<text x="80" y="1631" fill="#163447" font-family="Noto Sans CJK SC, sans-serif" font-size="39" font-weight="700" text-anchor="start">五仓库维护各自唯一主源</text>
+<text x="800" y="1630" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">3 个设备仓库 + 1 个平台仓库 + 1 个空间仓库；合同与资产按版本连接</text>
+<rect x="80" y="1670" width="905" height="362" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="105" y="1720" fill="#008B80" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">三类设备仓库</text>
+<text x="105" y="1768" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">carbentra-smart-plug  ·  Plug</text>
+<text x="105" y="1812" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">carbentra-presence-sensor  ·  Sense B</text>
+<text x="105" y="1856" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">carbentra-smart-switch  ·  Switch</text>
+<text x="105" y="1900" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">各自硬件 / 固件 / 本地安全与制造资料</text>
+<text x="105" y="1944" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">输出具体线协议与产品资产；无独立 Edge</text>
+<rect x="1047" y="1670" width="905" height="362" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="1072" y="1720" fill="#1E6594" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">平台与共享 Edge 仓库</text>
+<text x="1072" y="1768" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">carbentra-campus-platform</text>
+<text x="1072" y="1812" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">云端 / 前端 / 教室状态与联动</text>
+<text x="1072" y="1856" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">唯一 edge/ + packages/iot-contract</text>
+<text x="1072" y="1900" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">能力 / 事件 / 命令由具体适配器统一</text>
+<text x="1072" y="1944" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">身份 / 绑定 / 核算 / 授权与调度</text>
+<rect x="2014" y="1670" width="906" height="362" rx="22" fill="#FFFFFF" stroke="#C9D8E0" stroke-width="2"/>
+<text x="2039" y="1720" fill="#68579A" font-family="Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" text-anchor="start">校园空间与模型仓库</text>
+<text x="2039" y="1768" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">njupt-map</text>
+<text x="2039" y="1812" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">GPKG / Blender 作者源 / 稳定空间身份</text>
+<text x="2039" y="1856" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">轻量 LOD1 / 背景 / 129 栋作者外观</text>
+<text x="2039" y="1900" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">交付：版本化运行包与来源哈希</text>
+<text x="2039" y="1944" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">平台只消费，不另造几何创作主源</text>
+<rect x="80" y="2074" width="2840" height="68" rx="16" fill="#F1EDF8"/>
+<text x="110" y="2120" fill="#68579A" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" text-anchor="start">njupt-search：固定空间语义与室内示意参考，借鉴界面风格；未导入当前课表或实际占用</text>
+<path d="M80 2185 L2920 2185" fill="none" stroke="#C9D8E0" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="80" y="2240" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" text-anchor="start">当前实现的交付拓扑；可选传输与现场部署分别验收，图中不宣称已接真实设备或已实现节能</text>
+<text x="2920" y="2240" fill="#587082" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" text-anchor="end">2026-10-01  ·  v3.1</text>
+</svg>

@@ -1,0 +1,1837 @@
+{
+  "validator": "independent GLB/NumPy",
+  "numpy_version": "2.3.5",
+  "status": "passed",
+  "source_sha256": "dc25e3965a9e653eb5c91a4514fcc1a3e051ffa47593778d7e70a71071e439d0",
+  "display_sha256": "920e1c0de851eb64bcf4b36a4838bc83ed4820f0e833a0a4457fb3ce125f3277",
+  "position_tolerance_m": 1e-05,
+  "normal_tolerance_degrees": 0.01,
+  "parts": [
+    {
+      "id": "RearShell",
+      "vertices": 19810,
+      "triangles": 21536,
+      "max_world_position_error_m": 1.363153479904814e-06,
+      "max_world_bounds_error_m": 4.575797255060299e-07,
+      "max_world_normal_error_degrees": 0.0013899198965369303
+    },
+    {
+      "id": "FrontLid",
+      "vertices": 14946,
+      "triangles": 14880,
+      "max_world_position_error_m": 1.3779013533049413e-06,
+      "max_world_bounds_error_m": 4.567428511792482e-08,
+      "max_world_normal_error_degrees": 0.0011021731686936124
+    },
+    {
+      "id": "SeamRing",
+      "vertices": 1344,
+      "triangles": 1344,
+      "max_world_position_error_m": 1.1230161812828773e-06,
+      "max_world_bounds_error_m": 3.12517828532366e-07,
+      "max_world_normal_error_degrees": 0.000942528210771623
+    },
+    {
+      "id": "RearFinish",
+      "vertices": 1376,
+      "triangles": 1376,
+      "max_world_position_error_m": 1.2776389310287031e-06,
+      "max_world_bounds_error_m": 6.53903672508116e-07,
+      "max_world_normal_error_degrees": 0.0010500773763865172
+    },
+    {
+      "id": "PEChannel",
+      "vertices": 236,
+      "triangles": 196,
+      "max_world_position_error_m": 4.4964644308518104e-07,
+      "max_world_bounds_error_m": 2.2874790392424238e-07,
+      "max_world_normal_error_degrees": 0.0010257599152889063
+    },
+    {
+      "id": "Pawl_L",
+      "vertices": 254,
+      "triangles": 220,
+      "max_world_position_error_m": 1.081703019869684e-07,
+      "max_world_bounds_error_m": 4.574352606596943e-08,
+      "max_world_normal_error_degrees": 0.0008060025678082916
+    },
+    {
+      "id": "Pawl_N",
+      "vertices": 254,
+      "triangles": 220,
+      "max_world_position_error_m": 1.081703019869684e-07,
+      "max_world_bounds_error_m": 4.574352606596943e-08,
+      "max_world_normal_error_degrees": 0.0008060025678082916
+    },
+    {
+      "id": "PawlSpring_L",
+      "vertices": 12429,
+      "triangles": 24678,
+      "max_world_position_error_m": 2.2632485901205018e-08,
+      "max_world_bounds_error_m": 2.8578900999193246e-09,
+      "max_world_normal_error_degrees": 0.0014243774695108997
+    },
+    {
+      "id": "PawlSpring_N",
+      "vertices": 12429,
+      "triangles": 24678,
+      "max_world_position_error_m": 2.273218669852907e-08,
+      "max_world_bounds_error_m": 2.8578900999193246e-09,
+      "max_world_normal_error_degrees": 0.0014324243168040197
+    },
+    {
+      "id": "LocalButton",
+      "vertices": 1264,
+      "triangles": 1260,
+      "max_world_position_error_m": 5.023088965214693e-07,
+      "max_world_bounds_error_m": 1.2054813502970774e-07,
+      "max_world_normal_error_degrees": 0.0009660938309546204
+    },
+    {
+      "id": "RearmButton",
+      "vertices": 1264,
+      "triangles": 1260,
+      "max_world_position_error_m": 4.994078107369033e-07,
+      "max_world_bounds_error_m": 2.1638261214068644e-07,
+      "max_world_normal_error_degrees": 0.0009660930764422735
+    },
+    {
+      "id": "StatusLightGuide",
+      "vertices": 632,
+      "triangles": 628,
+      "max_world_position_error_m": 4.639464776884211e-07,
+      "max_world_bounds_error_m": 3.036182649671093e-07,
+      "max_world_normal_error_degrees": 0.0009871122510722594
+    },
+    {
+      "id": "Screw_0",
+      "vertices": 360,
+      "triangles": 348,
+      "max_world_position_error_m": 6.203319346359784e-07,
+      "max_world_bounds_error_m": 3.217847183711875e-07,
+      "max_world_normal_error_degrees": 0.0007809168431134887
+    },
+    {
+      "id": "Screw_1",
+      "vertices": 360,
+      "triangles": 348,
+      "max_world_position_error_m": 6.203319346359784e-07,
+      "max_world_bounds_error_m": 3.217847183711875e-07,
+      "max_world_normal_error_degrees": 0.0007809168431134887
+    },
+    {
+      "id": "Screw_2",
+      "vertices": 360,
+      "triangles": 348,
+      "max_world_position_error_m": 6.203319346359784e-07,
+      "max_world_bounds_error_m": 3.217847183711875e-07,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "Screw_3",
+      "vertices": 360,
+      "triangles": 348,
+      "max_world_position_error_m": 6.203319346359784e-07,
+      "max_world_bounds_error_m": 3.217847183711875e-07,
+      "max_world_normal_error_degrees": 0.0007809168431134887
+    },
+    {
+      "id": "RFAntenna",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.45604497445237e-07,
+      "max_world_bounds_error_m": 2.0396660737470595e-07,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "RFCoax",
+      "vertices": 2142,
+      "triangles": 4112,
+      "max_world_position_error_m": 3.875082312833074e-07,
+      "max_world_bounds_error_m": 1.152524973652147e-07,
+      "max_world_normal_error_degrees": 0.0014257416614795548
+    },
+    {
+      "id": "RFConnectorEnvelope",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 2.8236322445647567e-08,
+      "max_world_bounds_error_m": 1.734247579571191e-08,
+      "max_world_normal_error_degrees": 0.0007479646767582176
+    },
+    {
+      "id": "HeadConnectorEnvelope",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 6.9587365856202e-08,
+      "max_world_bounds_error_m": 6.635426778173192e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "HeadPigtail_0",
+      "vertices": 2142,
+      "triangles": 4112,
+      "max_world_position_error_m": 3.9603053588980585e-07,
+      "max_world_bounds_error_m": 1.952101230592862e-07,
+      "max_world_normal_error_degrees": 0.0014257416614795548
+    },
+    {
+      "id": "HeadPigtail_1",
+      "vertices": 2142,
+      "triangles": 4112,
+      "max_world_position_error_m": 3.9798958710837613e-07,
+      "max_world_bounds_error_m": 1.952101230592862e-07,
+      "max_world_normal_error_degrees": 0.0013189562179876232
+    },
+    {
+      "id": "HeadPigtail_2",
+      "vertices": 2142,
+      "triangles": 4112,
+      "max_world_position_error_m": 3.950962681545553e-07,
+      "max_world_bounds_error_m": 1.952101230592862e-07,
+      "max_world_normal_error_degrees": 0.0014257416614795548
+    },
+    {
+      "id": "PowerCore_L_RAW",
+      "vertices": 3108,
+      "triangles": 6044,
+      "max_world_position_error_m": 6.780749762872742e-07,
+      "max_world_bounds_error_m": 3.595939009233551e-07,
+      "max_world_normal_error_degrees": 0.0014257421727427997
+    },
+    {
+      "id": "PowerCore_N_RAW",
+      "vertices": 2436,
+      "triangles": 4700,
+      "max_world_position_error_m": 5.438966925528728e-07,
+      "max_world_bounds_error_m": 3.067882491727958e-07,
+      "max_world_normal_error_degrees": 0.0013189567706437893
+    },
+    {
+      "id": "PowerCore_L_PROTECTED",
+      "vertices": 2352,
+      "triangles": 4532,
+      "max_world_position_error_m": 7.183609727683222e-07,
+      "max_world_bounds_error_m": 3.247106023819557e-07,
+      "max_world_normal_error_degrees": 0.0013189562179876232
+    },
+    {
+      "id": "PowerCore_L_OUTPUT",
+      "vertices": 2604,
+      "triangles": 5036,
+      "max_world_position_error_m": 5.802612535684053e-07,
+      "max_world_bounds_error_m": 2.816205263711513e-07,
+      "max_world_normal_error_degrees": 0.0013189567706437893
+    },
+    {
+      "id": "PowerCore_N_OUTPUT",
+      "vertices": 2310,
+      "triangles": 4448,
+      "max_world_position_error_m": 4.735190369194159e-07,
+      "max_world_bounds_error_m": 2.4219414893750235e-07,
+      "max_world_normal_error_degrees": 0.0013189567706437893
+    },
+    {
+      "id": "Carrier",
+      "vertices": 6048,
+      "triangles": 8138,
+      "max_world_position_error_m": 7.824683482780718e-07,
+      "max_world_bounds_error_m": 3.8542037378644367e-07,
+      "max_world_normal_error_degrees": 0.001339368139241319
+    },
+    {
+      "id": "ShutterGuide",
+      "vertices": 292,
+      "triangles": 198,
+      "max_world_position_error_m": 2.6554343077408674e-08,
+      "max_world_bounds_error_m": 2.5202412552716158e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "ShutterSlider",
+      "vertices": 1030,
+      "triangles": 950,
+      "max_world_position_error_m": 4.010004308764689e-07,
+      "max_world_bounds_error_m": 2.676831747580599e-07,
+      "max_world_normal_error_degrees": 0.00106481490893216
+    },
+    {
+      "id": "ShutterReturnSpring",
+      "vertices": 12815,
+      "triangles": 25450,
+      "max_world_position_error_m": 3.5177316680312575e-07,
+      "max_world_bounds_error_m": 1.7049798574364505e-07,
+      "max_world_normal_error_degrees": 0.0014988350778026298
+    },
+    {
+      "id": "Contact_L",
+      "vertices": 618,
+      "triangles": 560,
+      "max_world_position_error_m": 2.6927419070254647e-07,
+      "max_world_bounds_error_m": 9.53006140669288e-08,
+      "max_world_normal_error_degrees": 0.0011496638342557552
+    },
+    {
+      "id": "Contact_N",
+      "vertices": 96,
+      "triangles": 76,
+      "max_world_position_error_m": 9.632755324955183e-08,
+      "max_world_bounds_error_m": 3.7522350788965486e-08,
+      "max_world_normal_error_degrees": 0.0006992406162843947
+    },
+    {
+      "id": "Contact_PE",
+      "vertices": 96,
+      "triangles": 76,
+      "max_world_position_error_m": 1.1986450821027515e-07,
+      "max_world_bounds_error_m": 3.071358573025762e-08,
+      "max_world_normal_error_degrees": 0.00039328951190598793
+    },
+    {
+      "id": "PowerCarrier_L_RAW",
+      "vertices": 6498,
+      "triangles": 12582,
+      "max_world_position_error_m": 7.103983443130323e-07,
+      "max_world_bounds_error_m": 3.4100897836758515e-07,
+      "max_world_normal_error_degrees": 0.0013709813099613737
+    },
+    {
+      "id": "PowerCarrier_N_RAW",
+      "vertices": 5192,
+      "triangles": 9944,
+      "max_world_position_error_m": 5.772386273591281e-07,
+      "max_world_bounds_error_m": 3.1595464743995605e-07,
+      "max_world_normal_error_degrees": 0.001350653717906414
+    },
+    {
+      "id": "PowerCarrier_L_PROTECTED",
+      "vertices": 4788,
+      "triangles": 9240,
+      "max_world_position_error_m": 7.540958623594355e-07,
+      "max_world_bounds_error_m": 3.072057910384618e-07,
+      "max_world_normal_error_degrees": 0.0013189562179876232
+    },
+    {
+      "id": "PowerCarrier_L_OUTPUT",
+      "vertices": 5124,
+      "triangles": 9912,
+      "max_world_position_error_m": 6.391726273993351e-07,
+      "max_world_bounds_error_m": 1.5726427232687357e-07,
+      "max_world_normal_error_degrees": 0.0013189567706437893
+    },
+    {
+      "id": "PowerCarrier_N_OUTPUT",
+      "vertices": 4536,
+      "triangles": 8736,
+      "max_world_position_error_m": 4.951461709695626e-07,
+      "max_world_bounds_error_m": 1.337010945819464e-07,
+      "max_world_normal_error_degrees": 0.0013189562179876232
+    },
+    {
+      "id": "ThermalPad",
+      "vertices": 96,
+      "triangles": 60,
+      "max_world_position_error_m": 2.780958445016067e-07,
+      "max_world_bounds_error_m": 2.1352978836486347e-07,
+      "max_world_normal_error_degrees": 0.0008420281718119089
+    },
+    {
+      "id": "PEBus",
+      "vertices": 428,
+      "triangles": 414,
+      "max_world_position_error_m": 5.089082284755557e-07,
+      "max_world_bounds_error_m": 2.7386963282957644e-07,
+      "max_world_normal_error_degrees": 0.0010824597381281751
+    },
+    {
+      "id": "BladeSleeve_L",
+      "vertices": 48,
+      "triangles": 32,
+      "max_world_position_error_m": 7.772821843998903e-08,
+      "max_world_bounds_error_m": 6.082028549195262e-08,
+      "max_world_normal_error_degrees": 7.612482538777412e-05
+    },
+    {
+      "id": "BladeSleeve_N",
+      "vertices": 48,
+      "triangles": 32,
+      "max_world_position_error_m": 7.772821843998903e-08,
+      "max_world_bounds_error_m": 6.082028549195262e-08,
+      "max_world_normal_error_degrees": 7.612482538777412e-05
+    },
+    {
+      "id": "Blade_L",
+      "vertices": 120,
+      "triangles": 76,
+      "max_world_position_error_m": 2.6526645132498964e-07,
+      "max_world_bounds_error_m": 5.93359022055262e-08,
+      "max_world_normal_error_degrees": 7.61152493357345e-05
+    },
+    {
+      "id": "Blade_N",
+      "vertices": 772,
+      "triangles": 720,
+      "max_world_position_error_m": 2.623220241951228e-07,
+      "max_world_bounds_error_m": 1.1266670369922127e-07,
+      "max_world_normal_error_degrees": 0.0011028881938641131
+    },
+    {
+      "id": "Blade_PE",
+      "vertices": 72,
+      "triangles": 44,
+      "max_world_position_error_m": 2.5575964400575446e-07,
+      "max_world_bounds_error_m": 3.866305360589184e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "AuxFuseCradle",
+      "vertices": 889,
+      "triangles": 888,
+      "max_world_position_error_m": 1.4696491624186288e-07,
+      "max_world_bounds_error_m": 4.500762647036832e-08,
+      "max_world_normal_error_degrees": 0.0010579275270663244
+    },
+    {
+      "id": "AuxFuseRetainer",
+      "vertices": 198,
+      "triangles": 128,
+      "max_world_position_error_m": 1.1971986744745366e-07,
+      "max_world_bounds_error_m": 5.136565031996221e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "PowerCore_L_FUSE_THERMAL",
+      "vertices": 1638,
+      "triangles": 3104,
+      "max_world_position_error_m": 7.17255378577457e-07,
+      "max_world_bounds_error_m": 1.8972752167945028e-07,
+      "max_world_normal_error_degrees": 0.0013189562179876232
+    },
+    {
+      "id": "PowerCarrier_L_FUSE_THERMAL",
+      "vertices": 2772,
+      "triangles": 5208,
+      "max_world_position_error_m": 7.873397688123615e-07,
+      "max_world_bounds_error_m": 1.5835553406756686e-07,
+      "max_world_normal_error_degrees": 0.0013189562179876232
+    },
+    {
+      "id": "MainFuseHolder",
+      "vertices": 2369,
+      "triangles": 2924,
+      "max_world_position_error_m": 5.835525899248254e-07,
+      "max_world_bounds_error_m": 3.3483438317133407e-07,
+      "max_world_normal_error_degrees": 0.00135454491831186
+    },
+    {
+      "id": "MainFuseCeramic",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 1.4474518064898553e-07,
+      "max_world_bounds_error_m": 8.165411246457976e-08,
+      "max_world_normal_error_degrees": 0.000747964189482749
+    },
+    {
+      "id": "MainFuseCap1",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 5.633636296481202e-08,
+      "max_world_bounds_error_m": 3.5231659853418584e-08,
+      "max_world_normal_error_degrees": 0.000747964189482749
+    },
+    {
+      "id": "MainFuseCap2",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 5.633636296481202e-08,
+      "max_world_bounds_error_m": 3.5231659853418584e-08,
+      "max_world_normal_error_degrees": 0.000747964189482749
+    },
+    {
+      "id": "MainFuseClip1",
+      "vertices": 464,
+      "triangles": 404,
+      "max_world_position_error_m": 1.2252808081405933e-07,
+      "max_world_bounds_error_m": 2.4466765211061947e-08,
+      "max_world_normal_error_degrees": 0.001023663208662972
+    },
+    {
+      "id": "MainFuseClip2",
+      "vertices": 464,
+      "triangles": 404,
+      "max_world_position_error_m": 1.2252808081405933e-07,
+      "max_world_bounds_error_m": 2.4466765211061947e-08,
+      "max_world_normal_error_degrees": 0.001023663208662972
+    },
+    {
+      "id": "MainFuseCollector1",
+      "vertices": 48,
+      "triangles": 28,
+      "max_world_position_error_m": 8.454162106750588e-08,
+      "max_world_bounds_error_m": 6.108034496243864e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainFuseCollector2",
+      "vertices": 48,
+      "triangles": 28,
+      "max_world_position_error_m": 8.454162106750588e-08,
+      "max_world_bounds_error_m": 6.108034496243864e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainFuseRetainer",
+      "vertices": 812,
+      "triangles": 776,
+      "max_world_position_error_m": 2.828588156103938e-07,
+      "max_world_bounds_error_m": 1.6041224856766512e-07,
+      "max_world_normal_error_degrees": 0.000747964189482749
+    },
+    {
+      "id": "FuseRetainerScrew_0",
+      "vertices": 336,
+      "triangles": 332,
+      "max_world_position_error_m": 1.8873471972124693e-07,
+      "max_world_bounds_error_m": 9.305528912359473e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "FuseRetainerScrew_1",
+      "vertices": 336,
+      "triangles": 332,
+      "max_world_position_error_m": 1.8873471972124693e-07,
+      "max_world_bounds_error_m": 9.305528912359473e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "FuseRetainerScrew_2",
+      "vertices": 336,
+      "triangles": 332,
+      "max_world_position_error_m": 1.8732460197055838e-07,
+      "max_world_bounds_error_m": 9.305528912359473e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "FuseRetainerScrew_3",
+      "vertices": 336,
+      "triangles": 332,
+      "max_world_position_error_m": 1.8732460197055838e-07,
+      "max_world_bounds_error_m": 9.305528912359473e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "ThermalBody",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 1.064555157813766e-07,
+      "max_world_bounds_error_m": 5.8119376837237335e-08,
+      "max_world_normal_error_degrees": 0.0007479646767582176
+    },
+    {
+      "id": "ThermalLead1",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 4.0992639695684607e-08,
+      "max_world_bounds_error_m": 3.4559892253538393e-08,
+      "max_world_normal_error_degrees": 0.0007809163763994825
+    },
+    {
+      "id": "ThermalLead2",
+      "vertices": 168,
+      "triangles": 164,
+      "max_world_position_error_m": 4.101470410971286e-08,
+      "max_world_bounds_error_m": 3.4584143819571533e-08,
+      "max_world_normal_error_degrees": 0.0007479646767582176
+    },
+    {
+      "id": "ThermalSleeve",
+      "vertices": 336,
+      "triangles": 336,
+      "max_world_position_error_m": 1.6734198153536527e-07,
+      "max_world_bounds_error_m": 1.0566172515408256e-07,
+      "max_world_normal_error_degrees": 0.000747964189482749
+    },
+    {
+      "id": "ThermalRetainer",
+      "vertices": 582,
+      "triangles": 556,
+      "max_world_position_error_m": 2.243037015035262e-07,
+      "max_world_bounds_error_m": 8.383859355365342e-08,
+      "max_world_normal_error_degrees": 0.0010590923570761239
+    },
+    {
+      "id": "ThermalRetainerScrew_0",
+      "vertices": 336,
+      "triangles": 332,
+      "max_world_position_error_m": 6.338290539152665e-08,
+      "max_world_bounds_error_m": 4.4614918832258654e-08,
+      "max_world_normal_error_degrees": 0.0007809163763994825
+    },
+    {
+      "id": "ThermalRetainerScrew_1",
+      "vertices": 336,
+      "triangles": 332,
+      "max_world_position_error_m": 6.365062611884171e-08,
+      "max_world_bounds_error_m": 4.54298260850472e-08,
+      "max_world_normal_error_degrees": 0.0007809163763994825
+    },
+    {
+      "id": "MainB_C101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.668029093819716e-08,
+      "max_world_bounds_error_m": 1.5822649556893054e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C102",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6176346733734224e-08,
+      "max_world_bounds_error_m": 1.5290465227302263e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C103",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.5989847597455835e-08,
+      "max_world_bounds_error_m": 1.5140791939649567e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C104",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.5989847597455835e-08,
+      "max_world_bounds_error_m": 1.5140791939649567e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C105",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C106",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C107",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6689816432074845e-08,
+      "max_world_bounds_error_m": 1.5922441223142902e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.5876940807894018e-08,
+      "max_world_bounds_error_m": 1.5157433357060324e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.543300456791248e-08,
+      "max_world_bounds_error_m": 1.4691772069752584e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C203",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6176346733734224e-08,
+      "max_world_bounds_error_m": 1.5290465227302263e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C204",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.61996887582971e-08,
+      "max_world_bounds_error_m": 1.5309174389993574e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C205",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6223037270204e-08,
+      "max_world_bounds_error_m": 1.5327883549215437e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C206",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C207",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C208",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.641228257090624e-08,
+      "max_world_bounds_error_m": 1.5340343298159836e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C301",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 8.146620019591533e-09,
+      "max_world_bounds_error_m": 5.932505899725049e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C402",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.0564287972769254e-08,
+      "max_world_bounds_error_m": 7.528060541259207e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C403",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.023767395851946e-08,
+      "max_world_bounds_error_m": 7.411645219432272e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C404",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 8.465899169042434e-09,
+      "max_world_bounds_error_m": 6.4871973556868134e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C405",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.169790824648272e-09,
+      "max_world_bounds_error_m": 6.541967662032633e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C406",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 8.472548267955848e-09,
+      "max_world_bounds_error_m": 6.048921218082537e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_C407",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.160700284596524e-09,
+      "max_world_bounds_error_m": 6.980243796167462e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CI201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CI202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6507532662223048e-08,
+      "max_world_bounds_error_m": 1.5442206704758404e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "PCB detail / routed copper",
+      "vertices": 54596,
+      "triangles": 27204,
+      "max_world_position_error_m": 1.1458205915643227e-06,
+      "max_world_bounds_error_m": 4.490815455684971e-07,
+      "max_world_normal_error_degrees": 0.0010284135054339234
+    },
+    {
+      "id": "MainB_CP201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CP202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6926377074282202e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CP203",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.623471395417196e-08,
+      "max_world_bounds_error_m": 1.5337238132295816e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CP204",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.5357912185647284e-08,
+      "max_world_bounds_error_m": 1.4405915557680338e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CV201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.605533365607416e-08,
+      "max_world_bounds_error_m": 1.4957835810236464e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CV202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6303523229573485e-08,
+      "max_world_bounds_error_m": 1.522392797589922e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_CX201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.56734015061779e-08,
+      "max_world_bounds_error_m": 1.567296915860883e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_D101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.024021009546699e-08,
+      "max_world_bounds_error_m": 1.9384998551676136e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_F501",
+      "vertices": 921,
+      "triangles": 500,
+      "max_world_position_error_m": 2.0569721683415911e-07,
+      "max_world_bounds_error_m": 1.358503281256862e-07,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_F501_FormedLead_1",
+      "vertices": 25350,
+      "triangles": 8816,
+      "max_world_position_error_m": 8.72882381212577e-08,
+      "max_world_bounds_error_m": 4.9355737141362765e-08,
+      "max_world_normal_error_degrees": 0.0013745599267303988
+    },
+    {
+      "id": "MainB_F501_FormedLead__1",
+      "vertices": 25356,
+      "triangles": 8816,
+      "max_world_position_error_m": 8.65457911929173e-08,
+      "max_world_bounds_error_m": 4.842441456848201e-08,
+      "max_world_normal_error_degrees": 0.0014103027872517774
+    },
+    {
+      "id": "MainB_J102",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.0654272772703799e-07,
+      "max_world_bounds_error_m": 1.5350488026272952e-07,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J102_Pin1",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.5530734657040354e-08,
+      "max_world_bounds_error_m": 3.219509122839859e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J102_Pin2",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.536639726595042e-08,
+      "max_world_bounds_error_m": 3.219509122839859e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J104",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 8.335966528618087e-08,
+      "max_world_bounds_error_m": 7.382649217305137e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J104_Tail1",
+      "vertices": 965,
+      "triangles": 500,
+      "max_world_position_error_m": 4.2581287308965165e-08,
+      "max_world_bounds_error_m": 2.7689366709215957e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_J104_Tail2",
+      "vertices": 943,
+      "triangles": 500,
+      "max_world_position_error_m": 4.2581287308965165e-08,
+      "max_world_bounds_error_m": 2.7689366709215957e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_J104_Tail3",
+      "vertices": 976,
+      "triangles": 500,
+      "max_world_position_error_m": 4.2219790145695764e-08,
+      "max_world_bounds_error_m": 2.7223705421908218e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_J104_Tail4",
+      "vertices": 964,
+      "triangles": 500,
+      "max_world_position_error_m": 4.2219790145695764e-08,
+      "max_world_bounds_error_m": 2.7223705421908218e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_J104_Tail5",
+      "vertices": 966,
+      "triangles": 500,
+      "max_world_position_error_m": 4.1503024280640775e-08,
+      "max_world_bounds_error_m": 2.8155027996523696e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_J201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.0619687838760321e-07,
+      "max_world_bounds_error_m": 1.5303921897455441e-07,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J201_Pin1",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.619397353176525e-08,
+      "max_world_bounds_error_m": 3.3126413803014065e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J201_Pin2",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.520266168702348e-08,
+      "max_world_bounds_error_m": 3.219509122839859e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J403",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.9309757749089576e-08,
+      "max_world_bounds_error_m": 3.9559913805279484e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_J403_Tail1",
+      "vertices": 996,
+      "triangles": 500,
+      "max_world_position_error_m": 4.272831060865686e-08,
+      "max_world_bounds_error_m": 2.629238284729274e-08,
+      "max_world_normal_error_degrees": 0.0009944535389008703
+    },
+    {
+      "id": "MainB_J403_Tail2",
+      "vertices": 999,
+      "triangles": 500,
+      "max_world_position_error_m": 4.278226607435281e-08,
+      "max_world_bounds_error_m": 2.629238284729274e-08,
+      "max_world_normal_error_degrees": 0.0009944535389008703
+    },
+    {
+      "id": "MainB_J403_Tail3",
+      "vertices": 1000,
+      "triangles": 500,
+      "max_world_position_error_m": 4.2800275695143784e-08,
+      "max_world_bounds_error_m": 2.629238284729274e-08,
+      "max_world_normal_error_degrees": 0.0009944535389008703
+    },
+    {
+      "id": "MainB_K101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.8500298202011086e-07,
+      "max_world_bounds_error_m": 1.8470019313987507e-07,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_K101_Tail012",
+      "vertices": 836,
+      "triangles": 500,
+      "max_world_position_error_m": 4.32249085905444e-08,
+      "max_world_bounds_error_m": 2.8993217337483675e-08,
+      "max_world_normal_error_degrees": 0.0009611788866531999
+    },
+    {
+      "id": "MainB_K101_Tail013",
+      "vertices": 885,
+      "triangles": 500,
+      "max_world_position_error_m": 4.313211271191527e-08,
+      "max_world_bounds_error_m": 2.900776925260362e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_K101_Tail014",
+      "vertices": 875,
+      "triangles": 500,
+      "max_world_position_error_m": 4.346294645434228e-08,
+      "max_world_bounds_error_m": 2.900776925260362e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_K101_Tail11",
+      "vertices": 841,
+      "triangles": 500,
+      "max_world_position_error_m": 4.32249085905444e-08,
+      "max_world_bounds_error_m": 2.8993217337483675e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_K101_Tail12",
+      "vertices": 876,
+      "triangles": 500,
+      "max_world_position_error_m": 4.313211271191527e-08,
+      "max_world_bounds_error_m": 2.900776925260362e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_K101_Tail14",
+      "vertices": 860,
+      "triangles": 500,
+      "max_world_position_error_m": 4.346294645434228e-08,
+      "max_world_bounds_error_m": 2.900776925260362e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_K101_TailA1",
+      "vertices": 973,
+      "triangles": 500,
+      "max_world_position_error_m": 4.346294645434228e-08,
+      "max_world_bounds_error_m": 2.99390918272191e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_K101_TailA2",
+      "vertices": 984,
+      "triangles": 500,
+      "max_world_position_error_m": 4.346294645434228e-08,
+      "max_world_bounds_error_m": 2.99390918272191e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_L101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.0538396358210054e-08,
+      "max_world_bounds_error_m": 3.052419188763478e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_LED101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.921867879481466e-08,
+      "max_world_bounds_error_m": 3.572888441355504e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_LED101_Tail1",
+      "vertices": 981,
+      "triangles": 500,
+      "max_world_position_error_m": 4.914251431135188e-08,
+      "max_world_bounds_error_m": 2.0166031421131603e-08,
+      "max_world_normal_error_degrees": 0.0011106804335549328
+    },
+    {
+      "id": "MainB_LED101_Tail2",
+      "vertices": 977,
+      "triangles": 500,
+      "max_world_position_error_m": 4.914251431135188e-08,
+      "max_world_bounds_error_m": 2.0166031421131603e-08,
+      "max_world_normal_error_degrees": 0.0011106804335549328
+    },
+    {
+      "id": "MainB_PCB_100x85_R10_4layer",
+      "vertices": 50254,
+      "triangles": 29292,
+      "max_world_position_error_m": 1.1485950433122532e-06,
+      "max_world_bounds_error_m": 4.150778120902421e-07,
+      "max_world_normal_error_degrees": 0.0011873238278880284
+    },
+    {
+      "id": "MainB_PS101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.560010278232095e-07,
+      "max_world_bounds_error_m": 2.6740385188420146e-07,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_PS101_Tail1",
+      "vertices": 973,
+      "triangles": 500,
+      "max_world_position_error_m": 4.599371983010339e-08,
+      "max_world_bounds_error_m": 2.953544860073709e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_PS101_Tail2",
+      "vertices": 978,
+      "triangles": 500,
+      "max_world_position_error_m": 4.474470356042326e-08,
+      "max_world_bounds_error_m": 2.953544860073709e-08,
+      "max_world_normal_error_degrees": 0.0010283337634421515
+    },
+    {
+      "id": "MainB_PS101_Tail3",
+      "vertices": 886,
+      "triangles": 500,
+      "max_world_position_error_m": 4.419878734165172e-08,
+      "max_world_bounds_error_m": 3.046677117708729e-08,
+      "max_world_normal_error_degrees": 0.0010500770293027802
+    },
+    {
+      "id": "MainB_PS101_Tail4",
+      "vertices": 868,
+      "triangles": 500,
+      "max_world_position_error_m": 4.546280424228629e-08,
+      "max_world_bounds_error_m": 3.046677117708729e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_PS201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.0848714646532e-08,
+      "max_world_bounds_error_m": 7.298221373942815e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_Q101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.3655392426676404e-08,
+      "max_world_bounds_error_m": 1.9844792352799456e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_Q401",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.300605661941036e-08,
+      "max_world_bounds_error_m": 1.2983504146801828e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_Q402",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.3668278115118305e-08,
+      "max_world_bounds_error_m": 1.9930166668055693e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_Q403",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.3668278115118305e-08,
+      "max_world_bounds_error_m": 1.9930166668055693e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.34302791043991e-09,
+      "max_world_bounds_error_m": 9.093920696340296e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R102",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.247943595236728e-09,
+      "max_world_bounds_error_m": 9.025443602553307e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R103",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.154137216047059e-09,
+      "max_world_bounds_error_m": 8.956966510501041e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R104",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.0356182361745251e-08,
+      "max_world_bounds_error_m": 9.77869162900602e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R105",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.0356182361745251e-08,
+      "max_world_bounds_error_m": 9.77869162900602e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R106",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.154137216047059e-09,
+      "max_world_bounds_error_m": 8.956966510501041e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R107",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.154137216047059e-09,
+      "max_world_bounds_error_m": 8.956966510501041e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R108",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.154137216047059e-09,
+      "max_world_bounds_error_m": 8.956966510501041e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R110",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.154137216047059e-09,
+      "max_world_bounds_error_m": 8.956966510501041e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R111",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.0356182361745251e-08,
+      "max_world_bounds_error_m": 9.77869162900602e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.9523499479591387e-09,
+      "max_world_bounds_error_m": 2.268345457648313e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.676227715036329e-09,
+      "max_world_bounds_error_m": 2.1176915897952453e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R203",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.628071945006176e-08,
+      "max_world_bounds_error_m": 1.536530187459806e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R204",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6561154642350024e-08,
+      "max_world_bounds_error_m": 1.5573173941813706e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R205",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6686630851038355e-08,
+      "max_world_bounds_error_m": 1.5803939507758047e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R206",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.685863133960634e-08,
+      "max_world_bounds_error_m": 1.5889158384851942e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R301",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.5583472159692114e-08,
+      "max_world_bounds_error_m": 2.14899550498443e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R301_Tail1",
+      "vertices": 996,
+      "triangles": 500,
+      "max_world_position_error_m": 4.438684108067629e-08,
+      "max_world_bounds_error_m": 2.3248182757368285e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_R301_Tail2",
+      "vertices": 984,
+      "triangles": 500,
+      "max_world_position_error_m": 4.438684108067629e-08,
+      "max_world_bounds_error_m": 2.3248182757368285e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_R302",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.6238320352626787e-08,
+      "max_world_bounds_error_m": 2.1856833672811993e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R302_Tail1",
+      "vertices": 984,
+      "triangles": 500,
+      "max_world_position_error_m": 4.438684108067629e-08,
+      "max_world_bounds_error_m": 2.3248182757368285e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_R302_Tail2",
+      "vertices": 1002,
+      "triangles": 500,
+      "max_world_position_error_m": 4.438684108067629e-08,
+      "max_world_bounds_error_m": 2.3248182757368285e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_R303",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.54543813873705e-08,
+      "max_world_bounds_error_m": 2.1539346382881686e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R303_Tail1",
+      "vertices": 958,
+      "triangles": 500,
+      "max_world_position_error_m": 4.509068500307985e-08,
+      "max_world_bounds_error_m": 2.2782521470927908e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_R303_Tail2",
+      "vertices": 883,
+      "triangles": 500,
+      "max_world_position_error_m": 4.5318374000279576e-08,
+      "max_world_bounds_error_m": 2.2782521470927908e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_R304",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 2.5257666205687297e-08,
+      "max_world_bounds_error_m": 2.1306515739227816e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R304_Tail1",
+      "vertices": 1000,
+      "triangles": 500,
+      "max_world_position_error_m": 4.438684108067629e-08,
+      "max_world_bounds_error_m": 2.3248182757368285e-08,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_R304_Tail2",
+      "vertices": 924,
+      "triangles": 500,
+      "max_world_position_error_m": 4.469555610264567e-08,
+      "max_world_bounds_error_m": 2.3248182757368285e-08,
+      "max_world_normal_error_degrees": 0.0010762818365331486
+    },
+    {
+      "id": "MainB_R305",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.196691257934473e-09,
+      "max_world_bounds_error_m": 2.4001675924534283e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R402",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.190618103727379e-09,
+      "max_world_bounds_error_m": 4.1084337399147075e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R403",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.0083518103759804e-09,
+      "max_world_bounds_error_m": 3.875603095393476e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R404",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.6573588693597455e-09,
+      "max_world_bounds_error_m": 3.409941808085737e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R405",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.6573588693597455e-09,
+      "max_world_bounds_error_m": 3.409941808085737e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R407",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.5137000514413436e-09,
+      "max_world_bounds_error_m": 2.569653195089172e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R409",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.270035798716664e-09,
+      "max_world_bounds_error_m": 2.3553647296448155e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R410",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.6573588693597455e-09,
+      "max_world_bounds_error_m": 3.409941808085737e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R411",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.6573588693597455e-09,
+      "max_world_bounds_error_m": 3.409941808085737e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R412",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.5137000514413436e-09,
+      "max_world_bounds_error_m": 2.569653195089172e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_R413",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.6198865871124927e-09,
+      "max_world_bounds_error_m": 2.8210260169525547e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RS201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 7.822735994281921e-08,
+      "max_world_bounds_error_m": 6.516827181449886e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.744603069608447e-09,
+      "max_world_bounds_error_m": 5.372488762894756e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.745093571087289e-09,
+      "max_world_bounds_error_m": 5.338093892262585e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV203",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.745615814153782e-09,
+      "max_world_bounds_error_m": 5.326628934806954e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV204",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.751184938970429e-09,
+      "max_world_bounds_error_m": 5.4642084173356364e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV205",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6198181081720993e-08,
+      "max_world_bounds_error_m": 1.5290465227302263e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV206",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.6233178357513676e-08,
+      "max_world_bounds_error_m": 1.5223927979368668e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_RV207",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.646563513361299e-08,
+      "max_world_bounds_error_m": 1.5523288765528775e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_SW101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.106186337168966e-09,
+      "max_world_bounds_error_m": 5.020535546323979e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_SW101_Tail002",
+      "vertices": 967,
+      "triangles": 500,
+      "max_world_position_error_m": 4.482748234562514e-08,
+      "max_world_bounds_error_m": 5.596753553660516e-09,
+      "max_world_normal_error_degrees": 0.001079294165227656
+    },
+    {
+      "id": "MainB_SW101_Tail003",
+      "vertices": 984,
+      "triangles": 500,
+      "max_world_position_error_m": 4.6045709093350314e-08,
+      "max_world_bounds_error_m": 4.420868914001286e-09,
+      "max_world_normal_error_degrees": 0.001079294165227656
+    },
+    {
+      "id": "MainB_SW101_Tail1",
+      "vertices": 925,
+      "triangles": 500,
+      "max_world_position_error_m": 4.482748234562514e-08,
+      "max_world_bounds_error_m": 5.596753553660516e-09,
+      "max_world_normal_error_degrees": 0.001079294165227656
+    },
+    {
+      "id": "MainB_SW101_Tail2",
+      "vertices": 950,
+      "triangles": 500,
+      "max_world_position_error_m": 4.6045709093350314e-08,
+      "max_world_bounds_error_m": 4.420868914001286e-09,
+      "max_world_normal_error_degrees": 0.001079294165227656
+    },
+    {
+      "id": "MainB_SW401",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.020535546323979e-09,
+      "max_world_bounds_error_m": 5.020535546323979e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_SW401_Tail002",
+      "vertices": 1007,
+      "triangles": 500,
+      "max_world_position_error_m": 4.3745954660459136e-08,
+      "max_world_bounds_error_m": 4.665430979045038e-09,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_SW401_Tail003",
+      "vertices": 1003,
+      "triangles": 500,
+      "max_world_position_error_m": 4.438387079931686e-08,
+      "max_world_bounds_error_m": 4.420868914001286e-09,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_SW401_Tail1",
+      "vertices": 1023,
+      "triangles": 500,
+      "max_world_position_error_m": 4.5130606101883474e-08,
+      "max_world_bounds_error_m": 4.665430979045038e-09,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_SW401_Tail2",
+      "vertices": 1019,
+      "triangles": 500,
+      "max_world_position_error_m": 4.574921906545366e-08,
+      "max_world_bounds_error_m": 3.734108404429559e-09,
+      "max_world_normal_error_degrees": 0.0010873885862002874
+    },
+    {
+      "id": "MainB_U101",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.2405662050128713e-07,
+      "max_world_bounds_error_m": 1.0754172228774617e-07,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U102",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.5234277180944083e-08,
+      "max_world_bounds_error_m": 1.5220449763389543e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U103",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.310259092712875e-09,
+      "max_world_bounds_error_m": 4.653106237123561e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.788953181424421e-08,
+      "max_world_bounds_error_m": 3.3578798193378834e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U202",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.153641842817546e-08,
+      "max_world_bounds_error_m": 7.366034799997923e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U301",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 5.839120133778026e-08,
+      "max_world_bounds_error_m": 5.2227275407212836e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U402",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.8019824889644024e-08,
+      "max_world_bounds_error_m": 1.7590828719007967e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U403",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.8101708582715193e-08,
+      "max_world_bounds_error_m": 1.7703360806822777e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U404",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 7.21325856815033e-09,
+      "max_world_bounds_error_m": 6.853535948828093e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U405",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.826931330479843e-08,
+      "max_world_bounds_error_m": 1.7928424980717672e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_U406",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.752269064837313e-08,
+      "max_world_bounds_error_m": 1.7478296631193158e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "MainB_Y201",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.5315829253181855e-08,
+      "max_world_bounds_error_m": 1.371037602025671e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "HeadB_C1_GRM188R71C104KA01D",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 8.580151069173983e-09,
+      "max_world_bounds_error_m": 6.295444443527032e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "HeadB_GND_HEAD_thermal_island_B_Cu",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.2467483166531734e-08,
+      "max_world_bounds_error_m": 2.4174396373588536e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "HeadB_J4_Soldered_insulated_pigtail_",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 9.571782398692927e-09,
+      "max_world_bounds_error_m": 7.534292191871406e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "PCB detail / pads and vias",
+      "vertices": 647127,
+      "triangles": 322444,
+      "max_world_position_error_m": 1.1477022513657775e-06,
+      "max_world_bounds_error_m": 5.959422079565568e-07,
+      "max_world_normal_error_degrees": 0.0011873244418142662
+    },
+    {
+      "id": "HeadB_R1_RC0603FR_0710KL",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 3.879972973536521e-09,
+      "max_world_bounds_error_m": 3.0832527087021333e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "HeadB_thermal_sensor_FR4",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 1.1815451466596019e-08,
+      "max_world_bounds_error_m": 1.1803832203338693e-08,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "HeadB_U1_TMP302BDRLR",
+      "vertices": 24,
+      "triangles": 12,
+      "max_world_position_error_m": 4.660534647788737e-09,
+      "max_world_bounds_error_m": 3.380552864550024e-09,
+      "max_world_normal_error_degrees": 0.0
+    },
+    {
+      "id": "Brand / front pad print",
+      "vertices": 3062,
+      "triangles": 3016,
+      "max_world_position_error_m": 1.306729921758774e-07,
+      "max_world_bounds_error_m": 1.4497278238989608e-08,
+      "max_world_normal_error_degrees": 0.001181405870235807
+    },
+    {
+      "id": "Brand / Chinese",
+      "vertices": 4049,
+      "triangles": 3892,
+      "max_world_position_error_m": 5.065579624641685e-08,
+      "max_world_bounds_error_m": 2.269557258793853e-08,
+      "max_world_normal_error_degrees": 0.0011694710800989518
+    },
+    {
+      "id": "Control marking / local OFF",
+      "vertices": 856,
+      "triangles": 840,
+      "max_world_position_error_m": 1.6033554332119557e-08,
+      "max_world_bounds_error_m": 1.1827701734690166e-09,
+      "max_world_normal_error_degrees": 0.00114692533697501
+    },
+    {
+      "id": "Control marking / hardware REARM",
+      "vertices": 1400,
+      "triangles": 1376,
+      "max_world_position_error_m": 2.6749494708155806e-08,
+      "max_world_bounds_error_m": 6.367623497927077e-09,
+      "max_world_normal_error_degrees": 0.0011694717033971735
+    }
+  ],
+  "part_count": 227,
+  "triangle_count": 666556,
+  "max_world_position_error_m": 1.3779013533049413e-06,
+  "max_world_bounds_error_m": 6.53903672508116e-07,
+  "max_world_normal_error_degrees": 0.0014988350778026298,
+  "topology_unchanged": true,
+  "part_ids_unchanged": true,
+  "materials_unchanged": true,
+  "extras_unchanged": true,
+  "physical_geometry_claim": false
+}

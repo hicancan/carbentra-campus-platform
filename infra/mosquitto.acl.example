@@ -1,0 +1,17 @@
+# Replace these explicit certificate CNs/device IDs with reviewed enrollments.
+# Never grant write # or a wildcard command namespace.
+user CM-SIM-001
+topic write carbentra/v1/CM-SIM-001/hello
+topic write carbentra/v1/CM-SIM-001/telemetry
+topic write carbentra/v1/CM-SIM-001/ack
+topic read carbentra/v1/CM-SIM-001/cmd
+topic read carbentra/v1/CM-SIM-001/time
+topic read carbentra/v1/CM-SIM-001/receipt
+
+user edge-campus-demo
+topic read carbentra/v1/CM-SIM-001/hello
+topic read carbentra/v1/CM-SIM-001/telemetry
+topic read carbentra/v1/CM-SIM-001/ack
+topic write carbentra/v1/CM-SIM-001/cmd
+topic write carbentra/v1/CM-SIM-001/time
+topic write carbentra/v1/CM-SIM-001/receipt

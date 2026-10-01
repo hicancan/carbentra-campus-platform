@@ -1,0 +1,16 @@
+# Isolated, loopback-only disposable PostgreSQL for native Windows/Linux tests.
+# Never combine this fixture service with production configuration.
+services:
+  postgres-tests:
+    image: postgis/postgis:17-3.6-alpine@sha256:a8ffa9afeea4ad6eada171fa2afdb57cd3eb90f92ce20156aa2cb8411d70e0cd
+    environment:
+      POSTGRES_USER: qa
+      POSTGRES_DB: acceptance
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports: ["127.0.0.1:${CARBENTRA_TEST_PG_PORT:-15432}:5432"]
+    tmpfs: ["/var/lib/postgresql/data:size=4g"]
+    healthcheck:
+      test: [CMD, pg_isready, -h, 127.0.0.1, -U, qa, -d, acceptance]
+      interval: 2s
+      timeout: 3s
+      retries: 30

@@ -1,0 +1,35 @@
+{
+  "version": "3.1",
+  "status": "engineering_delivery_with_validation_limits",
+  "date": "2026-10-01",
+  "description": "Five-repository software structure with a single platform Edge and IoT contract. Images built; runtime verification is ongoing. Physical actuation is OFF and field qualification is separate.",
+  "status_title": "工程交付版  ·  实物待验收",
+  "logical_title": "01  平台逻辑架构与数据控制闭环",
+  "deployment_title": "02  Docker 云边部署与五仓库责任",
+  "deployment_note": "构建与服务健康检查通过；界面操作和实物验证边界见交付报告",
+  "renderer": "librsvg + cairo; SVG and PNG share the same authored source",
+  "generator": "create_diagrams.py",
+  "generator_sha256": "08faffddd6667dbcfa14068cc426d6176a4fdec54adbe00d8216c09cd3dd4909",
+  "files": [
+    {
+      "name": "01_platform_logical_architecture",
+      "png_dimensions": [
+        3000,
+        2280
+      ],
+      "png_bytes": 958160,
+      "png_sha256": "32650d9a09161540e46f4f39c27d4d9762b13b1b0a404cffeafb93316c8dcafe",
+      "svg_sha256": "df71222de0eadf906b875f5d89a386936c4363bf4c988fee49c4ba7dbd3aad94"
+    },
+    {
+      "name": "02_docker_deployment_repo_ownership",
+      "png_dimensions": [
+        3000,
+        2280
+      ],
+      "png_bytes": 947710,
+      "png_sha256": "68e907813306d4e4f6d33e633ef7d09f4ab11b6e5d6287513c0d3845ee7a1336",
+      "svg_sha256": "f88ac663709c297037f402c086a94b41c9f9404a0d2935eaddca24b41fb57480"
+    }
+  ]
+}

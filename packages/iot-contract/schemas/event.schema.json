@@ -1,0 +1,526 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbentra.example/contracts/iot/v1/event.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "product_family": {
+      "enum": [
+        "PLUG",
+        "SWITCH",
+        "PRESENCE"
+      ]
+    },
+    "boot_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]{1,80}$"
+    },
+    "sequence": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$"
+    },
+    "observed_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 40
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "received_at": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
+    "monotonic_ms": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "source_mode": {
+      "enum": [
+        "REAL",
+        "SIMULATED",
+        "REPLAYED"
+      ]
+    },
+    "source_protocol": {
+      "enum": [
+        "plug-wire-v2",
+        "switch-mqtt-v1",
+        "presence-ble-v2",
+        "virtual-v1",
+        "presence-gatt-v1"
+      ]
+    },
+    "time_quality": {
+      "enum": [
+        "authenticated",
+        "device_clock",
+        "gateway_received",
+        "unknown"
+      ]
+    },
+    "quality": {
+      "enum": [
+        "valid",
+        "partial",
+        "invalid",
+        "stale",
+        "unknown",
+        "unavailable",
+        "uncalibrated"
+      ]
+    },
+    "readings": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "capability": {
+            "enum": [
+              "power.active",
+              "voltage.rms",
+              "current.rms",
+              "energy.import",
+              "energy.export",
+              "relay.commanded",
+              "relay.feedback",
+              "presence.pir",
+              "presence.radar",
+              "illuminance.raw",
+              "button.local",
+              "buffer.voltage",
+              "device.health",
+              "control.mode",
+              "control.manual_hold_until"
+            ]
+          },
+          "channel_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,63}$"
+          },
+          "value": {
+            "type": [
+              "number",
+              "boolean",
+              "string",
+              "null"
+            ]
+          },
+          "unit": {
+            "enum": [
+              "W",
+              "V",
+              "A",
+              "Wh",
+              "boolean",
+              "raw_count",
+              "mV",
+              "status",
+              "mode",
+              "monotonic_ms"
+            ]
+          },
+          "quality": {
+            "enum": [
+              "valid",
+              "partial",
+              "invalid",
+              "stale",
+              "unknown",
+              "unavailable",
+              "uncalibrated"
+            ]
+          },
+          "details": {
+            "type": "object",
+            "maxProperties": 32
+          }
+        },
+        "required": [
+          "capability",
+          "channel_id",
+          "value",
+          "unit",
+          "quality"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "power.active"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "W"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "voltage.rms"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "V"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "current.rms"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "A"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "energy.import"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "Wh"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "energy.export"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "Wh"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "relay.commanded"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "boolean"
+                },
+                "value": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "relay.feedback"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "boolean"
+                },
+                "value": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "presence.pir"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "boolean"
+                },
+                "value": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "presence.radar"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "boolean"
+                },
+                "value": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "illuminance.raw"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "raw_count"
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "button.local"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "boolean"
+                },
+                "value": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "buffer.voltage"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "mV"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "device.health"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "status"
+                },
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "control.mode"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "mode"
+                },
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "capability": {
+                  "const": "control.manual_hold_until"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "unit": {
+                  "const": "monotonic_ms"
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "raw": {
+      "type": "object",
+      "maxProperties": 100
+    }
+  },
+  "required": [
+    "schema_version",
+    "event_id",
+    "device_id",
+    "product_family",
+    "boot_id",
+    "sequence",
+    "observed_at",
+    "received_at",
+    "monotonic_ms",
+    "source_mode",
+    "source_protocol",
+    "time_quality",
+    "quality",
+    "readings",
+    "raw"
+  ]
+}

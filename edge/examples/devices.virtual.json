@@ -1,0 +1,46 @@
+{
+  "enrollments": [
+    {
+      "device_id": "virtual-plug-a101",
+      "product_family": "PLUG",
+      "protocol": "plug-wire-v2",
+      "source_mode": "SIMULATED",
+      "profile_id": "lab-load"
+    },
+    {
+      "device_id": "virtual-switch-a101",
+      "product_family": "SWITCH",
+      "protocol": "switch-mqtt-v1",
+      "source_mode": "SIMULATED"
+    },
+    {
+      "device_id": "virtual-sense-a101",
+      "product_family": "PRESENCE",
+      "protocol": "presence-ble-v2",
+      "source_mode": "SIMULATED",
+      "ble_address": "AA:BB:CC:DD:EE:01",
+      "ble_identity": 825241953
+    },
+    {
+      "device_id": "virtual-plug-a102",
+      "product_family": "PLUG",
+      "protocol": "plug-wire-v2",
+      "source_mode": "SIMULATED",
+      "profile_id": "lab-load"
+    },
+    {
+      "device_id": "virtual-switch-a102",
+      "product_family": "SWITCH",
+      "protocol": "switch-mqtt-v1",
+      "source_mode": "SIMULATED"
+    },
+    {
+      "device_id": "virtual-sense-a102",
+      "product_family": "PRESENCE",
+      "protocol": "presence-ble-v2",
+      "source_mode": "SIMULATED",
+      "ble_address": "AA:BB:CC:DD:EE:02",
+      "ble_identity": 842019169
+    }
+  ]
+}

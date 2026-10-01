@@ -1,0 +1,107 @@
+{
+  "power.active": {
+    "unit": "W",
+    "types": [
+      "number",
+      "null"
+    ]
+  },
+  "voltage.rms": {
+    "unit": "V",
+    "types": [
+      "number",
+      "null"
+    ]
+  },
+  "current.rms": {
+    "unit": "A",
+    "types": [
+      "number",
+      "null"
+    ]
+  },
+  "energy.import": {
+    "unit": "Wh",
+    "types": [
+      "number",
+      "null"
+    ]
+  },
+  "energy.export": {
+    "unit": "Wh",
+    "types": [
+      "number",
+      "null"
+    ]
+  },
+  "relay.commanded": {
+    "unit": "boolean",
+    "types": [
+      "boolean",
+      "null"
+    ]
+  },
+  "relay.feedback": {
+    "unit": "boolean",
+    "types": [
+      "boolean",
+      "null"
+    ]
+  },
+  "presence.pir": {
+    "unit": "boolean",
+    "types": [
+      "boolean",
+      "null"
+    ]
+  },
+  "presence.radar": {
+    "unit": "boolean",
+    "types": [
+      "boolean",
+      "null"
+    ]
+  },
+  "illuminance.raw": {
+    "unit": "raw_count",
+    "types": [
+      "integer",
+      "null"
+    ]
+  },
+  "button.local": {
+    "unit": "boolean",
+    "types": [
+      "boolean",
+      "null"
+    ]
+  },
+  "buffer.voltage": {
+    "unit": "mV",
+    "types": [
+      "number",
+      "null"
+    ]
+  },
+  "device.health": {
+    "unit": "status",
+    "types": [
+      "string",
+      "null"
+    ]
+  },
+  "control.mode": {
+    "unit": "mode",
+    "types": [
+      "string",
+      "null"
+    ]
+  },
+  "control.manual_hold_until": {
+    "unit": "monotonic_ms",
+    "types": [
+      "integer",
+      "null"
+    ]
+  }
+}

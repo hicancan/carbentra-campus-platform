@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbentra.example/contracts/iot/v1/command.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "product_family": {
+      "enum": [
+        "PLUG",
+        "SWITCH"
+      ]
+    },
+    "channel_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,63}$"
+    },
+    "capability": {
+      "const": "relay.commanded"
+    },
+    "value": {
+      "type": "boolean"
+    },
+    "sequence": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$"
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
+    "boot_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]{1,80}$"
+    },
+    "source_mode": {
+      "enum": [
+        "REAL",
+        "SIMULATED"
+      ]
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "cloud",
+            "local_rule",
+            "manual"
+          ]
+        },
+        "lease_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "lease_expires_at": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 40
+        },
+        "rule_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "release_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "kind",
+        "lease_id",
+        "lease_expires_at"
+      ]
+    },
+    "manual_hold_seconds": {
+      "type": "integer",
+      "minimum": 60,
+      "maximum": 86400
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "device_id",
+    "product_family",
+    "channel_id",
+    "capability",
+    "value",
+    "sequence",
+    "issued_at",
+    "expires_at",
+    "boot_id",
+    "source_mode",
+    "authority"
+  ]
+}

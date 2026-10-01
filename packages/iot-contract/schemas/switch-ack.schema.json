@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbentra.example/contracts/iot/v1/switch-ack.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "boot_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,48}$"
+    },
+    "seq": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{0,19}$"
+    },
+    "channel": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "result": {
+      "enum": [
+        "commanded",
+        "duplicate",
+        "invalid_command",
+        "wrong_boot",
+        "expired",
+        "stale_sequence",
+        "id_conflict",
+        "manual_hold",
+        "maintenance",
+        "protected",
+        "not_commissioned",
+        "fault_latched"
+      ]
+    },
+    "physical_verification": {
+      "const": false
+    },
+    "uptime_ms": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$"
+    }
+  },
+  "required": [
+    "device_id",
+    "boot_id",
+    "id",
+    "seq",
+    "channel",
+    "result",
+    "physical_verification",
+    "uptime_ms"
+  ]
+}

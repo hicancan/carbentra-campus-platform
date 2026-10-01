@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbentra.invalid/contracts/device-ack-v2.schema.json",
+  "title": "CARBENTRA device ACK v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "device_id",
+    "boot_epoch",
+    "id",
+    "seq",
+    "status",
+    "terminal",
+    "desired_on",
+    "fault_latched",
+    "voltage_absence_proven"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "boot_epoch": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "desired_on": {
+      "type": "boolean"
+    },
+    "fault_latched": {
+      "type": "boolean"
+    },
+    "feedback_valid": {
+      "type": "boolean"
+    },
+    "output_present": {
+      "type": "boolean"
+    },
+    "output_sensing": {
+      "enum": [
+        "AC_PRESENT",
+        "NO_AC_PULSES_DETECTED",
+        "PRESENT_OR_STUCK_LOW_FAULT",
+        "UNKNOWN"
+      ]
+    },
+    "voltage_absence_proven": {
+      "const": false
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "seq": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{0,19}$"
+    },
+    "status": {
+      "enum": [
+        "ACCEPTED_NO_CHANGE",
+        "ACTUATION_DISABLED_OR_FAILED",
+        "BAD_CLOCK",
+        "BAD_WINDOW",
+        "BUSY_AWAITING_FEEDBACK",
+        "CAPABILITY_DENIED",
+        "CRITICAL_LOAD",
+        "DUPLICATE",
+        "FAILED_FEEDBACK",
+        "FAILED_SUPERSEDED",
+        "ID_CONFLICT",
+        "INVALID",
+        "LOCAL_TRIP",
+        "MIN_DWELL",
+        "NOT_COMMISSIONED",
+        "NO_AUTH",
+        "OBSERVED_VERIFIED",
+        "OFFLINE_HOLD",
+        "PERSISTENCE_FAILURE",
+        "PROFILE_MISMATCH",
+        "RATE_LIMIT",
+        "REPLAY",
+        "REQUESTED_AWAITING_FEEDBACK",
+        "SESSION_CHANGED",
+        "STALE_DATA",
+        "TIMED_OUT",
+        "UNKNOWN_LOAD",
+        "WRONG_DEVICE",
+        "MANUAL_HOLD",
+        "MAINTENANCE"
+      ]
+    },
+    "terminal": {
+      "type": "boolean"
+    },
+    "requested_monotonic_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "deadline_monotonic_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "observed_monotonic_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "ACCEPTED_NO_CHANGE",
+              "REQUESTED_AWAITING_FEEDBACK"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "terminal": {
+            "const": false
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "terminal": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "ACCEPTED_NO_CHANGE",
+              "FAILED_FEEDBACK",
+              "FAILED_SUPERSEDED",
+              "OBSERVED_VERIFIED",
+              "REQUESTED_AWAITING_FEEDBACK",
+              "TIMED_OUT"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "requested_monotonic_ms",
+          "deadline_monotonic_ms"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "FAILED_FEEDBACK",
+              "FAILED_SUPERSEDED",
+              "OBSERVED_VERIFIED",
+              "TIMED_OUT"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "observed_monotonic_ms",
+          "feedback_valid",
+          "output_present",
+          "output_sensing"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "OBSERVED_VERIFIED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "fault_latched": {
+            "const": false
+          },
+          "feedback_valid": {
+            "const": true
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Semantic gate checks requested+100 <= observed < deadline <= requested+5000 for VERIFIED, qualified feedback equals desired_on, and matches existing device/command/seq; reboot evidence never guesses success. Optical NO_AC_PULSES_DETECTED is not voltage absence proof."
+}

@@ -1,0 +1,7 @@
+{
+  "enrollments": [
+    {"device_id":"example-plug","product_family":"PLUG","protocol":"plug-wire-v2","source_mode":"REAL","profile_id":"operator-load-profile"},
+    {"device_id":"example-switch","product_family":"SWITCH","protocol":"switch-mqtt-v1","source_mode":"REAL"},
+    {"device_id":"example-sense","product_family":"PRESENCE","protocol":"presence-gatt-v1","source_mode":"REAL","ble_address":"AA:BB:CC:DD:EE:01","ble_identity":305419896,"auth_key_file":"/operator/private/example-sense.key"}
+  ]
+}

@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+Dockerfile text eol=lf
+*.conf text eol=lf
+*.ps1 text eol=lf
+*.png binary
+*.glb binary
+*.zip binary
+# Published asset manifests hash exact bytes; never rewrite their line endings.
+packages/spatial/dist/** -text whitespace=cr-at-eol
+packages/product/dist/** -text whitespace=cr-at-eol

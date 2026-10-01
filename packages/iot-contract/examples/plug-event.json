@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "event_id": "d1c8dc924c15afefcd4475cdae916a0af8674c86f2d5295622b508b1729925ec",
+  "device_id": "virtual-plug-a101",
+  "product_family": "PLUG",
+  "boot_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "sequence": "1",
+  "observed_at": null,
+  "received_at": "2027-01-15T08:00:00Z",
+  "monotonic_ms": 5000,
+  "source_mode": "SIMULATED",
+  "source_protocol": "plug-wire-v2",
+  "time_quality": "unknown",
+  "quality": "partial",
+  "readings": [
+    {
+      "capability": "power.active",
+      "channel_id": "meter.aggregate",
+      "value": null,
+      "unit": "W",
+      "quality": "invalid",
+      "details": {
+        "calibrated": false
+      }
+    },
+    {
+      "capability": "voltage.rms",
+      "channel_id": "meter.aggregate",
+      "value": null,
+      "unit": "V",
+      "quality": "invalid",
+      "details": {
+        "calibrated": false
+      }
+    },
+    {
+      "capability": "current.rms",
+      "channel_id": "meter.aggregate",
+      "value": null,
+      "unit": "A",
+      "quality": "invalid",
+      "details": {
+        "calibrated": false
+      }
+    },
+    {
+      "capability": "energy.import",
+      "channel_id": "meter.aggregate",
+      "value": null,
+      "unit": "Wh",
+      "quality": "unavailable",
+      "details": {
+        "scope": "known_intervals_since_boot",
+        "uncertain_intervals": 5,
+        "billing_certified": false
+      }
+    },
+    {
+      "capability": "energy.export",
+      "channel_id": "meter.aggregate",
+      "value": null,
+      "unit": "Wh",
+      "quality": "unavailable",
+      "details": {
+        "scope": "known_intervals_since_boot",
+        "uncertain_intervals": 5,
+        "billing_certified": false
+      }
+    },
+    {
+      "capability": "relay.commanded",
+      "channel_id": "relay.1",
+      "value": true,
+      "unit": "boolean",
+      "quality": "valid"
+    },
+    {
+      "capability": "relay.feedback",
+      "channel_id": "relay.1",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "method": "optical_output_presence",
+        "sensing": "NO_AC_PULSES_DETECTED",
+        "voltage_absence_proven": false,
+        "independent_contact_feedback": false
+      }
+    },
+    {
+      "capability": "control.mode",
+      "channel_id": "relay.1",
+      "value": "auto",
+      "unit": "mode",
+      "quality": "valid"
+    },
+    {
+      "capability": "control.manual_hold_until",
+      "channel_id": "relay.1",
+      "value": 0,
+      "unit": "monotonic_ms",
+      "quality": "valid"
+    },
+    {
+      "capability": "button.local",
+      "channel_id": "button.1",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "event_sequence": "0",
+        "event_monotonic_ms": 0,
+        "semantics": "last_event_not_continuous_pressed",
+        "result": "none"
+      }
+    },
+    {
+      "capability": "device.health",
+      "channel_id": "device",
+      "value": "ok",
+      "unit": "status",
+      "quality": "valid",
+      "details": {
+        "fault_latched": false,
+        "maintenance": false,
+        "actuation_enabled": false
+      }
+    }
+  ],
+  "raw": {
+    "schema_version": 2,
+    "device_id": "virtual-plug-a101",
+    "boot_epoch": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "sample_seq": "1",
+    "board_revision": "CARBENTRA-P16-EVT-B",
+    "calibrated": false,
+    "valid": false,
+    "monotonic_ms": 5000,
+    "measurement_monotonic_ms": 5000,
+    "time_quality": "unknown",
+    "unix_s": null,
+    "unix_lower_s": null,
+    "unix_upper_s": null,
+    "fault_latched": false,
+    "board_temperature_valid": false,
+    "desired_on": true,
+    "feedback_valid": true,
+    "output_present": false,
+    "output_sensing": "NO_AC_PULSES_DETECTED",
+    "voltage_absence_proven": false,
+    "ram_buffer_dropped": 0,
+    "command_dropped": 0,
+    "energy_status": "uncalibrated_no_energy_result",
+    "known_forward_wh_since_boot": 0,
+    "known_reverse_wh_since_boot": 0,
+    "energy_uncertain_intervals": 5,
+    "control_mode": "auto",
+    "actuation_enabled": false,
+    "maintenance": false,
+    "manual_hold_until_uptime_ms": "0",
+    "last_local_input": {
+      "channel": 1,
+      "event_seq": "0",
+      "uptime_ms": "0",
+      "pressed": false,
+      "result": "none"
+    }
+  }
+}

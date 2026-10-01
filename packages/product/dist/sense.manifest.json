@@ -1,0 +1,976 @@
+{
+  "version": 2,
+  "family": "PRESENCE",
+  "product_name": "CARBENTRA Sense B",
+  "name": "CARBENTRA Sense B · Engineering reference",
+  "source_mode": "REFERENCE",
+  "source_repository": "carbentra-presence-sensor",
+  "source_commit": "c7ee30181848c2e872841904f82f70ae03e2c377",
+  "source_path": "mechanical/exports/carbentra_presence_sensor.glb",
+  "source_sha256": "3f007670b3e1980bea7eb053728cf95aaa2b2f266510c31e8aef3f025eeafde3",
+  "display_sha256": "3f007670b3e1980bea7eb053728cf95aaa2b2f266510c31e8aef3f025eeafde3",
+  "model_url": "/api/v1/assets/product/model?family=PRESENCE",
+  "hero_url": "/api/v1/assets/product/hero?family=PRESENCE",
+  "hero_sha256": "d9094428140f487dd6b6e174566fda731915246acec996ce5f0295318f4557c0",
+  "hero_bytes": 265939,
+  "source_hero_path": "visuals/01_exterior_hero.png",
+  "source_hero_sha256": "7ea3a6e0114bc1c0634a396bd021f863a9be9d4865102e83088aa7b7ceb62554",
+  "source_hero_bytes": 1358815,
+  "hero_derivation": {
+    "operation": "bounded_thumbnail",
+    "max_dimension_px": 640,
+    "resampling": "LANCZOS",
+    "tool": "Pillow 12.3.0",
+    "source_size_px": [
+      1200,
+      1200
+    ],
+    "size_px": [
+      640,
+      640
+    ]
+  },
+  "bytes": 3572588,
+  "source_bytes": 3572588,
+  "mime": "model/gltf-binary",
+  "units": "m",
+  "axis": "Y-up",
+  "node_count": 152,
+  "mesh_count": 152,
+  "triangle_count": 108294,
+  "parts": [
+    {
+      "id": "3.3V regulator | package schematic",
+      "name": "3.3V regulator | package schematic",
+      "node_index": 0,
+      "provenance": {}
+    },
+    {
+      "id": "5V power carrier | OD29.6 x 0.8 mm",
+      "name": "5V power carrier | OD29.6 x 0.8 mm",
+      "node_index": 1,
+      "provenance": {}
+    },
+    {
+      "id": "A121 antenna feature",
+      "name": "A121 antenna feature",
+      "node_index": 2,
+      "provenance": {}
+    },
+    {
+      "id": "A121 antenna feature.001",
+      "name": "A121 antenna feature.001",
+      "node_index": 3,
+      "provenance": {}
+    },
+    {
+      "id": "A121 antenna feature.002",
+      "name": "A121 antenna feature.002",
+      "node_index": 4,
+      "provenance": {}
+    },
+    {
+      "id": "A121 antenna feature.003",
+      "name": "A121 antenna feature.003",
+      "node_index": 5,
+      "provenance": {}
+    },
+    {
+      "id": "A121 antenna feature.004",
+      "name": "A121 antenna feature.004",
+      "node_index": 6,
+      "provenance": {}
+    },
+    {
+      "id": "A121 antenna feature.005",
+      "name": "A121 antenna feature.005",
+      "node_index": 7,
+      "provenance": {}
+    },
+    {
+      "id": "A121 radar IC | simplified top-side representation",
+      "name": "A121 radar IC | simplified top-side representation",
+      "node_index": 8,
+      "provenance": {}
+    },
+    {
+      "id": "Acconeer XM125 | 18.6 x 15 x 2.0 mm",
+      "name": "Acconeer XM125 | 18.6 x 15 x 2.0 mm",
+      "node_index": 9,
+      "provenance": {
+        "datasheet": "electronics/reference/xm125.pdf, page 17, module body dimensions"
+      }
+    },
+    {
+      "id": "Ambient-light pipe | aperture required",
+      "name": "Ambient-light pipe | aperture required",
+      "node_index": 10,
+      "provenance": {}
+    },
+    {
+      "id": "Anti-slip adhesive foot",
+      "name": "Anti-slip adhesive foot",
+      "node_index": 11,
+      "provenance": {}
+    },
+    {
+      "id": "Base | OD36 H9.5",
+      "name": "Base | OD36 H9.5",
+      "node_index": 12,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land",
+      "name": "BLE castellated land",
+      "node_index": 13,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.001",
+      "name": "BLE castellated land.001",
+      "node_index": 14,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.002",
+      "name": "BLE castellated land.002",
+      "node_index": 15,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.003",
+      "name": "BLE castellated land.003",
+      "node_index": 16,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.004",
+      "name": "BLE castellated land.004",
+      "node_index": 17,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.005",
+      "name": "BLE castellated land.005",
+      "node_index": 18,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.006",
+      "name": "BLE castellated land.006",
+      "node_index": 19,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.007",
+      "name": "BLE castellated land.007",
+      "node_index": 20,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.008",
+      "name": "BLE castellated land.008",
+      "node_index": 21,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.009",
+      "name": "BLE castellated land.009",
+      "node_index": 22,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.010",
+      "name": "BLE castellated land.010",
+      "node_index": 23,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.011",
+      "name": "BLE castellated land.011",
+      "node_index": 24,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.012",
+      "name": "BLE castellated land.012",
+      "node_index": 25,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.013",
+      "name": "BLE castellated land.013",
+      "node_index": 26,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.014",
+      "name": "BLE castellated land.014",
+      "node_index": 27,
+      "provenance": {}
+    },
+    {
+      "id": "BLE castellated land.015",
+      "name": "BLE castellated land.015",
+      "node_index": 28,
+      "provenance": {}
+    },
+    {
+      "id": "Board identifier",
+      "name": "Board identifier",
+      "node_index": 29,
+      "provenance": {}
+    },
+    {
+      "id": "Brass threaded insert",
+      "name": "Brass threaded insert",
+      "node_index": 30,
+      "provenance": {}
+    },
+    {
+      "id": "Brass threaded insert.001",
+      "name": "Brass threaded insert.001",
+      "node_index": 31,
+      "provenance": {}
+    },
+    {
+      "id": "Button actuator",
+      "name": "Button actuator",
+      "node_index": 32,
+      "provenance": {}
+    },
+    {
+      "id": "Button dark reveal",
+      "name": "Button dark reveal",
+      "node_index": 33,
+      "provenance": {}
+    },
+    {
+      "id": "Cap peripheral seat",
+      "name": "Cap peripheral seat",
+      "node_index": 34,
+      "provenance": {}
+    },
+    {
+      "id": "Curved radar cover | polymer concept",
+      "name": "Curved radar cover | polymer concept",
+      "node_index": 35,
+      "provenance": {
+        "qualification": "Sense B radome: material/RF and visible-light transmission require physical validation; no PIR lens."
+      }
+    },
+    {
+      "id": "Friction pivot ball | OD23",
+      "name": "Friction pivot ball | OD23",
+      "node_index": 36,
+      "provenance": {}
+    },
+    {
+      "id": "GCT USB4105 | low-voltage 5V input",
+      "name": "GCT USB4105 | low-voltage 5V input",
+      "node_index": 37,
+      "provenance": {}
+    },
+    {
+      "id": "M1.6 pan head screw",
+      "name": "M1.6 pan head screw",
+      "node_index": 38,
+      "provenance": {}
+    },
+    {
+      "id": "M1.6 pan head screw.001",
+      "name": "M1.6 pan head screw.001",
+      "node_index": 39,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive",
+      "name": "Main board passive",
+      "node_index": 40,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.001",
+      "name": "Main board passive.001",
+      "node_index": 41,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.002",
+      "name": "Main board passive.002",
+      "node_index": 42,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.003",
+      "name": "Main board passive.003",
+      "node_index": 43,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.004",
+      "name": "Main board passive.004",
+      "node_index": 44,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.005",
+      "name": "Main board passive.005",
+      "node_index": 45,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.006",
+      "name": "Main board passive.006",
+      "node_index": 46,
+      "provenance": {}
+    },
+    {
+      "id": "Main board passive.007",
+      "name": "Main board passive.007",
+      "node_index": 47,
+      "provenance": {}
+    },
+    {
+      "id": "Main board standoff",
+      "name": "Main board standoff",
+      "node_index": 48,
+      "provenance": {}
+    },
+    {
+      "id": "Main board standoff.001",
+      "name": "Main board standoff.001",
+      "node_index": 49,
+      "provenance": {}
+    },
+    {
+      "id": "Main PCB | OD36 x 1 mm",
+      "name": "Main PCB | OD36 x 1 mm",
+      "node_index": 50,
+      "provenance": {}
+    },
+    {
+      "id": "Main shell | OD42.6 ID39.2",
+      "name": "Main shell | OD42.6 ID39.2",
+      "node_index": 51,
+      "provenance": {}
+    },
+    {
+      "id": "MDBT42Q ceramic antenna",
+      "name": "MDBT42Q ceramic antenna",
+      "node_index": 52,
+      "provenance": {}
+    },
+    {
+      "id": "MDBT42Q RF shield",
+      "name": "MDBT42Q RF shield",
+      "node_index": 53,
+      "provenance": {}
+    },
+    {
+      "id": "Pair/reset button | 3.4 x 8 mm",
+      "name": "Pair/reset button | 3.4 x 8 mm",
+      "node_index": 54,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination",
+      "name": "Passive solder termination",
+      "node_index": 55,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.001",
+      "name": "Passive solder termination.001",
+      "node_index": 56,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.002",
+      "name": "Passive solder termination.002",
+      "node_index": 57,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.003",
+      "name": "Passive solder termination.003",
+      "node_index": 58,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.004",
+      "name": "Passive solder termination.004",
+      "node_index": 59,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.005",
+      "name": "Passive solder termination.005",
+      "node_index": 60,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.006",
+      "name": "Passive solder termination.006",
+      "node_index": 61,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.007",
+      "name": "Passive solder termination.007",
+      "node_index": 62,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.008",
+      "name": "Passive solder termination.008",
+      "node_index": 63,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.009",
+      "name": "Passive solder termination.009",
+      "node_index": 64,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.010",
+      "name": "Passive solder termination.010",
+      "node_index": 65,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.011",
+      "name": "Passive solder termination.011",
+      "node_index": 66,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.012",
+      "name": "Passive solder termination.012",
+      "node_index": 67,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.013",
+      "name": "Passive solder termination.013",
+      "node_index": 68,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.014",
+      "name": "Passive solder termination.014",
+      "node_index": 69,
+      "provenance": {}
+    },
+    {
+      "id": "Passive solder termination.015",
+      "name": "Passive solder termination.015",
+      "node_index": 70,
+      "provenance": {}
+    },
+    {
+      "id": "Power board passive",
+      "name": "Power board passive",
+      "node_index": 71,
+      "provenance": {}
+    },
+    {
+      "id": "Power board passive.001",
+      "name": "Power board passive.001",
+      "node_index": 72,
+      "provenance": {}
+    },
+    {
+      "id": "Power board passive.002",
+      "name": "Power board passive.002",
+      "node_index": 73,
+      "provenance": {}
+    },
+    {
+      "id": "Power board passive.003",
+      "name": "Power board passive.003",
+      "node_index": 74,
+      "provenance": {}
+    },
+    {
+      "id": "Power board passive.004",
+      "name": "Power board passive.004",
+      "node_index": 75,
+      "provenance": {}
+    },
+    {
+      "id": "Power board passive.005",
+      "name": "Power board passive.005",
+      "node_index": 76,
+      "provenance": {}
+    },
+    {
+      "id": "Power board support ledge",
+      "name": "Power board support ledge",
+      "node_index": 77,
+      "provenance": {}
+    },
+    {
+      "id": "Power board support ledge.001",
+      "name": "Power board support ledge.001",
+      "node_index": 78,
+      "provenance": {}
+    },
+    {
+      "id": "Power carrier marking",
+      "name": "Power carrier marking",
+      "node_index": 79,
+      "provenance": {}
+    },
+    {
+      "id": "Power ground harness",
+      "name": "Power ground harness",
+      "node_index": 80,
+      "provenance": {}
+    },
+    {
+      "id": "Raytac MDBT42Q | 10 x 16 x 2.2 mm",
+      "name": "Raytac MDBT42Q | 10 x 16 x 2.2 mm",
+      "node_index": 81,
+      "provenance": {}
+    },
+    {
+      "id": "Rear service cover | removable",
+      "name": "Rear service cover | removable",
+      "node_index": 82,
+      "provenance": {}
+    },
+    {
+      "id": "Regulated 3.3V harness",
+      "name": "Regulated 3.3V harness",
+      "node_index": 83,
+      "provenance": {}
+    },
+    {
+      "id": "Screw drive recess A",
+      "name": "Screw drive recess A",
+      "node_index": 84,
+      "provenance": {}
+    },
+    {
+      "id": "Screw drive recess A.001",
+      "name": "Screw drive recess A.001",
+      "node_index": 85,
+      "provenance": {}
+    },
+    {
+      "id": "Screw drive recess B",
+      "name": "Screw drive recess B",
+      "node_index": 86,
+      "provenance": {}
+    },
+    {
+      "id": "Screw drive recess B.001",
+      "name": "Screw drive recess B.001",
+      "node_index": 87,
+      "provenance": {}
+    },
+    {
+      "id": "Service cover shadow line",
+      "name": "Service cover shadow line",
+      "node_index": 88,
+      "provenance": {}
+    },
+    {
+      "id": "Side tactile switch",
+      "name": "Side tactile switch",
+      "node_index": 89,
+      "provenance": {}
+    },
+    {
+      "id": "SWD test pad",
+      "name": "SWD test pad",
+      "node_index": 90,
+      "provenance": {}
+    },
+    {
+      "id": "SWD test pad.001",
+      "name": "SWD test pad.001",
+      "node_index": 91,
+      "provenance": {}
+    },
+    {
+      "id": "SWD test pad.002",
+      "name": "SWD test pad.002",
+      "node_index": 92,
+      "provenance": {}
+    },
+    {
+      "id": "SWD test pad.003",
+      "name": "SWD test pad.003",
+      "node_index": 93,
+      "provenance": {}
+    },
+    {
+      "id": "SWD test pad.004",
+      "name": "SWD test pad.004",
+      "node_index": 94,
+      "provenance": {}
+    },
+    {
+      "id": "TEMT6000 active optical surface",
+      "name": "TEMT6000 active optical surface",
+      "node_index": 95,
+      "provenance": {}
+    },
+    {
+      "id": "TEMT6000X01 | 4 x 2 x 1.05 mm",
+      "name": "TEMT6000X01 | 4 x 2 x 1.05 mm",
+      "node_index": 96,
+      "provenance": {}
+    },
+    {
+      "id": "USB insulated tongue",
+      "name": "USB insulated tongue",
+      "node_index": 97,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact",
+      "name": "USB power connector contact",
+      "node_index": 98,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.001",
+      "name": "USB power connector contact.001",
+      "node_index": 99,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.002",
+      "name": "USB power connector contact.002",
+      "node_index": 100,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.003",
+      "name": "USB power connector contact.003",
+      "node_index": 101,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.004",
+      "name": "USB power connector contact.004",
+      "node_index": 102,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.005",
+      "name": "USB power connector contact.005",
+      "node_index": 103,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.006",
+      "name": "USB power connector contact.006",
+      "node_index": 104,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.007",
+      "name": "USB power connector contact.007",
+      "node_index": 105,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.008",
+      "name": "USB power connector contact.008",
+      "node_index": 106,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.009",
+      "name": "USB power connector contact.009",
+      "node_index": 107,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.010",
+      "name": "USB power connector contact.010",
+      "node_index": 108,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.011",
+      "name": "USB power connector contact.011",
+      "node_index": 109,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.012",
+      "name": "USB power connector contact.012",
+      "node_index": 110,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.013",
+      "name": "USB power connector contact.013",
+      "node_index": 111,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.014",
+      "name": "USB power connector contact.014",
+      "node_index": 112,
+      "provenance": {}
+    },
+    {
+      "id": "USB power connector contact.015",
+      "name": "USB power connector contact.015",
+      "node_index": 113,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact",
+      "name": "XM125 castellated contact",
+      "node_index": 114,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.001",
+      "name": "XM125 castellated contact.001",
+      "node_index": 115,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.002",
+      "name": "XM125 castellated contact.002",
+      "node_index": 116,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.003",
+      "name": "XM125 castellated contact.003",
+      "node_index": 117,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.004",
+      "name": "XM125 castellated contact.004",
+      "node_index": 118,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.005",
+      "name": "XM125 castellated contact.005",
+      "node_index": 119,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.006",
+      "name": "XM125 castellated contact.006",
+      "node_index": 120,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.007",
+      "name": "XM125 castellated contact.007",
+      "node_index": 121,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.008",
+      "name": "XM125 castellated contact.008",
+      "node_index": 122,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.009",
+      "name": "XM125 castellated contact.009",
+      "node_index": 123,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.010",
+      "name": "XM125 castellated contact.010",
+      "node_index": 124,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.011",
+      "name": "XM125 castellated contact.011",
+      "node_index": 125,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.012",
+      "name": "XM125 castellated contact.012",
+      "node_index": 126,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.013",
+      "name": "XM125 castellated contact.013",
+      "node_index": 127,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.014",
+      "name": "XM125 castellated contact.014",
+      "node_index": 128,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.015",
+      "name": "XM125 castellated contact.015",
+      "node_index": 129,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.016",
+      "name": "XM125 castellated contact.016",
+      "node_index": 130,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.017",
+      "name": "XM125 castellated contact.017",
+      "node_index": 131,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.018",
+      "name": "XM125 castellated contact.018",
+      "node_index": 132,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.019",
+      "name": "XM125 castellated contact.019",
+      "node_index": 133,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.020",
+      "name": "XM125 castellated contact.020",
+      "node_index": 134,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.021",
+      "name": "XM125 castellated contact.021",
+      "node_index": 135,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.022",
+      "name": "XM125 castellated contact.022",
+      "node_index": 136,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.023",
+      "name": "XM125 castellated contact.023",
+      "node_index": 137,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.024",
+      "name": "XM125 castellated contact.024",
+      "node_index": 138,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.025",
+      "name": "XM125 castellated contact.025",
+      "node_index": 139,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.026",
+      "name": "XM125 castellated contact.026",
+      "node_index": 140,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 castellated contact.027",
+      "name": "XM125 castellated contact.027",
+      "node_index": 141,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 crystal",
+      "name": "XM125 crystal",
+      "node_index": 142,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 MCU",
+      "name": "XM125 MCU",
+      "node_index": 143,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component",
+      "name": "XM125 passive component",
+      "node_index": 144,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component.001",
+      "name": "XM125 passive component.001",
+      "node_index": 145,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component.002",
+      "name": "XM125 passive component.002",
+      "node_index": 146,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component.003",
+      "name": "XM125 passive component.003",
+      "node_index": 147,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component.004",
+      "name": "XM125 passive component.004",
+      "node_index": 148,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component.005",
+      "name": "XM125 passive component.005",
+      "node_index": 149,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 passive component.006",
+      "name": "XM125 passive component.006",
+      "node_index": 150,
+      "provenance": {}
+    },
+    {
+      "id": "XM125 silkscreen",
+      "name": "XM125 silkscreen",
+      "node_index": 151,
+      "provenance": {}
+    }
+  ],
+  "optimized": false,
+  "optimization": null,
+  "materials_preserved": true,
+  "extensions": [
+    "KHR_materials_transmission"
+  ],
+  "physical_qualification": false,
+  "device_binding": false,
+  "provenance": "Byte-identical display artifact from the pinned source; authoritative CAD/ECAD remains upstream",
+  "license": "No repository-wide redistribution license was declared in the inspected source; review before external redistribution",
+  "limitations": [
+    "Product reference only; not the placement of a registered device",
+    "Engineering development; physical verification remains pending",
+    "No mains safety, calibration or voltage-absence proof",
+    "Optional display asset; load only after an explicit user action",
+    "No frame-rate or browser-memory claim without a measured viewer test"
+  ]
+}

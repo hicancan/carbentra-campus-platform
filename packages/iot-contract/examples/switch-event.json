@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "event_id": "bd82884fa360d0dc0a3e77cf8ab3fdc09be045143aef9ca01f8258128b584aaa",
+  "device_id": "virtual-switch-a101",
+  "product_family": "SWITCH",
+  "boot_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "sequence": "1",
+  "observed_at": null,
+  "received_at": "2027-01-15T08:00:00Z",
+  "monotonic_ms": 100000,
+  "source_mode": "SIMULATED",
+  "source_protocol": "switch-mqtt-v1",
+  "time_quality": "gateway_received",
+  "quality": "partial",
+  "readings": [
+    {
+      "capability": "relay.commanded",
+      "channel_id": "relay.1",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid"
+    },
+    {
+      "capability": "relay.feedback",
+      "channel_id": "relay.1",
+      "value": null,
+      "unit": "boolean",
+      "quality": "unavailable",
+      "details": {
+        "reason": "no_independent_sensor"
+      }
+    },
+    {
+      "capability": "control.mode",
+      "channel_id": "relay.1",
+      "value": "auto",
+      "unit": "mode",
+      "quality": "valid"
+    },
+    {
+      "capability": "control.manual_hold_until",
+      "channel_id": "relay.1",
+      "value": 0,
+      "unit": "monotonic_ms",
+      "quality": "valid"
+    },
+    {
+      "capability": "relay.commanded",
+      "channel_id": "relay.2",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid"
+    },
+    {
+      "capability": "relay.feedback",
+      "channel_id": "relay.2",
+      "value": null,
+      "unit": "boolean",
+      "quality": "unavailable",
+      "details": {
+        "reason": "no_independent_sensor"
+      }
+    },
+    {
+      "capability": "control.mode",
+      "channel_id": "relay.2",
+      "value": "auto",
+      "unit": "mode",
+      "quality": "valid"
+    },
+    {
+      "capability": "control.manual_hold_until",
+      "channel_id": "relay.2",
+      "value": 0,
+      "unit": "monotonic_ms",
+      "quality": "valid"
+    },
+    {
+      "capability": "relay.commanded",
+      "channel_id": "relay.3",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid"
+    },
+    {
+      "capability": "relay.feedback",
+      "channel_id": "relay.3",
+      "value": null,
+      "unit": "boolean",
+      "quality": "unavailable",
+      "details": {
+        "reason": "no_independent_sensor"
+      }
+    },
+    {
+      "capability": "control.mode",
+      "channel_id": "relay.3",
+      "value": "auto",
+      "unit": "mode",
+      "quality": "valid"
+    },
+    {
+      "capability": "control.manual_hold_until",
+      "channel_id": "relay.3",
+      "value": 0,
+      "unit": "monotonic_ms",
+      "quality": "valid"
+    },
+    {
+      "capability": "power.active",
+      "channel_id": "meter.aggregate",
+      "value": 60.0,
+      "unit": "W",
+      "quality": "valid",
+      "details": {
+        "meter_quality": "calibrated_readback",
+        "scope": "three_lighting_outputs_total"
+      }
+    },
+    {
+      "capability": "voltage.rms",
+      "channel_id": "meter.aggregate",
+      "value": 230.0,
+      "unit": "V",
+      "quality": "valid",
+      "details": {
+        "meter_quality": "calibrated_readback",
+        "scope": "three_lighting_outputs_total"
+      }
+    },
+    {
+      "capability": "current.rms",
+      "channel_id": "meter.aggregate",
+      "value": 0.3,
+      "unit": "A",
+      "quality": "valid",
+      "details": {
+        "meter_quality": "calibrated_readback",
+        "scope": "three_lighting_outputs_total"
+      }
+    },
+    {
+      "capability": "energy.import",
+      "channel_id": "meter.aggregate",
+      "value": 123.0,
+      "unit": "Wh",
+      "quality": "partial",
+      "details": {
+        "scope": "device_total",
+        "uncertain_intervals": 2,
+        "billing_certified": false,
+        "lower_bound": true
+      }
+    },
+    {
+      "capability": "energy.export",
+      "channel_id": "meter.aggregate",
+      "value": null,
+      "unit": "Wh",
+      "quality": "unavailable",
+      "details": {
+        "reason": "no_accumulated_export_measurement"
+      }
+    },
+    {
+      "capability": "button.local",
+      "channel_id": "button.1",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "event_sequence": "0",
+        "event_monotonic_ms": 0,
+        "event_channel": 0,
+        "semantics": "last_event_not_continuous_pressed",
+        "result": "none"
+      }
+    },
+    {
+      "capability": "button.local",
+      "channel_id": "button.2",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "event_sequence": "0",
+        "event_monotonic_ms": 0,
+        "event_channel": 0,
+        "semantics": "last_event_not_continuous_pressed",
+        "result": "none"
+      }
+    },
+    {
+      "capability": "button.local",
+      "channel_id": "button.3",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "event_sequence": "0",
+        "event_monotonic_ms": 0,
+        "event_channel": 0,
+        "semantics": "last_event_not_continuous_pressed",
+        "result": "none"
+      }
+    },
+    {
+      "capability": "device.health",
+      "channel_id": "device",
+      "value": "ok",
+      "unit": "status",
+      "quality": "valid",
+      "details": {
+        "fault_latched": false,
+        "maintenance": false,
+        "actuation_enabled": false,
+        "protected_channel_mask": 0
+      }
+    }
+  ],
+  "raw": {
+    "schema_version": 1,
+    "device_type": "smart_switch",
+    "device_id": "virtual-switch-a101",
+    "boot_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "sample_seq": "1",
+    "uptime_ms": "100000",
+    "last_seq": "0",
+    "source_mode": "SIMULATED",
+    "actuation_enabled": false,
+    "fault_latched": false,
+    "maintenance": false,
+    "protected_channel_mask": 0,
+    "channels": [
+      {
+        "channel": 1,
+        "channel_id": "lighting-1",
+        "commanded_on": false,
+        "physically_verified_on": null,
+        "feedback_quality": "unavailable_no_independent_sensor",
+        "control_mode": "auto",
+        "manual_hold_until_uptime_ms": "0"
+      },
+      {
+        "channel": 2,
+        "channel_id": "lighting-2",
+        "commanded_on": false,
+        "physically_verified_on": null,
+        "feedback_quality": "unavailable_no_independent_sensor",
+        "control_mode": "auto",
+        "manual_hold_until_uptime_ms": "0"
+      },
+      {
+        "channel": 3,
+        "channel_id": "lighting-3",
+        "commanded_on": false,
+        "physically_verified_on": null,
+        "feedback_quality": "unavailable_no_independent_sensor",
+        "control_mode": "auto",
+        "manual_hold_until_uptime_ms": "0"
+      }
+    ],
+    "last_local_input": {
+      "channel": 0,
+      "event_seq": "0",
+      "uptime_ms": "0",
+      "pressed": false,
+      "result": "none"
+    },
+    "aggregate_meter": {
+      "scope": "three_lighting_outputs_total",
+      "quality": "calibrated_readback",
+      "calibration_id": "TEST-FIXTURE",
+      "observed_uptime_ms": "100000",
+      "status_bits": 0,
+      "voltage_v": 230.0,
+      "current_a": 0.3,
+      "active_power_w": 60.0,
+      "known_energy_wh": "123.000",
+      "energy_quality": "partial_lower_bound",
+      "persistent_storage_ok": true,
+      "unknown_intervals": 2,
+      "checkpoint_interval_seconds": 60
+    }
+  }
+}

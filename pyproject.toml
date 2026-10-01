@@ -1,0 +1,26 @@
+[project]
+name = "carbentra-campus-platform"
+version = "0.1.0"
+description = "CARBENTRA platform development workspace"
+requires-python = ">=3.12,<3.13"
+dependencies = ["carbentra-campus-api", "carbentra-iot-contract"]
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "httpx==0.28.1", "PyYAML==6.0.3"]
+edge = ["carbentra-iot-contract", "paho-mqtt==2.1.0", "cryptography==50.0.0", "bleak==3.0.2"]
+assets = ["numpy==2.3.5", "Pillow==12.3.0"]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["backend", "packages/iot-contract"]
+
+[tool.uv.sources]
+carbentra-campus-api = { workspace = true }
+carbentra-iot-contract = { workspace = true }
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests", "tests/acceptance", "tests/test_infrastructure.py", "tests/system_upgrade/test_packaging.py"]
+pythonpath = ["backend"]
+addopts = "-q"

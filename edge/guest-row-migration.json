@@ -1,0 +1,33 @@
+{
+  "scope": "Actual exported stopped guest synthetic row + exact guest schema; pending variant is explicitly a fault-injection copy, not claimed as an original pending row",
+  "source_mode_enrollment": "QA owner independently confirmed original virtual_devices membership",
+  "input_sha256": {
+    "legacy-edge-row.json": "33cf922aa79169b38ea0a960883e0d86d841602eef5f248ed9c2e64c14a6d465",
+    "legacy-edge-inventory.json": "8cd8d7389603dce2183897ab04d944b1591b4b400700766e895d5160b8a743ca"
+  },
+  "success": true,
+  "checks": [
+    {
+      "scenario": "actual_delivered_row",
+      "result": {
+        "version": "20261001_legacy_outbox_to_iot_v1",
+        "converted_pending": 0,
+        "archived_delivered": 1,
+        "quarantined": 0,
+        "preserved_blocked": 0
+      },
+      "original_rows_unchanged": true
+    },
+    {
+      "scenario": "explicit_pending_fault_injection_copy",
+      "result": {
+        "version": "20261001_legacy_outbox_to_iot_v1",
+        "converted_pending": 1,
+        "archived_delivered": 0,
+        "quarantined": 0,
+        "preserved_blocked": 0
+      },
+      "original_rows_unchanged": true
+    }
+  ]
+}

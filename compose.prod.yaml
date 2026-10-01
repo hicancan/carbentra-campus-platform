@@ -1,0 +1,133 @@
+name: carbentra-campus-production
+x-api-environment: &api-environment
+  CARBENTRA_ENV: production
+  CARBENTRA_DATABASE_URL_FILE: /run/secrets/database_url
+  CARBENTRA_ADMIN_USERNAME: ${CARBENTRA_ADMIN_USERNAME:-admin}
+  CARBENTRA_DEV_AUTH: "false"
+  CARBENTRA_AUTO_MIGRATE: "false"
+  CARBENTRA_SEED_DEMO: "false"
+  CARBENTRA_COOKIE_SECURE: "true"
+  CARBENTRA_SIMULATION_ENABLED: "false"
+  CARBENTRA_WORKER_ENABLED: "false"
+  CARBENTRA_PHYSICAL_DISPATCH_ENABLED: "false"
+  CARBENTRA_PHYSICAL_RELEASE_IDS: '[]'
+  CARBENTRA_ENABLE_DOCS: "false"
+  CARBENTRA_ALLOWED_ORIGINS: ${CARBENTRA_ALLOWED_ORIGINS:?Set an explicit JSON HTTPS origin array}
+  CARBENTRA_TRUSTED_PROXY_CIDRS: ${CARBENTRA_TRUSTED_PROXY_CIDRS:-[]}
+  CARBENTRA_TRUSTED_HOSTS: ${CARBENTRA_TRUSTED_HOSTS:?Set an explicit JSON host allowlist}
+x-backend: &backend
+  image: carbentra-campus-api:${CARBENTRA_IMAGE_TAG:?Set a tested release tag}
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  environment: *api-environment
+  secrets: [database_url]
+  read_only: true
+  tmpfs: ["/tmp:size=64m,noexec,nosuid"]
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  networks: [private]
+  init: true
+  logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+services:
+  db:
+    # This pinned PostGIS release publishes linux/amd64; ARM hosts need emulation.
+    platform: linux/amd64
+    image: postgis/postgis:17-3.6-alpine@sha256:a8ffa9afeea4ad6eada171fa2afdb57cd3eb90f92ce20156aa2cb8411d70e0cd
+    environment:
+      POSTGRES_DB: carbentra
+      POSTGRES_USER: carbentra_bootstrap
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      CARBENTRA_DB_PASSWORD_FILE: /run/secrets/database_password
+      POSTGRES_INITDB_ARGS: --data-checksums --auth-host=scram-sha-256
+    secrets: [postgres_password, database_password]
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./infra/postgres-init.sh:/docker-entrypoint-initdb.d/20-carbentra.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -h 127.0.0.1 -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [private]
+    restart: unless-stopped
+    shm_size: 128mb
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+  migrate:
+    <<: *backend
+    command: [python, -m, app.migrate]
+    depends_on:
+      db: {condition: service_healthy}
+    restart: "no"
+  api:
+    <<: *backend
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    restart: unless-stopped
+  worker:
+    <<: *backend
+    command: [python, -m, app.worker]
+    healthcheck:
+      test: [CMD, python, -m, app.worker_health]
+      interval: 15s
+      timeout: 10s
+      retries: 4
+      start_period: 30s
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+  analysis:
+    <<: *backend
+    command: [python, -m, app.worker, --role, analysis]
+    healthcheck:
+      test: [CMD, python, -m, app.worker_health, --role, analysis]
+      interval: 30s
+      timeout: 10s
+      retries: 4
+      start_period: 60s
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+  web:
+    image: carbentra-campus-web:${CARBENTRA_IMAGE_TAG:?Set a tested release tag}
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["127.0.0.1:8080:8080"]
+    read_only: true
+    tmpfs: ["/tmp:size=32m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, wget, --quiet, --spider, http://127.0.0.1:8080/health/web]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    networks: [private, ingress]
+    restart: unless-stopped
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+networks:
+  private:
+    internal: true
+  ingress:
+    # Needed for Docker to materialize localhost-only published web ports.
+    driver: bridge
+volumes:
+  database:
+secrets:
+  postgres_password:
+    file: ${CARBENTRA_SECRETS_DIR:-./.secrets}/postgres_password
+  database_password:
+    file: ${CARBENTRA_SECRETS_DIR:-./.secrets}/database_password
+  database_url:
+    file: ${CARBENTRA_SECRETS_DIR:-./.secrets}/database_url
+  admin_password:
+    file: ${CARBENTRA_SECRETS_DIR:-./.secrets}/admin_password

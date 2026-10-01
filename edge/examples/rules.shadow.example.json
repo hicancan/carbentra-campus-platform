@@ -1,0 +1,8 @@
+{
+  "schema_version":1,
+  "revision":1,
+  "valid_until":"2000-01-01T00:00:00Z",
+  "rules":[
+    {"id":"a101-presence-light","sensor_device_id":"virtual-sense-a101","target_device_id":"virtual-switch-a101","channel_id":"relay.1","when_present":true,"desired_on":true,"stable_for_seconds":2,"maximum_age_seconds":5,"raw_light_below":2000}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "format": "carbentra-product-catalog",
+  "products": {
+    "PLUG": {
+      "hero": "plug-hero.png",
+      "manifest": "manifest.json",
+      "model": "carbentra-plug-reference.glb"
+    },
+    "PRESENCE": {
+      "hero": "sense-hero.png",
+      "manifest": "sense.manifest.json",
+      "model": "carbentra-sense-reference.glb"
+    },
+    "SWITCH": {
+      "hero": "switch-hero.png",
+      "manifest": "switch.manifest.json",
+      "model": "carbentra-switch-reference.glb"
+    }
+  },
+  "schema_version": 1
+}

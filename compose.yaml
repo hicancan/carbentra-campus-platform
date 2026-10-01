@@ -1,0 +1,120 @@
+name: carbentra-campus
+x-api-environment: &api-environment
+  CARBENTRA_ENV: development
+  CARBENTRA_DATABASE_URL: postgresql+psycopg://carbentra:development-db-only@db:5432/carbentra
+  CARBENTRA_DEV_AUTH: "true"
+  CARBENTRA_AUTO_MIGRATE: "false"
+  CARBENTRA_SEED_DEMO: "true"
+  CARBENTRA_SIMULATION_ENABLED: "true"
+  CARBENTRA_WORKER_ENABLED: "false"
+  CARBENTRA_PHYSICAL_DISPATCH_ENABLED: "false"
+  CARBENTRA_PHYSICAL_RELEASE_IDS: '[]'
+  CARBENTRA_ALLOWED_ORIGINS: '["http://localhost:8080","http://127.0.0.1:8080"]'
+  CARBENTRA_TRUSTED_PROXY_CIDRS: '[]'
+  CARBENTRA_TRUSTED_HOSTS: '["localhost","127.0.0.1","api"]'
+x-backend: &backend
+  image: carbentra-campus-api:local
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  environment: *api-environment
+  read_only: true
+  tmpfs: ["/tmp:size=64m,noexec,nosuid"]
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  networks: [private]
+  init: true
+  logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+services:
+  db:
+    # This pinned PostGIS release publishes linux/amd64; ARM hosts need emulation.
+    platform: linux/amd64
+    image: postgis/postgis:17-3.6-alpine@sha256:a8ffa9afeea4ad6eada171fa2afdb57cd3eb90f92ce20156aa2cb8411d70e0cd
+    environment:
+      POSTGRES_DB: carbentra
+      POSTGRES_USER: carbentra_bootstrap
+      POSTGRES_PASSWORD: development-bootstrap-only
+      CARBENTRA_DB_PASSWORD: development-db-only
+      POSTGRES_INITDB_ARGS: --data-checksums --auth-host=scram-sha-256
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./infra/postgres-init.sh:/docker-entrypoint-initdb.d/20-carbentra.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -h 127.0.0.1 -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [private]
+    restart: unless-stopped
+    shm_size: 128mb
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+  migrate:
+    <<: *backend
+    command: [python, -m, app.migrate]
+    depends_on:
+      db: {condition: service_healthy}
+    restart: "no"
+  api:
+    <<: *backend
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      # The explicit full-campus development fixture bulk-loads ~120k samples once.
+      start_period: 180s
+    restart: unless-stopped
+  worker:
+    <<: *backend
+    command: [python, -m, app.worker]
+    healthcheck:
+      test: [CMD, python, -m, app.worker_health]
+      interval: 15s
+      timeout: 10s
+      retries: 4
+      start_period: 30s
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+  analysis:
+    <<: *backend
+    command: [python, -m, app.worker, --role, analysis]
+    healthcheck:
+      test: [CMD, python, -m, app.worker_health, --role, analysis]
+      interval: 30s
+      timeout: 10s
+      retries: 4
+      start_period: 60s
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+  web:
+    image: carbentra-campus-web:local
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["127.0.0.1:8080:8080"]
+    read_only: true
+    tmpfs: ["/tmp:size=32m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, wget, --quiet, --spider, http://127.0.0.1:8080/health/web]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    networks: [private, ingress]
+    restart: unless-stopped
+    logging: {driver: json-file, options: {max-size: 10m, max-file: "3"}}
+networks:
+  private:
+    internal: true
+  ingress:
+    # Needed for Docker to materialize localhost-only published web ports.
+    driver: bridge
+volumes:
+  database:

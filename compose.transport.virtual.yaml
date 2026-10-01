@@ -1,0 +1,4 @@
+# Explicit opt-in only for SIMULATED + VIRTUAL devices. Physical dispatch is explicitly disabled.
+services:
+  edge:
+    command: [python, service.py, --broker, broker, --port, "8883", --ca, /run/secrets/mqtt_ca, --certificate, /run/secrets/edge_certificate, --key, /run/secrets/edge_key, --devices, /run/secrets/edge_devices, --database, /data/edge.sqlite3, --platform-url, "https://platform-tls:8443", --enable-virtual-commands]

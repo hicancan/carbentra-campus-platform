@@ -1,0 +1,2188 @@
+{
+  "version": 2,
+  "family": "PLUG",
+  "product_name": "CARBENTRA Plug Rev B",
+  "name": "CARBENTRA Plug Rev B · Engineering reference",
+  "source_mode": "REFERENCE",
+  "source_repository": "https://github.com/hicancan/carbentra-smart-plug",
+  "source_commit": "eb8a2239341801c18563f42c696ff350c5e84e1c",
+  "source_path": "visuals/rev_b/exports/carbentra_twin_light.glb",
+  "source_sha256": "dc25e3965a9e653eb5c91a4514fcc1a3e051ffa47593778d7e70a71071e439d0",
+  "display_sha256": "920e1c0de851eb64bcf4b36a4838bc83ed4820f0e833a0a4457fb3ce125f3277",
+  "model_url": "/api/v1/assets/product/model?family=PLUG",
+  "hero_url": "/api/v1/assets/product/hero?family=PLUG",
+  "hero_sha256": "4a5242116887ae94ea76b8ee5d2d0c1a073a131a10b7aa1d365b5ca3c844e4b3",
+  "hero_bytes": 261703,
+  "source_hero_path": "visuals/rev_b/renders/01_hero_ivory.png",
+  "source_hero_sha256": "8012f945ad7f1963505bc924448711a121cbf8a854edd9aaa39db8eeecd81603",
+  "source_hero_bytes": 6517373,
+  "hero_derivation": {
+    "operation": "bounded_thumbnail",
+    "max_dimension_px": 640,
+    "resampling": "LANCZOS",
+    "tool": "Pillow 12.3.0",
+    "source_size_px": [
+      2400,
+      2000
+    ],
+    "size_px": [
+      640,
+      533
+    ]
+  },
+  "bytes": 22318016,
+  "source_bytes": 30337768,
+  "mime": "model/gltf-binary",
+  "units": "m",
+  "axis": "Y-up",
+  "node_count": 227,
+  "mesh_count": 227,
+  "triangle_count": 666556,
+  "parts": [
+    {
+      "id": "RearShell",
+      "name": "RearShell",
+      "node_index": 0,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "FrontLid",
+      "name": "FrontLid",
+      "node_index": 1,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "SeamRing",
+      "name": "SeamRing",
+      "node_index": 2,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "RearFinish",
+      "name": "RearFinish",
+      "node_index": 3,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "PEChannel",
+      "name": "PEChannel",
+      "node_index": 4,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Pawl_L",
+      "name": "Pawl_L",
+      "node_index": 5,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Pawl_N",
+      "name": "Pawl_N",
+      "node_index": 6,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PawlSpring_L",
+      "name": "PawlSpring_L",
+      "node_index": 7,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PawlSpring_N",
+      "name": "PawlSpring_N",
+      "node_index": 8,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "LocalButton",
+      "name": "LocalButton",
+      "node_index": 9,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "RearmButton",
+      "name": "RearmButton",
+      "node_index": 10,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "StatusLightGuide",
+      "name": "StatusLightGuide",
+      "node_index": 11,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "Screw_0",
+      "name": "Screw_0",
+      "node_index": 12,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Screw_1",
+      "name": "Screw_1",
+      "node_index": 13,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Screw_2",
+      "name": "Screw_2",
+      "node_index": 14,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Screw_3",
+      "name": "Screw_3",
+      "node_index": 15,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "RFAntenna",
+      "name": "RFAntenna",
+      "node_index": 16,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "RFCoax",
+      "name": "RFCoax",
+      "node_index": 17,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "RFConnectorEnvelope",
+      "name": "RFConnectorEnvelope",
+      "node_index": 18,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "HeadConnectorEnvelope",
+      "name": "HeadConnectorEnvelope",
+      "node_index": 19,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "HeadPigtail_0",
+      "name": "HeadPigtail_0",
+      "node_index": 20,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "HeadPigtail_1",
+      "name": "HeadPigtail_1",
+      "node_index": 21,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "HeadPigtail_2",
+      "name": "HeadPigtail_2",
+      "node_index": 22,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCore_L_RAW",
+      "name": "PowerCore_L_RAW",
+      "node_index": 23,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCore_N_RAW",
+      "name": "PowerCore_N_RAW",
+      "node_index": 24,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCore_L_PROTECTED",
+      "name": "PowerCore_L_PROTECTED",
+      "node_index": 25,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCore_L_OUTPUT",
+      "name": "PowerCore_L_OUTPUT",
+      "node_index": 26,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCore_N_OUTPUT",
+      "name": "PowerCore_N_OUTPUT",
+      "node_index": 27,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Carrier",
+      "name": "Carrier",
+      "node_index": 28,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ShutterGuide",
+      "name": "ShutterGuide",
+      "node_index": 29,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ShutterSlider",
+      "name": "ShutterSlider",
+      "node_index": 30,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ShutterReturnSpring",
+      "name": "ShutterReturnSpring",
+      "node_index": 31,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Contact_L",
+      "name": "Contact_L",
+      "node_index": 32,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Contact_N",
+      "name": "Contact_N",
+      "node_index": 33,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "Contact_PE",
+      "name": "Contact_PE",
+      "node_index": 34,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCarrier_L_RAW",
+      "name": "PowerCarrier_L_RAW",
+      "node_index": 35,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCarrier_N_RAW",
+      "name": "PowerCarrier_N_RAW",
+      "node_index": 36,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCarrier_L_PROTECTED",
+      "name": "PowerCarrier_L_PROTECTED",
+      "node_index": 37,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCarrier_L_OUTPUT",
+      "name": "PowerCarrier_L_OUTPUT",
+      "node_index": 38,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCarrier_N_OUTPUT",
+      "name": "PowerCarrier_N_OUTPUT",
+      "node_index": 39,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalPad",
+      "name": "ThermalPad",
+      "node_index": 40,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PEBus",
+      "name": "PEBus",
+      "node_index": 41,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "BladeSleeve_L",
+      "name": "BladeSleeve_L",
+      "node_index": 42,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "BladeSleeve_N",
+      "name": "BladeSleeve_N",
+      "node_index": 43,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "Blade_L",
+      "name": "Blade_L",
+      "node_index": 44,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "Blade_N",
+      "name": "Blade_N",
+      "node_index": 45,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "Blade_PE",
+      "name": "Blade_PE",
+      "node_index": 46,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "AuxFuseCradle",
+      "name": "AuxFuseCradle",
+      "node_index": 47,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "AuxFuseRetainer",
+      "name": "AuxFuseRetainer",
+      "node_index": 48,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCore_L_FUSE_THERMAL",
+      "name": "PowerCore_L_FUSE_THERMAL",
+      "node_index": 49,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "PowerCarrier_L_FUSE_THERMAL",
+      "name": "PowerCarrier_L_FUSE_THERMAL",
+      "node_index": 50,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseHolder",
+      "name": "MainFuseHolder",
+      "node_index": 51,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseCeramic",
+      "name": "MainFuseCeramic",
+      "node_index": 52,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseCap1",
+      "name": "MainFuseCap1",
+      "node_index": 53,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseCap2",
+      "name": "MainFuseCap2",
+      "node_index": 54,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseClip1",
+      "name": "MainFuseClip1",
+      "node_index": 55,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseClip2",
+      "name": "MainFuseClip2",
+      "node_index": 56,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseCollector1",
+      "name": "MainFuseCollector1",
+      "node_index": 57,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseCollector2",
+      "name": "MainFuseCollector2",
+      "node_index": 58,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainFuseRetainer",
+      "name": "MainFuseRetainer",
+      "node_index": 59,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "FuseRetainerScrew_0",
+      "name": "FuseRetainerScrew_0",
+      "node_index": 60,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "FuseRetainerScrew_1",
+      "name": "FuseRetainerScrew_1",
+      "node_index": 61,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "FuseRetainerScrew_2",
+      "name": "FuseRetainerScrew_2",
+      "node_index": 62,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "FuseRetainerScrew_3",
+      "name": "FuseRetainerScrew_3",
+      "node_index": 63,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalBody",
+      "name": "ThermalBody",
+      "node_index": 64,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalLead1",
+      "name": "ThermalLead1",
+      "node_index": 65,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalLead2",
+      "name": "ThermalLead2",
+      "node_index": 66,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalSleeve",
+      "name": "ThermalSleeve",
+      "node_index": 67,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalRetainer",
+      "name": "ThermalRetainer",
+      "node_index": 68,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalRetainerScrew_0",
+      "name": "ThermalRetainerScrew_0",
+      "node_index": 69,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "ThermalRetainerScrew_1",
+      "name": "ThermalRetainerScrew_1",
+      "node_index": 70,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "display_tessellation_chord_mm": 0.04
+      }
+    },
+    {
+      "id": "MainB_C101",
+      "name": "MainB_C101",
+      "node_index": 71,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C102",
+      "name": "MainB_C102",
+      "node_index": 72,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C103",
+      "name": "MainB_C103",
+      "node_index": 73,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C104",
+      "name": "MainB_C104",
+      "node_index": 74,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C105",
+      "name": "MainB_C105",
+      "node_index": 75,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C106",
+      "name": "MainB_C106",
+      "node_index": 76,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C107",
+      "name": "MainB_C107",
+      "node_index": 77,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C201",
+      "name": "MainB_C201",
+      "node_index": 78,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C202",
+      "name": "MainB_C202",
+      "node_index": 79,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C203",
+      "name": "MainB_C203",
+      "node_index": 80,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C204",
+      "name": "MainB_C204",
+      "node_index": 81,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C205",
+      "name": "MainB_C205",
+      "node_index": 82,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C206",
+      "name": "MainB_C206",
+      "node_index": 83,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C207",
+      "name": "MainB_C207",
+      "node_index": 84,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C208",
+      "name": "MainB_C208",
+      "node_index": 85,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C301",
+      "name": "MainB_C301",
+      "node_index": 86,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C402",
+      "name": "MainB_C402",
+      "node_index": 87,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C403",
+      "name": "MainB_C403",
+      "node_index": 88,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C404",
+      "name": "MainB_C404",
+      "node_index": 89,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C405",
+      "name": "MainB_C405",
+      "node_index": 90,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C406",
+      "name": "MainB_C406",
+      "node_index": 91,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_C407",
+      "name": "MainB_C407",
+      "node_index": 92,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CI201",
+      "name": "MainB_CI201",
+      "node_index": 93,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CI202",
+      "name": "MainB_CI202",
+      "node_index": 94,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "PCB detail / routed copper",
+      "name": "PCB detail / routed copper",
+      "node_index": 95,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "source_members": "[\"MainB_Copper_BCu_1024\", \"MainB_Copper_BCu_1025\", \"MainB_Copper_BCu_1026\", \"MainB_Copper_BCu_1027\", \"MainB_Copper_BCu_1028\", \"MainB_Copper_BCu_1029\", \"MainB_Copper_BCu_1030\", \"MainB_Copper_BCu_1031\", \"MainB_Copper_BCu_1032\", \"MainB_Copper_BCu_1033\", \"MainB_Copper_BCu_1034\", \"MainB_Copper_BCu_1035\", \"MainB_Copper_BCu_1036\", \"MainB_Copper_BCu_1037\", \"MainB_Copper_BCu_1038\", \"MainB_Copper_BCu_1039\", \"MainB_Copper_BCu_1040\", \"MainB_Copper_BCu_1041\", \"MainB_Copper_BCu_1042\", \"MainB_Copper_BCu_1043\", \"MainB_Copper_BCu_1044\", \"MainB_Copper_BCu_1045\", \"MainB_Copper_BCu_1046\", \"MainB_Copper_BCu_1047\", \"MainB_Copper_BCu_1048\", \"MainB_Copper_BCu_1049\", \"MainB_Copper_BCu_1050\", \"MainB_Copper_BCu_1051\", \"MainB_Copper_BCu_1626\", \"MainB_Copper_BCu_1627\", \"MainB_Copper_BCu_1628\", \"MainB_Copper_BCu_1629\", \"MainB_Copper_BCu_1630\", \"MainB_Copper_BCu_1631\", \"MainB_Copper_BCu_1632\", \"MainB_Copper_BCu_1725\", \"MainB_Copper_BCu_1726\", \"MainB_Copper_BCu_1727\", \"MainB_Copper_BCu_1728\", \"MainB_Copper_BCu_1729\", \"MainB_Copper_BCu_1868\", \"MainB_Copper_BCu_1869\", \"MainB_Copper_BCu_1870\", \"MainB_Copper_BCu_1871\", \"MainB_Copper_BCu_1872\", \"MainB_Copper_BCu_1951\", \"MainB_Copper_BCu_2137\", \"MainB_Copper_BCu_2138\", \"MainB_Copper_BCu_2139\", \"MainB_Copper_BCu_2140\", \"MainB_Copper_BCu_2141\", \"MainB_Copper_BCu_2142\", \"MainB_Copper_BCu_2143\", \"MainB_Copper_BCu_2144\", \"MainB_Copper_BCu_2145\", \"MainB_Copper_BCu_2146\", \"MainB_Copper_BCu_2147\", \"MainB_Copper_BCu_2166\", \"MainB_Copper_BCu_2167\", \"MainB_Copper_BCu_2186\", \"MainB_Copper_BCu_2187\", \"MainB_Copper_BCu_2220\", \"MainB_Copper_BCu_2221\", \"MainB_Copper_BCu_245\", \"MainB_Copper_BCu_246\", \"MainB_Copper_BCu_247\", \"MainB_Copper_BCu_248\", \"MainB_Copper_BCu_249\", \"MainB_Copper_BCu_250\", \"MainB_Copper_BCu_251\", \"MainB_Copper_BCu_252\", \"MainB_Copper_BCu_253\", \"MainB_Copper_BCu_254\", \"MainB_Copper_BCu_255\", \"MainB_Copper_BCu_256\", \"MainB_Copper_BCu_257\", \"MainB_Copper_BCu_258\", \"MainB_Copper_BCu_259\", \"MainB_Copper_BCu_260\", \"MainB_Copper_BCu_261\", \"MainB_Copper_BCu_262\", \"MainB_Copper_BCu_263\", \"MainB_Copper_BCu_264\", \"MainB_Copper_BCu_265\", \"MainB_Copper_BCu_266\", \"MainB_Copper_BCu_267\", \"MainB_Copper_BCu_268\", \"MainB_Copper_BCu_269\", \"MainB_Copper_BCu_270\", \"MainB_Copper_BCu_271\", \"MainB_Copper_BCu_272\", \"MainB_Copper_BCu_273\", \"MainB_Copper_BCu_274\", \"MainB_Copper_BCu_275\", \"MainB_Copper_BCu_276\", \"MainB_Copper_BCu_277\", \"MainB_Copper_BCu_278\", \"MainB_Copper_BCu_279\", \"MainB_Copper_BCu_419\", \"MainB_Copper_BCu_420\", \"MainB_Copper_BCu_421\", \"MainB_Copper_BCu_422\", \"MainB_Copper_BCu_423\", \"MainB_Copper_BCu_424\", \"MainB_Copper_BCu_425\", \"MainB_Copper_BCu_426\", \"MainB_Copper_BCu_427\", \"MainB_Copper_BCu_428\", \"MainB_Copper_BCu_429\", \"MainB_Copper_BCu_430\", \"MainB_Copper_BCu_431\", \"MainB_Copper_BCu_432\", \"MainB_Copper_BCu_433\", \"MainB_Copper_BCu_434\", \"MainB_Copper_BCu_435\", \"MainB_Copper_BCu_436\", \"MainB_Copper_BCu_437\", \"MainB_Copper_BCu_438\", \"MainB_Copper_BCu_439\", \"MainB_Copper_BCu_440\", \"MainB_Copper_BCu_441\", \"MainB_Copper_BCu_442\", \"MainB_Copper_BCu_443\", \"MainB_Copper_BCu_444\", \"MainB_Copper_BCu_445\", \"MainB_Copper_BCu_446\", \"MainB_Copper_BCu_447\", \"MainB_Copper_BCu_448\", \"MainB_Copper_BCu_449\", \"MainB_Copper_BCu_450\", \"MainB_Copper_BCu_451\", \"MainB_Copper_BCu_452\", \"MainB_Copper_BCu_453\", \"MainB_Copper_BCu_454\", \"MainB_Copper_BCu_455\", \"MainB_Copper_BCu_456\", \"MainB_Copper_BCu_457\", \"MainB_Copper_BCu_458\", \"MainB_Copper_BCu_459\", \"MainB_Copper_BCu_460\", \"MainB_Copper_BCu_461\", \"MainB_Copper_BCu_462\", \"MainB_Copper_BCu_463\", \"MainB_Copper_BCu_464\", \"MainB_Copper_BCu_465\", \"MainB_Copper_BCu_466\", \"MainB_Copper_BCu_467\", \"MainB_Copper_BCu_468\", \"MainB_Copper_BCu_469\", \"MainB_Copper_BCu_470\", \"MainB_Copper_BCu_471\", \"MainB_Copper_BCu_472\", \"MainB_Copper_BCu_473\", \"MainB_Copper_BCu_474\", \"MainB_Copper_BCu_475\", \"MainB_Copper_BCu_476\", \"MainB_Copper_BCu_477\", \"MainB_Copper_BCu_478\", \"MainB_Copper_BCu_479\", \"MainB_Copper_BCu_480\", \"MainB_Copper_BCu_481\", \"MainB_Copper_BCu_482\", \"MainB_Copper_BCu_483\", \"MainB_Copper_BCu_484\", \"MainB_Copper_BCu_485\", \"MainB_Copper_BCu_486\", \"MainB_Copper_BCu_487\", \"MainB_Copper_BCu_488\", \"MainB_Copper_BCu_627\", \"MainB_Copper_FCu_0\", \"MainB_Copper_FCu_1\", \"MainB_Copper_FCu_10\", \"MainB_Copper_FCu_100\", \"MainB_Copper_FCu_101\", \"MainB_Copper_FCu_102\", \"MainB_Copper_FCu_103\", \"MainB_Copper_FCu_104\", \"MainB_Copper_FCu_105\", \"MainB_Copper_FCu_106\", \"MainB_Copper_FCu_107\", \"MainB_Copper_FCu_108\", \"MainB_Copper_FCu_109\", \"MainB_Copper_FCu_11\", \"MainB_Copper_FCu_110\", \"MainB_Copper_FCu_111\", \"MainB_Copper_FCu_112\", \"MainB_Copper_FCu_113\", \"MainB_Copper_FCu_114\", \"MainB_Copper_FCu_1144\", \"MainB_Copper_FCu_1145\", \"MainB_Copper_FCu_1146\", \"MainB_Copper_FCu_1147\", \"MainB_Copper_FCu_1148\", \"MainB_Copper_FCu_1149\", \"MainB_Copper_FCu_115\", \"MainB_Copper_FCu_1150\", \"MainB_Copper_FCu_1151\", \"MainB_Copper_FCu_1152\", \"MainB_Copper_FCu_1153\", \"MainB_Copper_FCu_1154\", \"MainB_Copper_FCu_1155\", \"MainB_Copper_FCu_1156\", \"MainB_Copper_FCu_1157\", \"MainB_Copper_FCu_1158\", \"MainB_Copper_FCu_1159\", \"MainB_Copper_FCu_116\", \"MainB_Copper_FCu_1160\", \"MainB_Copper_FCu_1161\", \"MainB_Copper_FCu_1162\", \"MainB_Copper_FCu_1163\", \"MainB_Copper_FCu_1164\", \"MainB_Copper_FCu_1165\", \"MainB_Copper_FCu_1166\", \"MainB_Copper_FCu_1167\", \"MainB_Copper_FCu_1168\", \"MainB_Copper_FCu_1169\", \"MainB_Copper_FCu_117\", \"MainB_Copper_FCu_1170\", \"MainB_Copper_FCu_1171\", \"MainB_Copper_FCu_1172\", \"MainB_Copper_FCu_1173\", \"MainB_Copper_FCu_1174\", \"MainB_Copper_FCu_1175\", \"MainB_Copper_FCu_1176\", \"MainB_Copper_FCu_1177\", \"MainB_Copper_FCu_1178\", \"MainB_Copper_FCu_1179\", \"MainB_Copper_FCu_118\", \"MainB_Copper_FCu_1180\", \"MainB_Copper_FCu_1181\", \"MainB_Copper_FCu_1182\", \"MainB_Copper_FCu_1183\", \"MainB_Copper_FCu_1184\", \"MainB_Copper_FCu_1185\", \"MainB_Copper_FCu_1186\", \"MainB_Copper_FCu_1187\", \"MainB_Copper_FCu_1188\", \"MainB_Copper_FCu_1189\", \"MainB_Copper_FCu_119\", \"MainB_Copper_FCu_1190\", \"MainB_Copper_FCu_1191\", \"MainB_Copper_FCu_1192\", \"MainB_Copper_FCu_1193\", \"MainB_Copper_FCu_1194\", \"MainB_Copper_FCu_1195\", \"MainB_Copper_FCu_1196\", \"MainB_Copper_FCu_1197\", \"MainB_Copper_FCu_1198\", \"MainB_Copper_FCu_1199\", \"MainB_Copper_FCu_12\", \"MainB_Copper_FCu_120\", \"MainB_Copper_FCu_1200\", \"MainB_Copper_FCu_1201\", \"MainB_Copper_FCu_1202\", \"MainB_Copper_FCu_1203\", \"MainB_Copper_FCu_1204\", \"MainB_Copper_FCu_1205\", \"MainB_Copper_FCu_1206\", \"MainB_Copper_FCu_1207\", \"MainB_Copper_FCu_1208\", \"MainB_Copper_FCu_1209\", \"MainB_Copper_FCu_121\", \"MainB_Copper_FCu_1210\", \"MainB_Copper_FCu_1211\", \"MainB_Copper_FCu_1212\", \"MainB_Copper_FCu_1213\", \"MainB_Copper_FCu_1214\", \"MainB_Copper_FCu_1215\", \"MainB_Copper_FCu_1216\", \"MainB_Copper_FCu_1217\", \"MainB_Copper_FCu_1218\", \"MainB_Copper_FCu_1219\", \"MainB_Copper_FCu_122\", \"MainB_Copper_FCu_1220\", \"MainB_Copper_FCu_1221\", \"MainB_Copper_FCu_1222\", \"MainB_Copper_FCu_1223\", \"MainB_Copper_FCu_1224\", \"MainB_Copper_FCu_1225\", \"MainB_Copper_FCu_1226\", \"MainB_Copper_FCu_1227\", \"MainB_Copper_FCu_1228\", \"MainB_Copper_FCu_1229\", \"MainB_Copper_FCu_123\", \"MainB_Copper_FCu_1230\", \"MainB_Copper_FCu_1231\", \"MainB_Copper_FCu_1232\", \"MainB_Copper_FCu_124\", \"MainB_Copper_FCu_1247\", \"MainB_Copper_FCu_1248\", \"MainB_Copper_FCu_1249\", \"MainB_Copper_FCu_125\", \"MainB_Copper_FCu_1250\", \"MainB_Copper_FCu_1251\", \"MainB_Copper_FCu_1252\", \"MainB_Copper_FCu_1253\", \"MainB_Copper_FCu_1254\", \"MainB_Copper_FCu_1255\", \"MainB_Copper_FCu_1256\", \"MainB_Copper_FCu_1257\", \"MainB_Copper_FCu_1258\", \"MainB_Copper_FCu_1259\", \"MainB_Copper_FCu_126\", \"MainB_Copper_FCu_1260\", \"MainB_Copper_FCu_1261\", \"MainB_Copper_FCu_1262\", \"MainB_Copper_FCu_1263\", \"MainB_Copper_FCu_1264\", \"MainB_Copper_FCu_1265\", \"MainB_Copper_FCu_1266\", \"MainB_Copper_FCu_1267\", \"MainB_Copper_FCu_1268\", \"MainB_Copper_FCu_1269\", \"MainB_Copper_FCu_127\", \"MainB_Copper_FCu_1270\", \"MainB_Copper_FCu_1271\", \"MainB_Copper_FCu_1272\", \"MainB_Copper_FCu_1273\", \"MainB_Copper_FCu_1274\", \"MainB_Copper_FCu_1275\", \"MainB_Copper_FCu_1276\", \"MainB_Copper_FCu_1277\", \"MainB_Copper_FCu_1278\", \"MainB_Copper_FCu_1279\", \"MainB_Copper_FCu_128\", \"MainB_Copper_FCu_1280\", \"MainB_Copper_FCu_1281\", \"MainB_Copper_FCu_1282\", \"MainB_Copper_FCu_1283\", \"MainB_Copper_FCu_1284\", \"MainB_Copper_FCu_1285\", \"MainB_Copper_FCu_1286\", \"MainB_Copper_FCu_1287\", \"MainB_Copper_FCu_1288\", \"MainB_Copper_FCu_1289\", \"MainB_Copper_FCu_129\", \"MainB_Copper_FCu_1290\", \"MainB_Copper_FCu_1291\", \"MainB_Copper_FCu_1292\", \"MainB_Copper_FCu_1293\", \"MainB_Copper_FCu_1294\", \"MainB_Copper_FCu_1295\", \"MainB_Copper_FCu_1296\", \"MainB_Copper_FCu_1297\", \"MainB_Copper_FCu_1298\", \"MainB_Copper_FCu_1299\", \"MainB_Copper_FCu_13\", \"MainB_Copper_FCu_130\", \"MainB_Copper_FCu_1300\", \"MainB_Copper_FCu_1301\", \"MainB_Copper_FCu_1302\", \"MainB_Copper_FCu_1303\", \"MainB_Copper_FCu_1304\", \"MainB_Copper_FCu_1305\", \"MainB_Copper_FCu_1306\", \"MainB_Copper_FCu_1307\", \"MainB_Copper_FCu_1308\", \"MainB_Copper_FCu_1309\", \"MainB_Copper_FCu_131\", \"MainB_Copper_FCu_1310\", \"MainB_Copper_FCu_1311\", \"MainB_Copper_FCu_1312\", \"MainB_Copper_FCu_1313\", \"MainB_Copper_FCu_1314\", \"MainB_Copper_FCu_1315\", \"MainB_Copper_FCu_1316\", \"MainB_Copper_FCu_1317\", \"MainB_Copper_FCu_1318\", \"MainB_Copper_FCu_1319\", \"MainB_Copper_FCu_132\", \"MainB_Copper_FCu_1320\", \"MainB_Copper_FCu_1321\", \"MainB_Copper_FCu_1322\", \"MainB_Copper_FCu_1323\", \"MainB_Copper_FCu_1324\", \"MainB_Copper_FCu_1325\", \"MainB_Copper_FCu_1326\", \"MainB_Copper_FCu_1327\", \"MainB_Copper_FCu_1328\", \"MainB_Copper_FCu_1329\", \"MainB_Copper_FCu_133\", \"MainB_Copper_FCu_1330\", \"MainB_Copper_FCu_1331\", \"MainB_Copper_FCu_1332\", \"MainB_Copper_FCu_1333\", \"MainB_Copper_FCu_1334\", \"MainB_Copper_FCu_1335\", \"MainB_Copper_FCu_1336\", \"MainB_Copper_FCu_1337\", \"MainB_Copper_FCu_1338\", \"MainB_Copper_FCu_1339\", \"MainB_Copper_FCu_134\", \"MainB_Copper_FCu_1340\", \"MainB_Copper_FCu_1341\", \"MainB_Copper_FCu_1342\", \"MainB_Copper_FCu_1343\", \"MainB_Copper_FCu_1344\", \"MainB_Copper_FCu_1345\", \"MainB_Copper_FCu_1346\", \"MainB_Copper_FCu_1347\", \"MainB_Copper_FCu_1348\", \"MainB_Copper_FCu_1349\", \"MainB_Copper_FCu_135\", \"MainB_Copper_FCu_1350\", \"MainB_Copper_FCu_1351\", \"MainB_Copper_FCu_1352\", \"MainB_Copper_FCu_136\", \"MainB_Copper_FCu_1363\", \"MainB_Copper_FCu_1364\", \"MainB_Copper_FCu_1365\", \"MainB_Copper_FCu_1369\", \"MainB_Copper_FCu_137\", \"MainB_Copper_FCu_1370\", \"MainB_Copper_FCu_1371\", \"MainB_Copper_FCu_1372\", \"MainB_Copper_FCu_1373\", \"MainB_Copper_FCu_1374\", \"MainB_Copper_FCu_1375\", \"MainB_Copper_FCu_1376\", \"MainB_Copper_FCu_1377\", \"MainB_Copper_FCu_1378\", \"MainB_Copper_FCu_1379\", \"MainB_Copper_FCu_138\", \"MainB_Copper_FCu_1380\", \"MainB_Copper_FCu_1381\", \"MainB_Copper_FCu_1382\", \"MainB_Copper_FCu_1383\", \"MainB_Copper_FCu_1384\", \"MainB_Copper_FCu_1385\", \"MainB_Copper_FCu_1386\", \"MainB_Copper_FCu_1387\", \"MainB_Copper_FCu_139\", \"MainB_Copper_FCu_14\", \"MainB_Copper_FCu_140\", \"MainB_Copper_FCu_141\", \"MainB_Copper_FCu_1410\", \"MainB_Copper_FCu_1411\", \"MainB_Copper_FCu_1412\", \"MainB_Copper_FCu_1413\", \"MainB_Copper_FCu_1414\", \"MainB_Copper_FCu_1415\", \"MainB_Copper_FCu_1416\", \"MainB_Copper_FCu_142\", \"MainB_Copper_FCu_1421\", \"MainB_Copper_FCu_1422\", \"MainB_Copper_FCu_1423\", \"MainB_Copper_FCu_1424\", \"MainB_Copper_FCu_1425\", \"MainB_Copper_FCu_143\", \"MainB_Copper_FCu_1433\", \"MainB_Copper_FCu_1434\", \"MainB_Copper_FCu_1435\", \"MainB_Copper_FCu_1436\", \"MainB_Copper_FCu_1437\", \"MainB_Copper_FCu_1438\", \"MainB_Copper_FCu_1439\", \"MainB_Copper_FCu_144\", \"MainB_Copper_FCu_1440\", \"MainB_Copper_FCu_1441\", \"MainB_Copper_FCu_1442\", \"MainB_Copper_FCu_1443\", \"MainB_Copper_FCu_1444\", \"MainB_Copper_FCu_1445\", \"MainB_Copper_FCu_1446\", \"MainB_Copper_FCu_1447\", \"MainB_Copper_FCu_1448\", \"MainB_Copper_FCu_1449\", \"MainB_Copper_FCu_145\", \"MainB_Copper_FCu_1450\", \"MainB_Copper_FCu_1451\", \"MainB_Copper_FCu_1452\", \"MainB_Copper_FCu_1453\", \"MainB_Copper_FCu_1454\", \"MainB_Copper_FCu_1455\", \"MainB_Copper_FCu_1456\", \"MainB_Copper_FCu_1457\", \"MainB_Copper_FCu_1458\", \"MainB_Copper_FCu_1459\", \"MainB_Copper_FCu_146\", \"MainB_Copper_FCu_1460\", \"MainB_Copper_FCu_1461\", \"MainB_Copper_FCu_1462\", \"MainB_Copper_FCu_1463\", \"MainB_Copper_FCu_1464\", \"MainB_Copper_FCu_1465\", \"MainB_Copper_FCu_1466\", \"MainB_Copper_FCu_1467\", \"MainB_Copper_FCu_1468\", \"MainB_Copper_FCu_1469\", \"MainB_Copper_FCu_147\", \"MainB_Copper_FCu_1470\", \"MainB_Copper_FCu_1471\", \"MainB_Copper_FCu_1472\", \"MainB_Copper_FCu_1473\", \"MainB_Copper_FCu_1474\", \"MainB_Copper_FCu_1475\", \"MainB_Copper_FCu_1476\", \"MainB_Copper_FCu_1477\", \"MainB_Copper_FCu_1478\", \"MainB_Copper_FCu_1479\", \"MainB_Copper_FCu_148\", \"MainB_Copper_FCu_1480\", \"MainB_Copper_FCu_1481\", \"MainB_Copper_FCu_1482\", \"MainB_Copper_FCu_1483\", \"MainB_Copper_FCu_1484\", \"MainB_Copper_FCu_1485\", \"MainB_Copper_FCu_1486\", \"MainB_Copper_FCu_1487\", \"MainB_Copper_FCu_1488\", \"MainB_Copper_FCu_1489\", \"MainB_Copper_FCu_149\", \"MainB_Copper_FCu_1490\", \"MainB_Copper_FCu_1491\", \"MainB_Copper_FCu_1492\", \"MainB_Copper_FCu_1493\", \"MainB_Copper_FCu_1494\", \"MainB_Copper_FCu_1495\", \"MainB_Copper_FCu_1496\", \"MainB_Copper_FCu_1497\", \"MainB_Copper_FCu_1498\", \"MainB_Copper_FCu_1499\", \"MainB_Copper_FCu_15\", \"MainB_Copper_FCu_150\", \"MainB_Copper_FCu_1500\", \"MainB_Copper_FCu_1501\", \"MainB_Copper_FCu_1502\", \"MainB_Copper_FCu_1503\", \"MainB_Copper_FCu_1504\", \"MainB_Copper_FCu_1505\", \"MainB_Copper_FCu_1506\", \"MainB_Copper_FCu_1507\", \"MainB_Copper_FCu_1508\", \"MainB_Copper_FCu_1509\", \"MainB_Copper_FCu_151\", \"MainB_Copper_FCu_1510\", \"MainB_Copper_FCu_1511\", \"MainB_Copper_FCu_1512\", \"MainB_Copper_FCu_1513\", \"MainB_Copper_FCu_1514\", \"MainB_Copper_FCu_1515\", \"MainB_Copper_FCu_1516\", \"MainB_Copper_FCu_1517\", \"MainB_Copper_FCu_1518\", \"MainB_Copper_FCu_1519\", \"MainB_Copper_FCu_152\", \"MainB_Copper_FCu_1520\", \"MainB_Copper_FCu_1521\", \"MainB_Copper_FCu_1522\", \"MainB_Copper_FCu_1523\", \"MainB_Copper_FCu_1524\", \"MainB_Copper_FCu_1525\", \"MainB_Copper_FCu_1526\", \"MainB_Copper_FCu_1527\", \"MainB_Copper_FCu_1528\", \"MainB_Copper_FCu_1529\", \"MainB_Copper_FCu_153\", \"MainB_Copper_FCu_1530\", \"MainB_Copper_FCu_1531\", \"MainB_Copper_FCu_1532\", \"MainB_Copper_FCu_1533\", \"MainB_Copper_FCu_1534\", \"MainB_Copper_FCu_1535\", \"MainB_Copper_FCu_1536\", \"MainB_Copper_FCu_1537\", \"MainB_Copper_FCu_1538\", \"MainB_Copper_FCu_1539\", \"MainB_Copper_FCu_154\", \"MainB_Copper_FCu_1540\", \"MainB_Copper_FCu_1541\", \"MainB_Copper_FCu_1542\", \"MainB_Copper_FCu_1543\", \"MainB_Copper_FCu_1544\", \"MainB_Copper_FCu_1545\", \"MainB_Copper_FCu_1546\", \"MainB_Copper_FCu_1547\", \"MainB_Copper_FCu_1548\", \"MainB_Copper_FCu_1549\", \"MainB_Copper_FCu_155\", \"MainB_Copper_FCu_1550\", \"MainB_Copper_FCu_1551\", \"MainB_Copper_FCu_1552\", \"MainB_Copper_FCu_1553\", \"MainB_Copper_FCu_1554\", \"MainB_Copper_FCu_1555\", \"MainB_Copper_FCu_1556\", \"MainB_Copper_FCu_1557\", \"MainB_Copper_FCu_1558\", \"MainB_Copper_FCu_1559\", \"MainB_Copper_FCu_156\", \"MainB_Copper_FCu_1560\", \"MainB_Copper_FCu_1561\", \"MainB_Copper_FCu_1562\", \"MainB_Copper_FCu_1563\", \"MainB_Copper_FCu_1564\", \"MainB_Copper_FCu_1565\", \"MainB_Copper_FCu_1566\", \"MainB_Copper_FCu_1567\", \"MainB_Copper_FCu_1568\", \"MainB_Copper_FCu_1569\", \"MainB_Copper_FCu_157\", \"MainB_Copper_FCu_1570\", \"MainB_Copper_FCu_1571\", \"MainB_Copper_FCu_1572\", \"MainB_Copper_FCu_1573\", \"MainB_Copper_FCu_1574\", \"MainB_Copper_FCu_1575\", \"MainB_Copper_FCu_1576\", \"MainB_Copper_FCu_1577\", \"MainB_Copper_FCu_1578\", \"MainB_Copper_FCu_1579\", \"MainB_Copper_FCu_158\", \"MainB_Copper_FCu_1580\", \"MainB_Copper_FCu_1581\", \"MainB_Copper_FCu_1582\", \"MainB_Copper_FCu_1583\", \"MainB_Copper_FCu_1584\", \"MainB_Copper_FCu_1585\", \"MainB_Copper_FCu_1586\", \"MainB_Copper_FCu_1587\", \"MainB_Copper_FCu_1588\", \"MainB_Copper_FCu_1589\", \"MainB_Copper_FCu_159\", \"MainB_Copper_FCu_1590\", \"MainB_Copper_FCu_1591\", \"MainB_Copper_FCu_16\", \"MainB_Copper_FCu_160\", \"MainB_Copper_FCu_161\", \"MainB_Copper_FCu_162\", \"MainB_Copper_FCu_163\", \"MainB_Copper_FCu_164\", \"MainB_Copper_FCu_165\", \"MainB_Copper_FCu_166\", \"MainB_Copper_FCu_167\", \"MainB_Copper_FCu_168\", \"MainB_Copper_FCu_1681\", \"MainB_Copper_FCu_1682\", \"MainB_Copper_FCu_1683\", \"MainB_Copper_FCu_1684\", \"MainB_Copper_FCu_1685\", \"MainB_Copper_FCu_1686\", \"MainB_Copper_FCu_1687\", \"MainB_Copper_FCu_1688\", \"MainB_Copper_FCu_1689\", \"MainB_Copper_FCu_169\", \"MainB_Copper_FCu_1690\", \"MainB_Copper_FCu_1691\", \"MainB_Copper_FCu_1692\", \"MainB_Copper_FCu_1693\", \"MainB_Copper_FCu_1694\", \"MainB_Copper_FCu_1695\", \"MainB_Copper_FCu_1696\", \"MainB_Copper_FCu_1697\", \"MainB_Copper_FCu_1698\", \"MainB_Copper_FCu_1699\", \"MainB_Copper_FCu_17\", \"MainB_Copper_FCu_170\", \"MainB_Copper_FCu_1700\", \"MainB_Copper_FCu_1701\", \"MainB_Copper_FCu_1702\", \"MainB_Copper_FCu_1703\", \"MainB_Copper_FCu_1704\", \"MainB_Copper_FCu_1705\", \"MainB_Copper_FCu_1706\", \"MainB_Copper_FCu_1707\", \"MainB_Copper_FCu_1708\", \"MainB_Copper_FCu_1709\", \"MainB_Copper_FCu_171\", \"MainB_Copper_FCu_1710\", \"MainB_Copper_FCu_1711\", \"MainB_Copper_FCu_1716\", \"MainB_Copper_FCu_172\", \"MainB_Copper_FCu_173\", \"MainB_Copper_FCu_1730\", \"MainB_Copper_FCu_1731\", \"MainB_Copper_FCu_1732\", \"MainB_Copper_FCu_1737\", \"MainB_Copper_FCu_1738\", \"MainB_Copper_FCu_1739\", \"MainB_Copper_FCu_174\", \"MainB_Copper_FCu_1744\", \"MainB_Copper_FCu_1745\", \"MainB_Copper_FCu_1746\", \"MainB_Copper_FCu_1747\", \"MainB_Copper_FCu_1748\", \"MainB_Copper_FCu_1749\", \"MainB_Copper_FCu_175\", \"MainB_Copper_FCu_1750\", \"MainB_Copper_FCu_1751\", \"MainB_Copper_FCu_1752\", \"MainB_Copper_FCu_1753\", \"MainB_Copper_FCu_1754\", \"MainB_Copper_FCu_1755\", \"MainB_Copper_FCu_1756\", \"MainB_Copper_FCu_1757\", \"MainB_Copper_FCu_1758\", \"MainB_Copper_FCu_1759\", \"MainB_Copper_FCu_176\", \"MainB_Copper_FCu_1760\", \"MainB_Copper_FCu_1761\", \"MainB_Copper_FCu_1762\", \"MainB_Copper_FCu_1763\", \"MainB_Copper_FCu_1764\", \"MainB_Copper_FCu_1765\", \"MainB_Copper_FCu_1766\", \"MainB_Copper_FCu_1767\", \"MainB_Copper_FCu_1768\", \"MainB_Copper_FCu_1769\", \"MainB_Copper_FCu_177\", \"MainB_Copper_FCu_1770\", \"MainB_Copper_FCu_1771\", \"MainB_Copper_FCu_1772\", \"MainB_Copper_FCu_1773\", \"MainB_Copper_FCu_1774\", \"MainB_Copper_FCu_1775\", \"MainB_Copper_FCu_1776\", \"MainB_Copper_FCu_1777\", \"MainB_Copper_FCu_1778\", \"MainB_Copper_FCu_1779\", \"MainB_Copper_FCu_178\", \"MainB_Copper_FCu_1780\", \"MainB_Copper_FCu_1781\", \"MainB_Copper_FCu_1782\", \"MainB_Copper_FCu_1783\", \"MainB_Copper_FCu_1784\", \"MainB_Copper_FCu_1785\", \"MainB_Copper_FCu_1786\", \"MainB_Copper_FCu_1787\", \"MainB_Copper_FCu_1788\", \"MainB_Copper_FCu_1789\", \"MainB_Copper_FCu_179\", \"MainB_Copper_FCu_1790\", \"MainB_Copper_FCu_1791\", \"MainB_Copper_FCu_1792\", \"MainB_Copper_FCu_1793\", \"MainB_Copper_FCu_1794\", \"MainB_Copper_FCu_1795\", \"MainB_Copper_FCu_1796\", \"MainB_Copper_FCu_1797\", \"MainB_Copper_FCu_1798\", \"MainB_Copper_FCu_1799\", \"MainB_Copper_FCu_18\", \"MainB_Copper_FCu_180\", \"MainB_Copper_FCu_1800\", \"MainB_Copper_FCu_1801\", \"MainB_Copper_FCu_1802\", \"MainB_Copper_FCu_1803\", \"MainB_Copper_FCu_1804\", \"MainB_Copper_FCu_1805\", \"MainB_Copper_FCu_1806\", \"MainB_Copper_FCu_1807\", \"MainB_Copper_FCu_1808\", \"MainB_Copper_FCu_1809\", \"MainB_Copper_FCu_181\", \"MainB_Copper_FCu_1810\", \"MainB_Copper_FCu_1811\", \"MainB_Copper_FCu_1812\", \"MainB_Copper_FCu_1813\", \"MainB_Copper_FCu_1814\", \"MainB_Copper_FCu_1815\", \"MainB_Copper_FCu_1816\", \"MainB_Copper_FCu_1817\", \"MainB_Copper_FCu_1818\", \"MainB_Copper_FCu_1819\", \"MainB_Copper_FCu_182\", \"MainB_Copper_FCu_1820\", \"MainB_Copper_FCu_1821\", \"MainB_Copper_FCu_1822\", \"MainB_Copper_FCu_1823\", \"MainB_Copper_FCu_1824\", \"MainB_Copper_FCu_1825\", \"MainB_Copper_FCu_1826\", \"MainB_Copper_FCu_1827\", \"MainB_Copper_FCu_1828\", \"MainB_Copper_FCu_1829\", \"MainB_Copper_FCu_183\", \"MainB_Copper_FCu_1830\", \"MainB_Copper_FCu_1831\", \"MainB_Copper_FCu_1832\", \"MainB_Copper_FCu_1833\", \"MainB_Copper_FCu_1834\", \"MainB_Copper_FCu_1835\", \"MainB_Copper_FCu_1836\", \"MainB_Copper_FCu_1837\", \"MainB_Copper_FCu_1838\", \"MainB_Copper_FCu_1839\", \"MainB_Copper_FCu_184\", \"MainB_Copper_FCu_1840\", \"MainB_Copper_FCu_1841\", \"MainB_Copper_FCu_1842\", \"MainB_Copper_FCu_1843\", \"MainB_Copper_FCu_1844\", \"MainB_Copper_FCu_1845\", \"MainB_Copper_FCu_1846\", \"MainB_Copper_FCu_1847\", \"MainB_Copper_FCu_1848\", \"MainB_Copper_FCu_1849\", \"MainB_Copper_FCu_185\", \"MainB_Copper_FCu_1850\", \"MainB_Copper_FCu_1851\", \"MainB_Copper_FCu_1852\", \"MainB_Copper_FCu_1853\", \"MainB_Copper_FCu_1854\", \"MainB_Copper_FCu_1855\", \"MainB_Copper_FCu_1856\", \"MainB_Copper_FCu_1857\", \"MainB_Copper_FCu_1858\", \"MainB_Copper_FCu_1859\", \"MainB_Copper_FCu_186\", \"MainB_Copper_FCu_1860\", \"MainB_Copper_FCu_1861\", \"MainB_Copper_FCu_1862\", \"MainB_Copper_FCu_1863\", \"MainB_Copper_FCu_1864\", \"MainB_Copper_FCu_1865\", \"MainB_Copper_FCu_187\", \"MainB_Copper_FCu_1876\", \"MainB_Copper_FCu_1877\", \"MainB_Copper_FCu_1878\", \"MainB_Copper_FCu_1879\", \"MainB_Copper_FCu_188\", \"MainB_Copper_FCu_1880\", \"MainB_Copper_FCu_1881\", \"MainB_Copper_FCu_1882\", \"MainB_Copper_FCu_1883\", \"MainB_Copper_FCu_1884\", \"MainB_Copper_FCu_1885\", \"MainB_Copper_FCu_1886\", \"MainB_Copper_FCu_1887\", \"MainB_Copper_FCu_1888\", \"MainB_Copper_FCu_1889\", \"MainB_Copper_FCu_189\", \"MainB_Copper_FCu_1890\", \"MainB_Copper_FCu_1891\", \"MainB_Copper_FCu_1892\", \"MainB_Copper_FCu_1893\", \"MainB_Copper_FCu_1894\", \"MainB_Copper_FCu_1895\", \"MainB_Copper_FCu_1896\", \"MainB_Copper_FCu_1897\", \"MainB_Copper_FCu_1898\", \"MainB_Copper_FCu_1899\", \"MainB_Copper_FCu_19\", \"MainB_Copper_FCu_190\", \"MainB_Copper_FCu_1900\", \"MainB_Copper_FCu_1901\", \"MainB_Copper_FCu_1902\", \"MainB_Copper_FCu_1903\", \"MainB_Copper_FCu_1904\", \"MainB_Copper_FCu_1905\", \"MainB_Copper_FCu_1906\", \"MainB_Copper_FCu_1907\", \"MainB_Copper_FCu_1908\", \"MainB_Copper_FCu_1909\", \"MainB_Copper_FCu_191\", \"MainB_Copper_FCu_1910\", \"MainB_Copper_FCu_1911\", \"MainB_Copper_FCu_1912\", \"MainB_Copper_FCu_1913\", \"MainB_Copper_FCu_1914\", \"MainB_Copper_FCu_1915\", \"MainB_Copper_FCu_1916\", \"MainB_Copper_FCu_1917\", \"MainB_Copper_FCu_1918\", \"MainB_Copper_FCu_1919\", \"MainB_Copper_FCu_192\", \"MainB_Copper_FCu_1920\", \"MainB_Copper_FCu_1921\", \"MainB_Copper_FCu_1922\", \"MainB_Copper_FCu_1923\", \"MainB_Copper_FCu_1924\", \"MainB_Copper_FCu_1925\", \"MainB_Copper_FCu_1926\", \"MainB_Copper_FCu_1927\", \"MainB_Copper_FCu_1928\", \"MainB_Copper_FCu_1929\", \"MainB_Copper_FCu_193\", \"MainB_Copper_FCu_1933\", \"MainB_Copper_FCu_1934\", \"MainB_Copper_FCu_1935\", \"MainB_Copper_FCu_194\", \"MainB_Copper_FCu_1940\", \"MainB_Copper_FCu_1941\", \"MainB_Copper_FCu_1942\", \"MainB_Copper_FCu_1943\", \"MainB_Copper_FCu_1944\", \"MainB_Copper_FCu_1945\", \"MainB_Copper_FCu_1946\", \"MainB_Copper_FCu_1947\", \"MainB_Copper_FCu_1948\", \"MainB_Copper_FCu_195\", \"MainB_Copper_FCu_196\", \"MainB_Copper_FCu_197\", \"MainB_Copper_FCu_198\", \"MainB_Copper_FCu_1989\", \"MainB_Copper_FCu_199\", \"MainB_Copper_FCu_1990\", \"MainB_Copper_FCu_1991\", \"MainB_Copper_FCu_1992\", \"MainB_Copper_FCu_1993\", \"MainB_Copper_FCu_1994\", \"MainB_Copper_FCu_1995\", \"MainB_Copper_FCu_1996\", \"MainB_Copper_FCu_2\", \"MainB_Copper_FCu_20\", \"MainB_Copper_FCu_200\", \"MainB_Copper_FCu_2000\", \"MainB_Copper_FCu_2001\", \"MainB_Copper_FCu_2002\", \"MainB_Copper_FCu_2003\", \"MainB_Copper_FCu_2004\", \"MainB_Copper_FCu_2005\", \"MainB_Copper_FCu_2006\", \"MainB_Copper_FCu_2007\", \"MainB_Copper_FCu_2008\", \"MainB_Copper_FCu_2009\", \"MainB_Copper_FCu_201\", \"MainB_Copper_FCu_2010\", \"MainB_Copper_FCu_2011\", \"MainB_Copper_FCu_2012\", \"MainB_Copper_FCu_2013\", \"MainB_Copper_FCu_2014\", \"MainB_Copper_FCu_2015\", \"MainB_Copper_FCu_2016\", \"MainB_Copper_FCu_2017\", \"MainB_Copper_FCu_2018\", \"MainB_Copper_FCu_2019\", \"MainB_Copper_FCu_202\", \"MainB_Copper_FCu_2020\", \"MainB_Copper_FCu_2021\", \"MainB_Copper_FCu_2022\", \"MainB_Copper_FCu_2023\", \"MainB_Copper_FCu_2024\", \"MainB_Copper_FCu_2025\", \"MainB_Copper_FCu_2026\", \"MainB_Copper_FCu_2027\", \"MainB_Copper_FCu_2028\", \"MainB_Copper_FCu_203\", \"MainB_Copper_FCu_2032\", \"MainB_Copper_FCu_2033\", \"MainB_Copper_FCu_2034\", \"MainB_Copper_FCu_2035\", \"MainB_Copper_FCu_2036\", \"MainB_Copper_FCu_2037\", \"MainB_Copper_FCu_2038\", \"MainB_Copper_FCu_2039\", \"MainB_Copper_FCu_204\", \"MainB_Copper_FCu_2040\", \"MainB_Copper_FCu_2041\", \"MainB_Copper_FCu_2042\", \"MainB_Copper_FCu_2043\", \"MainB_Copper_FCu_2044\", \"MainB_Copper_FCu_2045\", \"MainB_Copper_FCu_2046\", \"MainB_Copper_FCu_2047\", \"MainB_Copper_FCu_2048\", \"MainB_Copper_FCu_2049\", \"MainB_Copper_FCu_205\", \"MainB_Copper_FCu_2053\", \"MainB_Copper_FCu_2054\", \"MainB_Copper_FCu_2055\", \"MainB_Copper_FCu_2056\", \"MainB_Copper_FCu_2057\", \"MainB_Copper_FCu_2058\", \"MainB_Copper_FCu_2059\", \"MainB_Copper_FCu_2060\", \"MainB_Copper_FCu_2061\", \"MainB_Copper_FCu_2062\", \"MainB_Copper_FCu_2063\", \"MainB_Copper_FCu_2064\", \"MainB_Copper_FCu_2065\", \"MainB_Copper_FCu_2066\", \"MainB_Copper_FCu_2067\", \"MainB_Copper_FCu_2068\", \"MainB_Copper_FCu_2069\", \"MainB_Copper_FCu_2070\", \"MainB_Copper_FCu_2071\", \"MainB_Copper_FCu_2072\", \"MainB_Copper_FCu_2073\", \"MainB_Copper_FCu_2074\", \"MainB_Copper_FCu_2079\", \"MainB_Copper_FCu_2080\", \"MainB_Copper_FCu_2081\", \"MainB_Copper_FCu_2082\", \"MainB_Copper_FCu_2083\", \"MainB_Copper_FCu_2084\", \"MainB_Copper_FCu_2085\", \"MainB_Copper_FCu_2086\", \"MainB_Copper_FCu_2087\", \"MainB_Copper_FCu_2088\", \"MainB_Copper_FCu_2089\", \"MainB_Copper_FCu_2090\", \"MainB_Copper_FCu_2091\", \"MainB_Copper_FCu_2092\", \"MainB_Copper_FCu_2093\", \"MainB_Copper_FCu_2094\", \"MainB_Copper_FCu_2095\", \"MainB_Copper_FCu_2096\", \"MainB_Copper_FCu_2097\", \"MainB_Copper_FCu_2098\", \"MainB_Copper_FCu_2099\", \"MainB_Copper_FCu_21\", \"MainB_Copper_FCu_2100\", \"MainB_Copper_FCu_2101\", \"MainB_Copper_FCu_2102\", \"MainB_Copper_FCu_2103\", \"MainB_Copper_FCu_2104\", \"MainB_Copper_FCu_2105\", \"MainB_Copper_FCu_2106\", \"MainB_Copper_FCu_2107\", \"MainB_Copper_FCu_2108\", \"MainB_Copper_FCu_2109\", \"MainB_Copper_FCu_2119\", \"MainB_Copper_FCu_2120\", \"MainB_Copper_FCu_2121\", \"MainB_Copper_FCu_2126\", \"MainB_Copper_FCu_2127\", \"MainB_Copper_FCu_2128\", \"MainB_Copper_FCu_2129\", \"MainB_Copper_FCu_2130\", \"MainB_Copper_FCu_2131\", \"MainB_Copper_FCu_2132\", \"MainB_Copper_FCu_2160\", \"MainB_Copper_FCu_2161\", \"MainB_Copper_FCu_2162\", \"MainB_Copper_FCu_2180\", \"MainB_Copper_FCu_2181\", \"MainB_Copper_FCu_2182\", \"MainB_Copper_FCu_22\", \"MainB_Copper_FCu_2214\", \"MainB_Copper_FCu_2215\", \"MainB_Copper_FCu_2216\", \"MainB_Copper_FCu_2234\", \"MainB_Copper_FCu_2235\", \"MainB_Copper_FCu_2236\", \"MainB_Copper_FCu_2237\", \"MainB_Copper_FCu_2238\", \"MainB_Copper_FCu_2239\", \"MainB_Copper_FCu_2240\", \"MainB_Copper_FCu_2241\", \"MainB_Copper_FCu_2242\", \"MainB_Copper_FCu_2251\", \"MainB_Copper_FCu_2252\", \"MainB_Copper_FCu_2253\", \"MainB_Copper_FCu_2254\", \"MainB_Copper_FCu_2255\", \"MainB_Copper_FCu_2256\", \"MainB_Copper_FCu_2257\", \"MainB_Copper_FCu_2258\", \"MainB_Copper_FCu_2259\", \"MainB_Copper_FCu_2260\", \"MainB_Copper_FCu_2261\", \"MainB_Copper_FCu_2262\", \"MainB_Copper_FCu_2263\", \"MainB_Copper_FCu_2264\", \"MainB_Copper_FCu_2265\", \"MainB_Copper_FCu_2266\", \"MainB_Copper_FCu_2267\", \"MainB_Copper_FCu_2268\", \"MainB_Copper_FCu_2269\", \"MainB_Copper_FCu_2270\", \"MainB_Copper_FCu_2271\", \"MainB_Copper_FCu_2272\", \"MainB_Copper_FCu_2273\", \"MainB_Copper_FCu_2274\", \"MainB_Copper_FCu_2275\", \"MainB_Copper_FCu_2276\", \"MainB_Copper_FCu_2277\", \"MainB_Copper_FCu_2278\", \"MainB_Copper_FCu_2279\", \"MainB_Copper_FCu_2280\", \"MainB_Copper_FCu_2281\", \"MainB_Copper_FCu_2282\", \"MainB_Copper_FCu_2283\", \"MainB_Copper_FCu_2284\", \"MainB_Copper_FCu_2285\", \"MainB_Copper_FCu_2286\", \"MainB_Copper_FCu_2287\", \"MainB_Copper_FCu_2288\", \"MainB_Copper_FCu_2289\", \"MainB_Copper_FCu_2290\", \"MainB_Copper_FCu_2291\", \"MainB_Copper_FCu_2292\", \"MainB_Copper_FCu_2293\", \"MainB_Copper_FCu_2294\", \"MainB_Copper_FCu_2295\", \"MainB_Copper_FCu_2296\", \"MainB_Copper_FCu_2297\", \"MainB_Copper_FCu_2298\", \"MainB_Copper_FCu_2299\", \"MainB_Copper_FCu_23\", \"MainB_Copper_FCu_2300\", \"MainB_Copper_FCu_2301\", \"MainB_Copper_FCu_2302\", \"MainB_Copper_FCu_2303\", \"MainB_Copper_FCu_2304\", \"MainB_Copper_FCu_2305\", \"MainB_Copper_FCu_2306\", \"MainB_Copper_FCu_2307\", \"MainB_Copper_FCu_2308\", \"MainB_Copper_FCu_2309\", \"MainB_Copper_FCu_2310\", \"MainB_Copper_FCu_2311\", \"MainB_Copper_FCu_2312\", \"MainB_Copper_FCu_2313\", \"MainB_Copper_FCu_2314\", \"MainB_Copper_FCu_2315\", \"MainB_Copper_FCu_2316\", \"MainB_Copper_FCu_2317\", \"MainB_Copper_FCu_2318\", \"MainB_Copper_FCu_2319\", \"MainB_Copper_FCu_2320\", \"MainB_Copper_FCu_2321\", \"MainB_Copper_FCu_2322\", \"MainB_Copper_FCu_2323\", \"MainB_Copper_FCu_2324\", \"MainB_Copper_FCu_2325\", \"MainB_Copper_FCu_2326\", \"MainB_Copper_FCu_2327\", \"MainB_Copper_FCu_2328\", \"MainB_Copper_FCu_2329\", \"MainB_Copper_FCu_2330\", \"MainB_Copper_FCu_2335\", \"MainB_Copper_FCu_2336\", \"MainB_Copper_FCu_2337\", \"MainB_Copper_FCu_2338\", \"MainB_Copper_FCu_2339\", \"MainB_Copper_FCu_2340\", \"MainB_Copper_FCu_2341\", \"MainB_Copper_FCu_2342\", \"MainB_Copper_FCu_2343\", \"MainB_Copper_FCu_2344\", \"MainB_Copper_FCu_2345\", \"MainB_Copper_FCu_2346\", \"MainB_Copper_FCu_2347\", \"MainB_Copper_FCu_2348\", \"MainB_Copper_FCu_2349\", \"MainB_Copper_FCu_2350\", \"MainB_Copper_FCu_2351\", \"MainB_Copper_FCu_2356\", \"MainB_Copper_FCu_2357\", \"MainB_Copper_FCu_2358\", \"MainB_Copper_FCu_2359\", \"MainB_Copper_FCu_2360\", \"MainB_Copper_FCu_2361\", \"MainB_Copper_FCu_2362\", \"MainB_Copper_FCu_2363\", \"MainB_Copper_FCu_2364\", \"MainB_Copper_FCu_2365\", \"MainB_Copper_FCu_2366\", \"MainB_Copper_FCu_2367\", \"MainB_Copper_FCu_2368\", \"MainB_Copper_FCu_2369\", \"MainB_Copper_FCu_2370\", \"MainB_Copper_FCu_2371\", \"MainB_Copper_FCu_2372\", \"MainB_Copper_FCu_2373\", \"MainB_Copper_FCu_2374\", \"MainB_Copper_FCu_2375\", \"MainB_Copper_FCu_2376\", \"MainB_Copper_FCu_2377\", \"MainB_Copper_FCu_2378\", \"MainB_Copper_FCu_2379\", \"MainB_Copper_FCu_2380\", \"MainB_Copper_FCu_2381\", \"MainB_Copper_FCu_2382\", \"MainB_Copper_FCu_2386\", \"MainB_Copper_FCu_2387\", \"MainB_Copper_FCu_2388\", \"MainB_Copper_FCu_2389\", \"MainB_Copper_FCu_2390\", \"MainB_Copper_FCu_2391\", \"MainB_Copper_FCu_2392\", \"MainB_Copper_FCu_2393\", \"MainB_Copper_FCu_2394\", \"MainB_Copper_FCu_2395\", \"MainB_Copper_FCu_2396\", \"MainB_Copper_FCu_24\", \"MainB_Copper_FCu_2407\", \"MainB_Copper_FCu_2408\", \"MainB_Copper_FCu_2409\", \"MainB_Copper_FCu_2410\", \"MainB_Copper_FCu_2411\", \"MainB_Copper_FCu_2412\", \"MainB_Copper_FCu_2413\", \"MainB_Copper_FCu_2414\", \"MainB_Copper_FCu_2415\", \"MainB_Copper_FCu_2416\", \"MainB_Copper_FCu_2417\", \"MainB_Copper_FCu_2418\", \"MainB_Copper_FCu_2419\", \"MainB_Copper_FCu_2420\", \"MainB_Copper_FCu_2421\", \"MainB_Copper_FCu_2422\", \"MainB_Copper_FCu_2423\", \"MainB_Copper_FCu_2424\", \"MainB_Copper_FCu_2425\", \"MainB_Copper_FCu_2426\", \"MainB_Copper_FCu_2427\", \"MainB_Copper_FCu_2428\", \"MainB_Copper_FCu_2429\", \"MainB_Copper_FCu_2436\", \"MainB_Copper_FCu_2437\", \"MainB_Copper_FCu_2438\", \"MainB_Copper_FCu_2439\", \"MainB_Copper_FCu_2440\", \"MainB_Copper_FCu_2441\", \"MainB_Copper_FCu_2442\", \"MainB_Copper_FCu_2443\", \"MainB_Copper_FCu_2444\", \"MainB_Copper_FCu_2445\", \"MainB_Copper_FCu_2446\", \"MainB_Copper_FCu_2447\", \"MainB_Copper_FCu_2448\", \"MainB_Copper_FCu_2449\", \"MainB_Copper_FCu_2450\", \"MainB_Copper_FCu_2451\", \"MainB_Copper_FCu_2452\", \"MainB_Copper_FCu_2453\", \"MainB_Copper_FCu_2454\", \"MainB_Copper_FCu_2455\", \"MainB_Copper_FCu_2456\", \"MainB_Copper_FCu_2457\", \"MainB_Copper_FCu_2458\", \"MainB_Copper_FCu_2459\", \"MainB_Copper_FCu_2460\", \"MainB_Copper_FCu_2461\", \"MainB_Copper_FCu_2462\", \"MainB_Copper_FCu_2463\", \"MainB_Copper_FCu_2464\", \"MainB_Copper_FCu_2465\", \"MainB_Copper_FCu_2466\", \"MainB_Copper_FCu_2467\", \"MainB_Copper_FCu_2468\", \"MainB_Copper_FCu_2469\", \"MainB_Copper_FCu_2470\", \"MainB_Copper_FCu_2471\", \"MainB_Copper_FCu_2472\", \"MainB_Copper_FCu_2473\", \"MainB_Copper_FCu_2474\", \"MainB_Copper_FCu_2475\", \"MainB_Copper_FCu_2476\", \"MainB_Copper_FCu_2477\", \"MainB_Copper_FCu_2478\", \"MainB_Copper_FCu_2479\", \"MainB_Copper_FCu_2480\", \"MainB_Copper_FCu_25\", \"MainB_Copper_FCu_26\", \"MainB_Copper_FCu_27\", \"MainB_Copper_FCu_28\", \"MainB_Copper_FCu_29\", \"MainB_Copper_FCu_3\", \"MainB_Copper_FCu_30\", \"MainB_Copper_FCu_31\", \"MainB_Copper_FCu_312\", \"MainB_Copper_FCu_313\", \"MainB_Copper_FCu_314\", \"MainB_Copper_FCu_315\", \"MainB_Copper_FCu_316\", \"MainB_Copper_FCu_317\", \"MainB_Copper_FCu_318\", \"MainB_Copper_FCu_319\", \"MainB_Copper_FCu_32\", \"MainB_Copper_FCu_320\", \"MainB_Copper_FCu_321\", \"MainB_Copper_FCu_322\", \"MainB_Copper_FCu_323\", \"MainB_Copper_FCu_324\", \"MainB_Copper_FCu_325\", \"MainB_Copper_FCu_326\", \"MainB_Copper_FCu_327\", \"MainB_Copper_FCu_328\", \"MainB_Copper_FCu_329\", \"MainB_Copper_FCu_33\", \"MainB_Copper_FCu_330\", \"MainB_Copper_FCu_331\", \"MainB_Copper_FCu_332\", \"MainB_Copper_FCu_333\", \"MainB_Copper_FCu_334\", \"MainB_Copper_FCu_335\", \"MainB_Copper_FCu_336\", \"MainB_Copper_FCu_337\", \"MainB_Copper_FCu_338\", \"MainB_Copper_FCu_339\", \"MainB_Copper_FCu_34\", \"MainB_Copper_FCu_340\", \"MainB_Copper_FCu_341\", \"MainB_Copper_FCu_342\", \"MainB_Copper_FCu_343\", \"MainB_Copper_FCu_344\", \"MainB_Copper_FCu_345\", \"MainB_Copper_FCu_346\", \"MainB_Copper_FCu_347\", \"MainB_Copper_FCu_348\", \"MainB_Copper_FCu_349\", \"MainB_Copper_FCu_35\", \"MainB_Copper_FCu_350\", \"MainB_Copper_FCu_351\", \"MainB_Copper_FCu_352\", \"MainB_Copper_FCu_353\", \"MainB_Copper_FCu_354\", \"MainB_Copper_FCu_355\", \"MainB_Copper_FCu_356\", \"MainB_Copper_FCu_357\", \"MainB_Copper_FCu_358\", \"MainB_Copper_FCu_359\", \"MainB_Copper_FCu_36\", \"MainB_Copper_FCu_360\", \"MainB_Copper_FCu_361\", \"MainB_Copper_FCu_362\", \"MainB_Copper_FCu_363\", \"MainB_Copper_FCu_364\", \"MainB_Copper_FCu_365\", \"MainB_Copper_FCu_366\", \"MainB_Copper_FCu_367\", \"MainB_Copper_FCu_368\", \"MainB_Copper_FCu_369\", \"MainB_Copper_FCu_37\", \"MainB_Copper_FCu_370\", \"MainB_Copper_FCu_371\", \"MainB_Copper_FCu_372\", \"MainB_Copper_FCu_373\", \"MainB_Copper_FCu_374\", \"MainB_Copper_FCu_375\", \"MainB_Copper_FCu_376\", \"MainB_Copper_FCu_377\", \"MainB_Copper_FCu_378\", \"MainB_Copper_FCu_379\", \"MainB_Copper_FCu_38\", \"MainB_Copper_FCu_380\", \"MainB_Copper_FCu_381\", \"MainB_Copper_FCu_382\", \"MainB_Copper_FCu_383\", \"MainB_Copper_FCu_384\", \"MainB_Copper_FCu_385\", \"MainB_Copper_FCu_386\", \"MainB_Copper_FCu_387\", \"MainB_Copper_FCu_388\", \"MainB_Copper_FCu_389\", \"MainB_Copper_FCu_39\", \"MainB_Copper_FCu_390\", \"MainB_Copper_FCu_391\", \"MainB_Copper_FCu_392\", \"MainB_Copper_FCu_393\", \"MainB_Copper_FCu_394\", \"MainB_Copper_FCu_395\", \"MainB_Copper_FCu_396\", \"MainB_Copper_FCu_397\", \"MainB_Copper_FCu_398\", \"MainB_Copper_FCu_399\", \"MainB_Copper_FCu_4\", \"MainB_Copper_FCu_40\", \"MainB_Copper_FCu_400\", \"MainB_Copper_FCu_401\", \"MainB_Copper_FCu_402\", \"MainB_Copper_FCu_403\", \"MainB_Copper_FCu_404\", \"MainB_Copper_FCu_405\", \"MainB_Copper_FCu_406\", \"MainB_Copper_FCu_407\", \"MainB_Copper_FCu_408\", \"MainB_Copper_FCu_409\", \"MainB_Copper_FCu_41\", \"MainB_Copper_FCu_410\", \"MainB_Copper_FCu_411\", \"MainB_Copper_FCu_412\", \"MainB_Copper_FCu_413\", \"MainB_Copper_FCu_414\", \"MainB_Copper_FCu_42\", \"MainB_Copper_FCu_43\", \"MainB_Copper_FCu_44\", \"MainB_Copper_FCu_45\", \"MainB_Copper_FCu_46\", \"MainB_Copper_FCu_47\", \"MainB_Copper_FCu_48\", \"MainB_Copper_FCu_49\", \"MainB_Copper_FCu_491\", \"MainB_Copper_FCu_492\", \"MainB_Copper_FCu_493\", \"MainB_Copper_FCu_498\", \"MainB_Copper_FCu_499\", \"MainB_Copper_FCu_5\", \"MainB_Copper_FCu_50\", \"MainB_Copper_FCu_500\", \"MainB_Copper_FCu_501\", \"MainB_Copper_FCu_502\", \"MainB_Copper_FCu_503\", \"MainB_Copper_FCu_504\", \"MainB_Copper_FCu_505\", \"MainB_Copper_FCu_506\", \"MainB_Copper_FCu_507\", \"MainB_Copper_FCu_508\", \"MainB_Copper_FCu_509\", \"MainB_Copper_FCu_51\", \"MainB_Copper_FCu_510\", \"MainB_Copper_FCu_511\", \"MainB_Copper_FCu_512\", \"MainB_Copper_FCu_513\", \"MainB_Copper_FCu_514\", \"MainB_Copper_FCu_515\", \"MainB_Copper_FCu_516\", \"MainB_Copper_FCu_517\", \"MainB_Copper_FCu_518\", \"MainB_Copper_FCu_519\", \"MainB_Copper_FCu_52\", \"MainB_Copper_FCu_520\", \"MainB_Copper_FCu_521\", \"MainB_Copper_FCu_53\", \"MainB_Copper_FCu_54\", \"MainB_Copper_FCu_540\", \"MainB_Copper_FCu_541\", \"MainB_Copper_FCu_542\", \"MainB_Copper_FCu_543\", \"MainB_Copper_FCu_544\", \"MainB_Copper_FCu_545\", \"MainB_Copper_FCu_546\", \"MainB_Copper_FCu_547\", \"MainB_Copper_FCu_548\", \"MainB_Copper_FCu_549\", \"MainB_Copper_FCu_55\", \"MainB_Copper_FCu_550\", \"MainB_Copper_FCu_56\", \"MainB_Copper_FCu_57\", \"MainB_Copper_FCu_577\", \"MainB_Copper_FCu_578\", \"MainB_Copper_FCu_579\", \"MainB_Copper_FCu_58\", \"MainB_Copper_FCu_580\", \"MainB_Copper_FCu_581\", \"MainB_Copper_FCu_582\", \"MainB_Copper_FCu_583\", \"MainB_Copper_FCu_584\", \"MainB_Copper_FCu_585\", \"MainB_Copper_FCu_586\", \"MainB_Copper_FCu_587\", \"MainB_Copper_FCu_588\", \"MainB_Copper_FCu_589\", \"MainB_Copper_FCu_59\", \"MainB_Copper_FCu_590\", \"MainB_Copper_FCu_591\", \"MainB_Copper_FCu_592\", \"MainB_Copper_FCu_593\", \"MainB_Copper_FCu_594\", \"MainB_Copper_FCu_595\", \"MainB_Copper_FCu_596\", \"MainB_Copper_FCu_6\", \"MainB_Copper_FCu_60\", \"MainB_Copper_FCu_604\", \"MainB_Copper_FCu_605\", \"MainB_Copper_FCu_606\", \"MainB_Copper_FCu_607\", \"MainB_Copper_FCu_608\", \"MainB_Copper_FCu_609\", \"MainB_Copper_FCu_61\", \"MainB_Copper_FCu_610\", \"MainB_Copper_FCu_611\", \"MainB_Copper_FCu_612\", \"MainB_Copper_FCu_613\", \"MainB_Copper_FCu_614\", \"MainB_Copper_FCu_615\", \"MainB_Copper_FCu_616\", \"MainB_Copper_FCu_617\", \"MainB_Copper_FCu_618\", \"MainB_Copper_FCu_619\", \"MainB_Copper_FCu_62\", \"MainB_Copper_FCu_620\", \"MainB_Copper_FCu_621\", \"MainB_Copper_FCu_622\", \"MainB_Copper_FCu_629\", \"MainB_Copper_FCu_63\", \"MainB_Copper_FCu_630\", \"MainB_Copper_FCu_631\", \"MainB_Copper_FCu_632\", \"MainB_Copper_FCu_633\", \"MainB_Copper_FCu_634\", \"MainB_Copper_FCu_635\", \"MainB_Copper_FCu_636\", \"MainB_Copper_FCu_637\", \"MainB_Copper_FCu_638\", \"MainB_Copper_FCu_639\", \"MainB_Copper_FCu_64\", \"MainB_Copper_FCu_640\", \"MainB_Copper_FCu_641\", \"MainB_Copper_FCu_642\", \"MainB_Copper_FCu_643\", \"MainB_Copper_FCu_644\", \"MainB_Copper_FCu_645\", \"MainB_Copper_FCu_646\", \"MainB_Copper_FCu_647\", \"MainB_Copper_FCu_648\", \"MainB_Copper_FCu_649\", \"MainB_Copper_FCu_65\", \"MainB_Copper_FCu_650\", \"MainB_Copper_FCu_651\", \"MainB_Copper_FCu_652\", \"MainB_Copper_FCu_653\", \"MainB_Copper_FCu_654\", \"MainB_Copper_FCu_655\", \"MainB_Copper_FCu_656\", \"MainB_Copper_FCu_657\", \"MainB_Copper_FCu_658\", \"MainB_Copper_FCu_659\", \"MainB_Copper_FCu_66\", \"MainB_Copper_FCu_660\", \"MainB_Copper_FCu_661\", \"MainB_Copper_FCu_662\", \"MainB_Copper_FCu_663\", \"MainB_Copper_FCu_664\", \"MainB_Copper_FCu_665\", \"MainB_Copper_FCu_666\", \"MainB_Copper_FCu_667\", \"MainB_Copper_FCu_668\", \"MainB_Copper_FCu_669\", \"MainB_Copper_FCu_67\", \"MainB_Copper_FCu_670\", \"MainB_Copper_FCu_671\", \"MainB_Copper_FCu_672\", \"MainB_Copper_FCu_673\", \"MainB_Copper_FCu_674\", \"MainB_Copper_FCu_675\", \"MainB_Copper_FCu_676\", \"MainB_Copper_FCu_677\", \"MainB_Copper_FCu_678\", \"MainB_Copper_FCu_679\", \"MainB_Copper_FCu_68\", \"MainB_Copper_FCu_680\", \"MainB_Copper_FCu_681\", \"MainB_Copper_FCu_682\", \"MainB_Copper_FCu_683\", \"MainB_Copper_FCu_684\", \"MainB_Copper_FCu_685\", \"MainB_Copper_FCu_686\", \"MainB_Copper_FCu_687\", \"MainB_Copper_FCu_688\", \"MainB_Copper_FCu_689\", \"MainB_Copper_FCu_69\", \"MainB_Copper_FCu_690\", \"MainB_Copper_FCu_691\", \"MainB_Copper_FCu_692\", \"MainB_Copper_FCu_693\", \"MainB_Copper_FCu_694\", \"MainB_Copper_FCu_695\", \"MainB_Copper_FCu_696\", \"MainB_Copper_FCu_697\", \"MainB_Copper_FCu_698\", \"MainB_Copper_FCu_699\", \"MainB_Copper_FCu_7\", \"MainB_Copper_FCu_70\", \"MainB_Copper_FCu_700\", \"MainB_Copper_FCu_701\", \"MainB_Copper_FCu_702\", \"MainB_Copper_FCu_703\", \"MainB_Copper_FCu_704\", \"MainB_Copper_FCu_705\", \"MainB_Copper_FCu_706\", \"MainB_Copper_FCu_707\", \"MainB_Copper_FCu_708\", \"MainB_Copper_FCu_709\", \"MainB_Copper_FCu_71\", \"MainB_Copper_FCu_710\", \"MainB_Copper_FCu_711\", \"MainB_Copper_FCu_712\", \"MainB_Copper_FCu_713\", \"MainB_Copper_FCu_714\", \"MainB_Copper_FCu_715\", \"MainB_Copper_FCu_716\", \"MainB_Copper_FCu_717\", \"MainB_Copper_FCu_718\", \"MainB_Copper_FCu_719\", \"MainB_Copper_FCu_72\", \"MainB_Copper_FCu_720\", \"MainB_Copper_FCu_721\", \"MainB_Copper_FCu_722\", \"MainB_Copper_FCu_723\", \"MainB_Copper_FCu_724\", \"MainB_Copper_FCu_725\", \"MainB_Copper_FCu_726\", \"MainB_Copper_FCu_727\", \"MainB_Copper_FCu_728\", \"MainB_Copper_FCu_729\", \"MainB_Copper_FCu_73\", \"MainB_Copper_FCu_730\", \"MainB_Copper_FCu_731\", \"MainB_Copper_FCu_732\", \"MainB_Copper_FCu_733\", \"MainB_Copper_FCu_734\", \"MainB_Copper_FCu_735\", \"MainB_Copper_FCu_736\", \"MainB_Copper_FCu_737\", \"MainB_Copper_FCu_738\", \"MainB_Copper_FCu_739\", \"MainB_Copper_FCu_74\", \"MainB_Copper_FCu_740\", \"MainB_Copper_FCu_741\", \"MainB_Copper_FCu_742\", \"MainB_Copper_FCu_743\", \"MainB_Copper_FCu_744\", \"MainB_Copper_FCu_745\", \"MainB_Copper_FCu_746\", \"MainB_Copper_FCu_747\", \"MainB_Copper_FCu_748\", \"MainB_Copper_FCu_749\", \"MainB_Copper_FCu_75\", \"MainB_Copper_FCu_750\", \"MainB_Copper_FCu_751\", \"MainB_Copper_FCu_752\", \"MainB_Copper_FCu_753\", \"MainB_Copper_FCu_754\", \"MainB_Copper_FCu_755\", \"MainB_Copper_FCu_756\", \"MainB_Copper_FCu_757\", \"MainB_Copper_FCu_758\", \"MainB_Copper_FCu_759\", \"MainB_Copper_FCu_76\", \"MainB_Copper_FCu_760\", \"MainB_Copper_FCu_761\", \"MainB_Copper_FCu_762\", \"MainB_Copper_FCu_763\", \"MainB_Copper_FCu_764\", \"MainB_Copper_FCu_765\", \"MainB_Copper_FCu_766\", \"MainB_Copper_FCu_767\", \"MainB_Copper_FCu_768\", \"MainB_Copper_FCu_769\", \"MainB_Copper_FCu_77\", \"MainB_Copper_FCu_770\", \"MainB_Copper_FCu_771\", \"MainB_Copper_FCu_772\", \"MainB_Copper_FCu_773\", \"MainB_Copper_FCu_774\", \"MainB_Copper_FCu_775\", \"MainB_Copper_FCu_776\", \"MainB_Copper_FCu_777\", \"MainB_Copper_FCu_778\", \"MainB_Copper_FCu_779\", \"MainB_Copper_FCu_78\", \"MainB_Copper_FCu_780\", \"MainB_Copper_FCu_781\", \"MainB_Copper_FCu_782\", \"MainB_Copper_FCu_783\", \"MainB_Copper_FCu_784\", \"MainB_Copper_FCu_785\", \"MainB_Copper_FCu_786\", \"MainB_Copper_FCu_787\", \"MainB_Copper_FCu_788\", \"MainB_Copper_FCu_789\", \"MainB_Copper_FCu_79\", \"MainB_Copper_FCu_790\", \"MainB_Copper_FCu_791\", \"MainB_Copper_FCu_792\", \"MainB_Copper_FCu_793\", \"MainB_Copper_FCu_794\", \"MainB_Copper_FCu_795\", \"MainB_Copper_FCu_796\", \"MainB_Copper_FCu_797\", \"MainB_Copper_FCu_798\", \"MainB_Copper_FCu_799\", \"MainB_Copper_FCu_8\", \"MainB_Copper_FCu_80\", \"MainB_Copper_FCu_800\", \"MainB_Copper_FCu_801\", \"MainB_Copper_FCu_802\", \"MainB_Copper_FCu_803\", \"MainB_Copper_FCu_804\", \"MainB_Copper_FCu_805\", \"MainB_Copper_FCu_806\", \"MainB_Copper_FCu_807\", \"MainB_Copper_FCu_808\", \"MainB_Copper_FCu_809\", \"MainB_Copper_FCu_81\", \"MainB_Copper_FCu_810\", \"MainB_Copper_FCu_811\", \"MainB_Copper_FCu_812\", \"MainB_Copper_FCu_813\", \"MainB_Copper_FCu_814\", \"MainB_Copper_FCu_815\", \"MainB_Copper_FCu_816\", \"MainB_Copper_FCu_817\", \"MainB_Copper_FCu_818\", \"MainB_Copper_FCu_819\", \"MainB_Copper_FCu_82\", \"MainB_Copper_FCu_820\", \"MainB_Copper_FCu_821\", \"MainB_Copper_FCu_822\", \"MainB_Copper_FCu_823\", \"MainB_Copper_FCu_824\", \"MainB_Copper_FCu_825\", \"MainB_Copper_FCu_826\", \"MainB_Copper_FCu_827\", \"MainB_Copper_FCu_828\", \"MainB_Copper_FCu_829\", \"MainB_Copper_FCu_83\", \"MainB_Copper_FCu_830\", \"MainB_Copper_FCu_831\", \"MainB_Copper_FCu_832\", \"MainB_Copper_FCu_833\", \"MainB_Copper_FCu_834\", \"MainB_Copper_FCu_835\", \"MainB_Copper_FCu_836\", \"MainB_Copper_FCu_837\", \"MainB_Copper_FCu_838\", \"MainB_Copper_FCu_839\", \"MainB_Copper_FCu_84\", \"MainB_Copper_FCu_840\", \"MainB_Copper_FCu_841\", \"MainB_Copper_FCu_842\", \"MainB_Copper_FCu_843\", \"MainB_Copper_FCu_844\", \"MainB_Copper_FCu_845\", \"MainB_Copper_FCu_846\", \"MainB_Copper_FCu_847\", \"MainB_Copper_FCu_848\", \"MainB_Copper_FCu_849\", \"MainB_Copper_FCu_85\", \"MainB_Copper_FCu_850\", \"MainB_Copper_FCu_851\", \"MainB_Copper_FCu_852\", \"MainB_Copper_FCu_853\", \"MainB_Copper_FCu_854\", \"MainB_Copper_FCu_855\", \"MainB_Copper_FCu_856\", \"MainB_Copper_FCu_857\", \"MainB_Copper_FCu_858\", \"MainB_Copper_FCu_859\", \"MainB_Copper_FCu_86\", \"MainB_Copper_FCu_860\", \"MainB_Copper_FCu_861\", \"MainB_Copper_FCu_862\", \"MainB_Copper_FCu_863\", \"MainB_Copper_FCu_864\", \"MainB_Copper_FCu_865\", \"MainB_Copper_FCu_866\", \"MainB_Copper_FCu_867\", \"MainB_Copper_FCu_868\", \"MainB_Copper_FCu_869\", \"MainB_Copper_FCu_87\", \"MainB_Copper_FCu_870\", \"MainB_Copper_FCu_871\", \"MainB_Copper_FCu_872\", \"MainB_Copper_FCu_873\", \"MainB_Copper_FCu_874\", \"MainB_Copper_FCu_875\", \"MainB_Copper_FCu_876\", \"MainB_Copper_FCu_877\", \"MainB_Copper_FCu_878\", \"MainB_Copper_FCu_879\", \"MainB_Copper_FCu_88\", \"MainB_Copper_FCu_880\", \"MainB_Copper_FCu_881\", \"MainB_Copper_FCu_882\", \"MainB_Copper_FCu_883\", \"MainB_Copper_FCu_884\", \"MainB_Copper_FCu_885\", \"MainB_Copper_FCu_886\", \"MainB_Copper_FCu_887\", \"MainB_Copper_FCu_888\", \"MainB_Copper_FCu_889\", \"MainB_Copper_FCu_89\", \"MainB_Copper_FCu_890\", \"MainB_Copper_FCu_891\", \"MainB_Copper_FCu_892\", \"MainB_Copper_FCu_893\", \"MainB_Copper_FCu_894\", \"MainB_Copper_FCu_895\", \"MainB_Copper_FCu_896\", \"MainB_Copper_FCu_897\", \"MainB_Copper_FCu_898\", \"MainB_Copper_FCu_899\", \"MainB_Copper_FCu_9\", \"MainB_Copper_FCu_90\", \"MainB_Copper_FCu_900\", \"MainB_Copper_FCu_901\", \"MainB_Copper_FCu_902\", \"MainB_Copper_FCu_903\", \"MainB_Copper_FCu_904\", \"MainB_Copper_FCu_905\", \"MainB_Copper_FCu_906\", \"MainB_Copper_FCu_907\", \"MainB_Copper_FCu_908\", \"MainB_Copper_FCu_909\", \"MainB_Copper_FCu_91\", \"MainB_Copper_FCu_910\", \"MainB_Copper_FCu_911\", \"MainB_Copper_FCu_912\", \"MainB_Copper_FCu_913\", \"MainB_Copper_FCu_914\", \"MainB_Copper_FCu_915\", \"MainB_Copper_FCu_916\", \"MainB_Copper_FCu_917\", \"MainB_Copper_FCu_918\", \"MainB_Copper_FCu_919\", \"MainB_Copper_FCu_92\", \"MainB_Copper_FCu_920\", \"MainB_Copper_FCu_921\", \"MainB_Copper_FCu_922\", \"MainB_Copper_FCu_923\", \"MainB_Copper_FCu_924\", \"MainB_Copper_FCu_925\", \"MainB_Copper_FCu_926\", \"MainB_Copper_FCu_927\", \"MainB_Copper_FCu_928\", \"MainB_Copper_FCu_929\", \"MainB_Copper_FCu_93\", \"MainB_Copper_FCu_930\", \"MainB_Copper_FCu_931\", \"MainB_Copper_FCu_932\", \"MainB_Copper_FCu_933\", \"MainB_Copper_FCu_934\", \"MainB_Copper_FCu_935\", \"MainB_Copper_FCu_936\", \"MainB_Copper_FCu_937\", \"MainB_Copper_FCu_938\", \"MainB_Copper_FCu_939\", \"MainB_Copper_FCu_94\", \"MainB_Copper_FCu_940\", \"MainB_Copper_FCu_941\", \"MainB_Copper_FCu_942\", \"MainB_Copper_FCu_943\", \"MainB_Copper_FCu_944\", \"MainB_Copper_FCu_945\", \"MainB_Copper_FCu_946\", \"MainB_Copper_FCu_947\", \"MainB_Copper_FCu_948\", \"MainB_Copper_FCu_949\", \"MainB_Copper_FCu_95\", \"MainB_Copper_FCu_950\", \"MainB_Copper_FCu_951\", \"MainB_Copper_FCu_952\", \"MainB_Copper_FCu_953\", \"MainB_Copper_FCu_954\", \"MainB_Copper_FCu_955\", \"MainB_Copper_FCu_956\", \"MainB_Copper_FCu_957\", \"MainB_Copper_FCu_958\", \"MainB_Copper_FCu_959\", \"MainB_Copper_FCu_96\", \"MainB_Copper_FCu_960\", \"MainB_Copper_FCu_961\", \"MainB_Copper_FCu_962\", \"MainB_Copper_FCu_963\", \"MainB_Copper_FCu_964\", \"MainB_Copper_FCu_965\", \"MainB_Copper_FCu_966\", \"MainB_Copper_FCu_967\", \"MainB_Copper_FCu_968\", \"MainB_Copper_FCu_969\", \"MainB_Copper_FCu_97\", \"MainB_Copper_FCu_970\", \"MainB_Copper_FCu_971\", \"MainB_Copper_FCu_972\", \"MainB_Copper_FCu_973\", \"MainB_Copper_FCu_974\", \"MainB_Copper_FCu_975\", \"MainB_Copper_FCu_976\", \"MainB_Copper_FCu_977\", \"MainB_Copper_FCu_978\", \"MainB_Copper_FCu_979\", \"MainB_Copper_FCu_98\", \"MainB_Copper_FCu_980\", \"MainB_Copper_FCu_981\", \"MainB_Copper_FCu_99\", \"MainB_Copper_In1Cu_1052\", \"MainB_Copper_In1Cu_1053\", \"MainB_Copper_In1Cu_1054\", \"MainB_Copper_In1Cu_1055\", \"MainB_Copper_In1Cu_1056\", \"MainB_Copper_In1Cu_1057\", \"MainB_Copper_In1Cu_1058\", \"MainB_Copper_In1Cu_1059\", \"MainB_Copper_In1Cu_1060\", \"MainB_Copper_In1Cu_1061\", \"MainB_Copper_In1Cu_1062\", \"MainB_Copper_In1Cu_1063\", \"MainB_Copper_In1Cu_1064\", \"MainB_Copper_In1Cu_1065\", \"MainB_Copper_In1Cu_1066\", \"MainB_Copper_In1Cu_1067\", \"MainB_Copper_In1Cu_1068\", \"MainB_Copper_In1Cu_1069\", \"MainB_Copper_In1Cu_1070\", \"MainB_Copper_In1Cu_1071\", \"MainB_Copper_In1Cu_1072\", \"MainB_Copper_In1Cu_1073\", \"MainB_Copper_In1Cu_1074\", \"MainB_Copper_In1Cu_1075\", \"MainB_Copper_In1Cu_1076\", \"MainB_Copper_In1Cu_1077\", \"MainB_Copper_In1Cu_1078\", \"MainB_Copper_In1Cu_1079\", \"MainB_Copper_In1Cu_1080\", \"MainB_Copper_In1Cu_1081\", \"MainB_Copper_In1Cu_1082\", \"MainB_Copper_In1Cu_1083\", \"MainB_Copper_In1Cu_1084\", \"MainB_Copper_In1Cu_1085\", \"MainB_Copper_In1Cu_1086\", \"MainB_Copper_In1Cu_1087\", \"MainB_Copper_In1Cu_1088\", \"MainB_Copper_In1Cu_1089\", \"MainB_Copper_In1Cu_1090\", \"MainB_Copper_In1Cu_1091\", \"MainB_Copper_In1Cu_1092\", \"MainB_Copper_In1Cu_1093\", \"MainB_Copper_In1Cu_1094\", \"MainB_Copper_In1Cu_1095\", \"MainB_Copper_In1Cu_1096\", \"MainB_Copper_In1Cu_1097\", \"MainB_Copper_In1Cu_1098\", \"MainB_Copper_In1Cu_1099\", \"MainB_Copper_In1Cu_1100\", \"MainB_Copper_In1Cu_1101\", \"MainB_Copper_In1Cu_1102\", \"MainB_Copper_In1Cu_1103\", \"MainB_Copper_In1Cu_1104\", \"MainB_Copper_In1Cu_1105\", \"MainB_Copper_In1Cu_1106\", \"MainB_Copper_In1Cu_1107\", \"MainB_Copper_In1Cu_1108\", \"MainB_Copper_In1Cu_1109\", \"MainB_Copper_In1Cu_1110\", \"MainB_Copper_In1Cu_1111\", \"MainB_Copper_In1Cu_1112\", \"MainB_Copper_In1Cu_1113\", \"MainB_Copper_In1Cu_1114\", \"MainB_Copper_In1Cu_1115\", \"MainB_Copper_In1Cu_1116\", \"MainB_Copper_In1Cu_1117\", \"MainB_Copper_In1Cu_1118\", \"MainB_Copper_In1Cu_1241\", \"MainB_Copper_In1Cu_1242\", \"MainB_Copper_In1Cu_1243\", \"MainB_Copper_In1Cu_1244\", \"MainB_Copper_In1Cu_1245\", \"MainB_Copper_In1Cu_1246\", \"MainB_Copper_In1Cu_1355\", \"MainB_Copper_In1Cu_1356\", \"MainB_Copper_In1Cu_1357\", \"MainB_Copper_In1Cu_1358\", \"MainB_Copper_In1Cu_1359\", \"MainB_Copper_In1Cu_1360\", \"MainB_Copper_In1Cu_1361\", \"MainB_Copper_In1Cu_1362\", \"MainB_Copper_In1Cu_1368\", \"MainB_Copper_In1Cu_1390\", \"MainB_Copper_In1Cu_1391\", \"MainB_Copper_In1Cu_1392\", \"MainB_Copper_In1Cu_1393\", \"MainB_Copper_In1Cu_1394\", \"MainB_Copper_In1Cu_1395\", \"MainB_Copper_In1Cu_1396\", \"MainB_Copper_In1Cu_1397\", \"MainB_Copper_In1Cu_1398\", \"MainB_Copper_In1Cu_1399\", \"MainB_Copper_In1Cu_1400\", \"MainB_Copper_In1Cu_1401\", \"MainB_Copper_In1Cu_1402\", \"MainB_Copper_In1Cu_1403\", \"MainB_Copper_In1Cu_1404\", \"MainB_Copper_In1Cu_1405\", \"MainB_Copper_In1Cu_1406\", \"MainB_Copper_In1Cu_1407\", \"MainB_Copper_In1Cu_1408\", \"MainB_Copper_In1Cu_1409\", \"MainB_Copper_In1Cu_1419\", \"MainB_Copper_In1Cu_1420\", \"MainB_Copper_In1Cu_1428\", \"MainB_Copper_In1Cu_1429\", \"MainB_Copper_In1Cu_1430\", \"MainB_Copper_In1Cu_1431\", \"MainB_Copper_In1Cu_1432\", \"MainB_Copper_In1Cu_1633\", \"MainB_Copper_In1Cu_1634\", \"MainB_Copper_In1Cu_1635\", \"MainB_Copper_In1Cu_1636\", \"MainB_Copper_In1Cu_1637\", \"MainB_Copper_In1Cu_1638\", \"MainB_Copper_In1Cu_1639\", \"MainB_Copper_In1Cu_1640\", \"MainB_Copper_In1Cu_1641\", \"MainB_Copper_In1Cu_1642\", \"MainB_Copper_In1Cu_1643\", \"MainB_Copper_In1Cu_1644\", \"MainB_Copper_In1Cu_1645\", \"MainB_Copper_In1Cu_1646\", \"MainB_Copper_In1Cu_1647\", \"MainB_Copper_In1Cu_1648\", \"MainB_Copper_In1Cu_1649\", \"MainB_Copper_In1Cu_1650\", \"MainB_Copper_In1Cu_1651\", \"MainB_Copper_In1Cu_1652\", \"MainB_Copper_In1Cu_1653\", \"MainB_Copper_In1Cu_1654\", \"MainB_Copper_In1Cu_1655\", \"MainB_Copper_In1Cu_1656\", \"MainB_Copper_In1Cu_1657\", \"MainB_Copper_In1Cu_1658\", \"MainB_Copper_In1Cu_1659\", \"MainB_Copper_In1Cu_1660\", \"MainB_Copper_In1Cu_1661\", \"MainB_Copper_In1Cu_1662\", \"MainB_Copper_In1Cu_1663\", \"MainB_Copper_In1Cu_1664\", \"MainB_Copper_In1Cu_1665\", \"MainB_Copper_In1Cu_1666\", \"MainB_Copper_In1Cu_1667\", \"MainB_Copper_In1Cu_1668\", \"MainB_Copper_In1Cu_1669\", \"MainB_Copper_In1Cu_1670\", \"MainB_Copper_In1Cu_1671\", \"MainB_Copper_In1Cu_1672\", \"MainB_Copper_In1Cu_1673\", \"MainB_Copper_In1Cu_1674\", \"MainB_Copper_In1Cu_1675\", \"MainB_Copper_In1Cu_1676\", \"MainB_Copper_In1Cu_1677\", \"MainB_Copper_In1Cu_1678\", \"MainB_Copper_In1Cu_1679\", \"MainB_Copper_In1Cu_1714\", \"MainB_Copper_In1Cu_1715\", \"MainB_Copper_In1Cu_1735\", \"MainB_Copper_In1Cu_1736\", \"MainB_Copper_In1Cu_1742\", \"MainB_Copper_In1Cu_1743\", \"MainB_Copper_In1Cu_1938\", \"MainB_Copper_In1Cu_1939\", \"MainB_Copper_In1Cu_1952\", \"MainB_Copper_In1Cu_1953\", \"MainB_Copper_In1Cu_1954\", \"MainB_Copper_In1Cu_1955\", \"MainB_Copper_In1Cu_1956\", \"MainB_Copper_In1Cu_1957\", \"MainB_Copper_In1Cu_1958\", \"MainB_Copper_In1Cu_1959\", \"MainB_Copper_In1Cu_1960\", \"MainB_Copper_In1Cu_1961\", \"MainB_Copper_In1Cu_1962\", \"MainB_Copper_In1Cu_1963\", \"MainB_Copper_In1Cu_1964\", \"MainB_Copper_In1Cu_1965\", \"MainB_Copper_In1Cu_1966\", \"MainB_Copper_In1Cu_1967\", \"MainB_Copper_In1Cu_1968\", \"MainB_Copper_In1Cu_1969\", \"MainB_Copper_In1Cu_1970\", \"MainB_Copper_In1Cu_1971\", \"MainB_Copper_In1Cu_1972\", \"MainB_Copper_In1Cu_1973\", \"MainB_Copper_In1Cu_1974\", \"MainB_Copper_In1Cu_1975\", \"MainB_Copper_In1Cu_1976\", \"MainB_Copper_In1Cu_1977\", \"MainB_Copper_In1Cu_1978\", \"MainB_Copper_In1Cu_1979\", \"MainB_Copper_In1Cu_1980\", \"MainB_Copper_In1Cu_1981\", \"MainB_Copper_In1Cu_1982\", \"MainB_Copper_In1Cu_1983\", \"MainB_Copper_In1Cu_1984\", \"MainB_Copper_In1Cu_1985\", \"MainB_Copper_In1Cu_1986\", \"MainB_Copper_In1Cu_1987\", \"MainB_Copper_In1Cu_1988\", \"MainB_Copper_In1Cu_1999\", \"MainB_Copper_In1Cu_2031\", \"MainB_Copper_In1Cu_2052\", \"MainB_Copper_In1Cu_2124\", \"MainB_Copper_In1Cu_2125\", \"MainB_Copper_In1Cu_2168\", \"MainB_Copper_In1Cu_2169\", \"MainB_Copper_In1Cu_2170\", \"MainB_Copper_In1Cu_2171\", \"MainB_Copper_In1Cu_2172\", \"MainB_Copper_In1Cu_2173\", \"MainB_Copper_In1Cu_2174\", \"MainB_Copper_In1Cu_2175\", \"MainB_Copper_In1Cu_2176\", \"MainB_Copper_In1Cu_2177\", \"MainB_Copper_In1Cu_2178\", \"MainB_Copper_In1Cu_2179\", \"MainB_Copper_In1Cu_2188\", \"MainB_Copper_In1Cu_2189\", \"MainB_Copper_In1Cu_2190\", \"MainB_Copper_In1Cu_2191\", \"MainB_Copper_In1Cu_2192\", \"MainB_Copper_In1Cu_2193\", \"MainB_Copper_In1Cu_2194\", \"MainB_Copper_In1Cu_2195\", \"MainB_Copper_In1Cu_2196\", \"MainB_Copper_In1Cu_2197\", \"MainB_Copper_In1Cu_2198\", \"MainB_Copper_In1Cu_2199\", \"MainB_Copper_In1Cu_2200\", \"MainB_Copper_In1Cu_2201\", \"MainB_Copper_In1Cu_2202\", \"MainB_Copper_In1Cu_2203\", \"MainB_Copper_In1Cu_2204\", \"MainB_Copper_In1Cu_2205\", \"MainB_Copper_In1Cu_2206\", \"MainB_Copper_In1Cu_2207\", \"MainB_Copper_In1Cu_2208\", \"MainB_Copper_In1Cu_2209\", \"MainB_Copper_In1Cu_2210\", \"MainB_Copper_In1Cu_2211\", \"MainB_Copper_In1Cu_2212\", \"MainB_Copper_In1Cu_2213\", \"MainB_Copper_In1Cu_2222\", \"MainB_Copper_In1Cu_2223\", \"MainB_Copper_In1Cu_2224\", \"MainB_Copper_In1Cu_2225\", \"MainB_Copper_In1Cu_2226\", \"MainB_Copper_In1Cu_2227\", \"MainB_Copper_In1Cu_2228\", \"MainB_Copper_In1Cu_2229\", \"MainB_Copper_In1Cu_2230\", \"MainB_Copper_In1Cu_2231\", \"MainB_Copper_In1Cu_2232\", \"MainB_Copper_In1Cu_2233\", \"MainB_Copper_In1Cu_2247\", \"MainB_Copper_In1Cu_2248\", \"MainB_Copper_In1Cu_2249\", \"MainB_Copper_In1Cu_2250\", \"MainB_Copper_In1Cu_2333\", \"MainB_Copper_In1Cu_2334\", \"MainB_Copper_In1Cu_2354\", \"MainB_Copper_In1Cu_2355\", \"MainB_Copper_In1Cu_2385\", \"MainB_Copper_In1Cu_2399\", \"MainB_Copper_In1Cu_2400\", \"MainB_Copper_In1Cu_2401\", \"MainB_Copper_In1Cu_2402\", \"MainB_Copper_In1Cu_2403\", \"MainB_Copper_In1Cu_2404\", \"MainB_Copper_In1Cu_2405\", \"MainB_Copper_In1Cu_2406\", \"MainB_Copper_In1Cu_2432\", \"MainB_Copper_In1Cu_2433\", \"MainB_Copper_In1Cu_2434\", \"MainB_Copper_In1Cu_2435\", \"MainB_Copper_In1Cu_280\", \"MainB_Copper_In1Cu_281\", \"MainB_Copper_In1Cu_282\", \"MainB_Copper_In1Cu_283\", \"MainB_Copper_In1Cu_284\", \"MainB_Copper_In1Cu_285\", \"MainB_Copper_In1Cu_286\", \"MainB_Copper_In1Cu_287\", \"MainB_Copper_In1Cu_288\", \"MainB_Copper_In1Cu_289\", \"MainB_Copper_In1Cu_290\", \"MainB_Copper_In1Cu_291\", \"MainB_Copper_In1Cu_292\", \"MainB_Copper_In1Cu_293\", \"MainB_Copper_In1Cu_294\", \"MainB_Copper_In1Cu_295\", \"MainB_Copper_In1Cu_296\", \"MainB_Copper_In1Cu_297\", \"MainB_Copper_In1Cu_298\", \"MainB_Copper_In1Cu_299\", \"MainB_Copper_In1Cu_300\", \"MainB_Copper_In1Cu_301\", \"MainB_Copper_In1Cu_302\", \"MainB_Copper_In1Cu_303\", \"MainB_Copper_In1Cu_304\", \"MainB_Copper_In1Cu_305\", \"MainB_Copper_In1Cu_306\", \"MainB_Copper_In1Cu_307\", \"MainB_Copper_In1Cu_308\", \"MainB_Copper_In1Cu_309\", \"MainB_Copper_In1Cu_310\", \"MainB_Copper_In1Cu_489\", \"MainB_Copper_In1Cu_490\", \"MainB_Copper_In1Cu_496\", \"MainB_Copper_In1Cu_497\", \"MainB_Copper_In1Cu_526\", \"MainB_Copper_In1Cu_527\", \"MainB_Copper_In1Cu_528\", \"MainB_Copper_In1Cu_529\", \"MainB_Copper_In1Cu_530\", \"MainB_Copper_In1Cu_531\", \"MainB_Copper_In1Cu_532\", \"MainB_Copper_In1Cu_533\", \"MainB_Copper_In1Cu_534\", \"MainB_Copper_In1Cu_535\", \"MainB_Copper_In1Cu_536\", \"MainB_Copper_In1Cu_537\", \"MainB_Copper_In1Cu_538\", \"MainB_Copper_In1Cu_539\", \"MainB_Copper_In1Cu_601\", \"MainB_Copper_In1Cu_602\", \"MainB_Copper_In1Cu_603\", \"MainB_Copper_In1Cu_628\", \"MainB_Copper_In2Cu_1119\", \"MainB_Copper_In2Cu_1120\", \"MainB_Copper_In2Cu_1121\", \"MainB_Copper_In2Cu_1122\", \"MainB_Copper_In2Cu_1123\", \"MainB_Copper_In2Cu_1124\", \"MainB_Copper_In2Cu_1125\", \"MainB_Copper_In2Cu_1126\", \"MainB_Copper_In2Cu_1127\", \"MainB_Copper_In2Cu_1128\", \"MainB_Copper_In2Cu_1129\", \"MainB_Copper_In2Cu_1130\", \"MainB_Copper_In2Cu_1131\", \"MainB_Copper_In2Cu_1132\", \"MainB_Copper_In2Cu_1133\", \"MainB_Copper_In2Cu_1134\", \"MainB_Copper_In2Cu_1135\", \"MainB_Copper_In2Cu_1136\", \"MainB_Copper_In2Cu_1137\", \"MainB_Copper_In2Cu_1138\", \"MainB_Copper_In2Cu_1139\", \"MainB_Copper_In2Cu_1140\", \"MainB_Copper_In2Cu_1141\", \"MainB_Copper_In2Cu_1142\", \"MainB_Copper_In2Cu_1143\", \"MainB_Copper_In2Cu_1680\", \"MainB_Copper_In2Cu_1873\", \"MainB_Copper_In2Cu_1874\", \"MainB_Copper_In2Cu_1875\", \"MainB_Copper_In2Cu_1932\", \"MainB_Copper_In2Cu_2077\", \"MainB_Copper_In2Cu_2078\", \"MainB_Copper_In2Cu_2112\", \"MainB_Copper_In2Cu_2113\", \"MainB_Copper_In2Cu_2114\", \"MainB_Copper_In2Cu_2115\", \"MainB_Copper_In2Cu_2116\", \"MainB_Copper_In2Cu_2117\", \"MainB_Copper_In2Cu_2118\", \"MainB_Copper_In2Cu_2148\", \"MainB_Copper_In2Cu_2149\", \"MainB_Copper_In2Cu_2150\", \"MainB_Copper_In2Cu_2151\", \"MainB_Copper_In2Cu_2152\", \"MainB_Copper_In2Cu_2153\", \"MainB_Copper_In2Cu_2154\", \"MainB_Copper_In2Cu_2155\", \"MainB_Copper_In2Cu_2156\", \"MainB_Copper_In2Cu_2157\", \"MainB_Copper_In2Cu_2158\", \"MainB_Copper_In2Cu_2159\", \"MainB_Copper_In2Cu_311\", \"MainB_Copper_In2Cu_553\", \"MainB_Copper_In2Cu_554\", \"MainB_Copper_In2Cu_555\", \"MainB_Copper_In2Cu_556\", \"MainB_Copper_In2Cu_557\", \"MainB_Copper_In2Cu_558\", \"MainB_Copper_In2Cu_559\", \"MainB_Copper_In2Cu_560\", \"MainB_Copper_In2Cu_561\", \"MainB_Copper_In2Cu_562\", \"MainB_Copper_In2Cu_563\", \"MainB_Copper_In2Cu_564\", \"MainB_Copper_In2Cu_565\", \"MainB_Copper_In2Cu_566\", \"MainB_Copper_In2Cu_567\", \"MainB_Copper_In2Cu_568\", \"MainB_Copper_In2Cu_569\", \"MainB_Copper_In2Cu_570\", \"MainB_Copper_In2Cu_571\", \"MainB_Copper_In2Cu_572\", \"MainB_Copper_In2Cu_573\", \"MainB_Copper_In2Cu_574\", \"MainB_Copper_In2Cu_575\", \"MainB_Copper_In2Cu_576\"]",
+        "representation": "Actual source geometry batched by material; not electrically connected by this display operation"
+      }
+    },
+    {
+      "id": "MainB_CP201",
+      "name": "MainB_CP201",
+      "node_index": 96,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CP202",
+      "name": "MainB_CP202",
+      "node_index": 97,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CP203",
+      "name": "MainB_CP203",
+      "node_index": 98,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CP204",
+      "name": "MainB_CP204",
+      "node_index": 99,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CV201",
+      "name": "MainB_CV201",
+      "node_index": 100,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CV202",
+      "name": "MainB_CV202",
+      "node_index": 101,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_CX201",
+      "name": "MainB_CX201",
+      "node_index": 102,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_D101",
+      "name": "MainB_D101",
+      "node_index": 103,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_F501",
+      "name": "MainB_F501",
+      "node_index": 104,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_F501_FormedLead_1",
+      "name": "MainB_F501_FormedLead_1",
+      "node_index": 105,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_F501_FormedLead__1",
+      "name": "MainB_F501_FormedLead__1",
+      "node_index": 106,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J102",
+      "name": "MainB_J102",
+      "node_index": 107,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J102_Pin1",
+      "name": "MainB_J102_Pin1",
+      "node_index": 108,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J102_Pin2",
+      "name": "MainB_J102_Pin2",
+      "node_index": 109,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J104",
+      "name": "MainB_J104",
+      "node_index": 110,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J104_Tail1",
+      "name": "MainB_J104_Tail1",
+      "node_index": 111,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J104_Tail2",
+      "name": "MainB_J104_Tail2",
+      "node_index": 112,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J104_Tail3",
+      "name": "MainB_J104_Tail3",
+      "node_index": 113,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J104_Tail4",
+      "name": "MainB_J104_Tail4",
+      "node_index": 114,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J104_Tail5",
+      "name": "MainB_J104_Tail5",
+      "node_index": 115,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J201",
+      "name": "MainB_J201",
+      "node_index": 116,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J201_Pin1",
+      "name": "MainB_J201_Pin1",
+      "node_index": 117,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J201_Pin2",
+      "name": "MainB_J201_Pin2",
+      "node_index": 118,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J403",
+      "name": "MainB_J403",
+      "node_index": 119,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J403_Tail1",
+      "name": "MainB_J403_Tail1",
+      "node_index": 120,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J403_Tail2",
+      "name": "MainB_J403_Tail2",
+      "node_index": 121,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_J403_Tail3",
+      "name": "MainB_J403_Tail3",
+      "node_index": 122,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101",
+      "name": "MainB_K101",
+      "node_index": 123,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_Tail012",
+      "name": "MainB_K101_Tail012",
+      "node_index": 124,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_Tail013",
+      "name": "MainB_K101_Tail013",
+      "node_index": 125,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_Tail014",
+      "name": "MainB_K101_Tail014",
+      "node_index": 126,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_Tail11",
+      "name": "MainB_K101_Tail11",
+      "node_index": 127,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_Tail12",
+      "name": "MainB_K101_Tail12",
+      "node_index": 128,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_Tail14",
+      "name": "MainB_K101_Tail14",
+      "node_index": 129,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_TailA1",
+      "name": "MainB_K101_TailA1",
+      "node_index": 130,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_K101_TailA2",
+      "name": "MainB_K101_TailA2",
+      "node_index": 131,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_L101",
+      "name": "MainB_L101",
+      "node_index": 132,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_LED101",
+      "name": "MainB_LED101",
+      "node_index": 133,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_LED101_Tail1",
+      "name": "MainB_LED101_Tail1",
+      "node_index": 134,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_LED101_Tail2",
+      "name": "MainB_LED101_Tail2",
+      "node_index": 135,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PCB_100x85_R10_4layer",
+      "name": "MainB_PCB_100x85_R10_4layer",
+      "node_index": 136,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PS101",
+      "name": "MainB_PS101",
+      "node_index": 137,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PS101_Tail1",
+      "name": "MainB_PS101_Tail1",
+      "node_index": 138,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PS101_Tail2",
+      "name": "MainB_PS101_Tail2",
+      "node_index": 139,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PS101_Tail3",
+      "name": "MainB_PS101_Tail3",
+      "node_index": 140,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PS101_Tail4",
+      "name": "MainB_PS101_Tail4",
+      "node_index": 141,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_PS201",
+      "name": "MainB_PS201",
+      "node_index": 142,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_Q101",
+      "name": "MainB_Q101",
+      "node_index": 143,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_Q401",
+      "name": "MainB_Q401",
+      "node_index": 144,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_Q402",
+      "name": "MainB_Q402",
+      "node_index": 145,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_Q403",
+      "name": "MainB_Q403",
+      "node_index": 146,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R101",
+      "name": "MainB_R101",
+      "node_index": 147,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R102",
+      "name": "MainB_R102",
+      "node_index": 148,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R103",
+      "name": "MainB_R103",
+      "node_index": 149,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R104",
+      "name": "MainB_R104",
+      "node_index": 150,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R105",
+      "name": "MainB_R105",
+      "node_index": 151,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R106",
+      "name": "MainB_R106",
+      "node_index": 152,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R107",
+      "name": "MainB_R107",
+      "node_index": 153,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R108",
+      "name": "MainB_R108",
+      "node_index": 154,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R110",
+      "name": "MainB_R110",
+      "node_index": 155,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R111",
+      "name": "MainB_R111",
+      "node_index": 156,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R201",
+      "name": "MainB_R201",
+      "node_index": 157,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R202",
+      "name": "MainB_R202",
+      "node_index": 158,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R203",
+      "name": "MainB_R203",
+      "node_index": 159,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R204",
+      "name": "MainB_R204",
+      "node_index": 160,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R205",
+      "name": "MainB_R205",
+      "node_index": 161,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R206",
+      "name": "MainB_R206",
+      "node_index": 162,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R301",
+      "name": "MainB_R301",
+      "node_index": 163,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R301_Tail1",
+      "name": "MainB_R301_Tail1",
+      "node_index": 164,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R301_Tail2",
+      "name": "MainB_R301_Tail2",
+      "node_index": 165,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R302",
+      "name": "MainB_R302",
+      "node_index": 166,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R302_Tail1",
+      "name": "MainB_R302_Tail1",
+      "node_index": 167,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R302_Tail2",
+      "name": "MainB_R302_Tail2",
+      "node_index": 168,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R303",
+      "name": "MainB_R303",
+      "node_index": 169,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R303_Tail1",
+      "name": "MainB_R303_Tail1",
+      "node_index": 170,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R303_Tail2",
+      "name": "MainB_R303_Tail2",
+      "node_index": 171,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R304",
+      "name": "MainB_R304",
+      "node_index": 172,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R304_Tail1",
+      "name": "MainB_R304_Tail1",
+      "node_index": 173,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R304_Tail2",
+      "name": "MainB_R304_Tail2",
+      "node_index": 174,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R305",
+      "name": "MainB_R305",
+      "node_index": 175,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R402",
+      "name": "MainB_R402",
+      "node_index": 176,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R403",
+      "name": "MainB_R403",
+      "node_index": 177,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R404",
+      "name": "MainB_R404",
+      "node_index": 178,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R405",
+      "name": "MainB_R405",
+      "node_index": 179,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R407",
+      "name": "MainB_R407",
+      "node_index": 180,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R409",
+      "name": "MainB_R409",
+      "node_index": 181,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R410",
+      "name": "MainB_R410",
+      "node_index": 182,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R411",
+      "name": "MainB_R411",
+      "node_index": 183,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R412",
+      "name": "MainB_R412",
+      "node_index": 184,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_R413",
+      "name": "MainB_R413",
+      "node_index": 185,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RS201",
+      "name": "MainB_RS201",
+      "node_index": 186,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV201",
+      "name": "MainB_RV201",
+      "node_index": 187,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV202",
+      "name": "MainB_RV202",
+      "node_index": 188,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV203",
+      "name": "MainB_RV203",
+      "node_index": 189,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV204",
+      "name": "MainB_RV204",
+      "node_index": 190,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV205",
+      "name": "MainB_RV205",
+      "node_index": 191,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV206",
+      "name": "MainB_RV206",
+      "node_index": 192,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_RV207",
+      "name": "MainB_RV207",
+      "node_index": 193,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW101",
+      "name": "MainB_SW101",
+      "node_index": 194,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW101_Tail002",
+      "name": "MainB_SW101_Tail002",
+      "node_index": 195,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW101_Tail003",
+      "name": "MainB_SW101_Tail003",
+      "node_index": 196,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW101_Tail1",
+      "name": "MainB_SW101_Tail1",
+      "node_index": 197,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW101_Tail2",
+      "name": "MainB_SW101_Tail2",
+      "node_index": 198,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW401",
+      "name": "MainB_SW401",
+      "node_index": 199,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW401_Tail002",
+      "name": "MainB_SW401_Tail002",
+      "node_index": 200,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW401_Tail003",
+      "name": "MainB_SW401_Tail003",
+      "node_index": 201,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW401_Tail1",
+      "name": "MainB_SW401_Tail1",
+      "node_index": 202,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_SW401_Tail2",
+      "name": "MainB_SW401_Tail2",
+      "node_index": 203,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U101",
+      "name": "MainB_U101",
+      "node_index": 204,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U102",
+      "name": "MainB_U102",
+      "node_index": 205,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U103",
+      "name": "MainB_U103",
+      "node_index": 206,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U201",
+      "name": "MainB_U201",
+      "node_index": 207,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U202",
+      "name": "MainB_U202",
+      "node_index": 208,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U301",
+      "name": "MainB_U301",
+      "node_index": 209,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U402",
+      "name": "MainB_U402",
+      "node_index": 210,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U403",
+      "name": "MainB_U403",
+      "node_index": 211,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U404",
+      "name": "MainB_U404",
+      "node_index": 212,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U405",
+      "name": "MainB_U405",
+      "node_index": 213,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_U406",
+      "name": "MainB_U406",
+      "node_index": 214,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "MainB_Y201",
+      "name": "MainB_Y201",
+      "node_index": 215,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "HeadB_C1_GRM188R71C104KA01D",
+      "name": "HeadB_C1_GRM188R71C104KA01D",
+      "node_index": 216,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "HeadB_GND_HEAD_thermal_island_B_Cu",
+      "name": "HeadB_GND_HEAD_thermal_island_B_Cu",
+      "node_index": 217,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "HeadB_J4_Soldered_insulated_pigtail_",
+      "name": "HeadB_J4_Soldered_insulated_pigtail_",
+      "node_index": 218,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "PCB detail / pads and vias",
+      "name": "PCB detail / pads and vias",
+      "node_index": 219,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending",
+        "source_members": "[\"HeadB_Pad_C1_0\", \"HeadB_Pad_C1_1\", \"HeadB_Pad_J4_0\", \"HeadB_Pad_J4_1\", \"HeadB_Pad_J4_2\", \"HeadB_Pad_R1_0\", \"HeadB_Pad_R1_1\", \"HeadB_Pad_U1_0\", \"HeadB_Pad_U1_1\", \"HeadB_Pad_U1_2\", \"HeadB_Pad_U1_3\", \"HeadB_Pad_U1_4\", \"HeadB_Pad_U1_5\", \"MainB_Pad_BCu_F501_1_0\", \"MainB_Pad_BCu_F501_2_0\", \"MainB_Pad_BCu_J102_1_0\", \"MainB_Pad_BCu_J102_2_0\", \"MainB_Pad_BCu_J104_1_0\", \"MainB_Pad_BCu_J104_2_0\", \"MainB_Pad_BCu_J104_3_0\", \"MainB_Pad_BCu_J104_4_0\", \"MainB_Pad_BCu_J104_5_0\", \"MainB_Pad_BCu_J201_1_0\", \"MainB_Pad_BCu_J201_2_0\", \"MainB_Pad_BCu_J403_1_0\", \"MainB_Pad_BCu_J403_2_0\", \"MainB_Pad_BCu_J403_3_0\", \"MainB_Pad_BCu_K101_11_0\", \"MainB_Pad_BCu_K101_11_001\", \"MainB_Pad_BCu_K101_12_0\", \"MainB_Pad_BCu_K101_12_001\", \"MainB_Pad_BCu_K101_14_0\", \"MainB_Pad_BCu_K101_14_001\", \"MainB_Pad_BCu_K101_A1_0\", \"MainB_Pad_BCu_K101_A2_0\", \"MainB_Pad_BCu_LED101_1_0\", \"MainB_Pad_BCu_LED101_2_0\", \"MainB_Pad_BCu_PS101_1_0\", \"MainB_Pad_BCu_PS101_2_0\", \"MainB_Pad_BCu_PS101_3_0\", \"MainB_Pad_BCu_PS101_4_0\", \"MainB_Pad_BCu_R301_1_0\", \"MainB_Pad_BCu_R301_2_0\", \"MainB_Pad_BCu_R302_1_0\", \"MainB_Pad_BCu_R302_2_0\", \"MainB_Pad_BCu_R303_1_0\", \"MainB_Pad_BCu_R303_2_0\", \"MainB_Pad_BCu_R304_1_0\", \"MainB_Pad_BCu_R304_2_0\", \"MainB_Pad_BCu_SW101_1_0\", \"MainB_Pad_BCu_SW101_1_001\", \"MainB_Pad_BCu_SW101_2_0\", \"MainB_Pad_BCu_SW101_2_001\", \"MainB_Pad_BCu_SW401_1_0\", \"MainB_Pad_BCu_SW401_1_001\", \"MainB_Pad_BCu_SW401_2_0\", \"MainB_Pad_BCu_SW401_2_001\", \"MainB_Pad_BCu_U101_19_0\", \"MainB_Pad_BCu_U101_19_001\", \"MainB_Pad_BCu_U101_19_002\", \"MainB_Pad_BCu_U101_19_003\", \"MainB_Pad_BCu_U101_19_004\", \"MainB_Pad_BCu_U101_19_005\", \"MainB_Pad_BCu_U101_19_006\", \"MainB_Pad_BCu_U101_19_007\", \"MainB_Pad_BCu_U101_19_008\", \"MainB_Pad_BCu_U101_19_009\", \"MainB_Pad_BCu_U101_19_010\", \"MainB_Pad_BCu_U101_19_011\", \"MainB_Pad_FCu_C101_1_0\", \"MainB_Pad_FCu_C101_2_0\", \"MainB_Pad_FCu_C102_1_0\", \"MainB_Pad_FCu_C102_2_0\", \"MainB_Pad_FCu_C103_1_0\", \"MainB_Pad_FCu_C103_2_0\", \"MainB_Pad_FCu_C104_1_0\", \"MainB_Pad_FCu_C104_2_0\", \"MainB_Pad_FCu_C105_1_0\", \"MainB_Pad_FCu_C105_2_0\", \"MainB_Pad_FCu_C106_1_0\", \"MainB_Pad_FCu_C106_2_0\", \"MainB_Pad_FCu_C107_1_0\", \"MainB_Pad_FCu_C107_2_0\", \"MainB_Pad_FCu_C201_1_0\", \"MainB_Pad_FCu_C201_2_0\", \"MainB_Pad_FCu_C202_1_0\", \"MainB_Pad_FCu_C202_2_0\", \"MainB_Pad_FCu_C203_1_0\", \"MainB_Pad_FCu_C203_2_0\", \"MainB_Pad_FCu_C204_1_0\", \"MainB_Pad_FCu_C204_2_0\", \"MainB_Pad_FCu_C205_1_0\", \"MainB_Pad_FCu_C205_2_0\", \"MainB_Pad_FCu_C206_1_0\", \"MainB_Pad_FCu_C206_2_0\", \"MainB_Pad_FCu_C207_1_0\", \"MainB_Pad_FCu_C207_2_0\", \"MainB_Pad_FCu_C208_1_0\", \"MainB_Pad_FCu_C208_2_0\", \"MainB_Pad_FCu_C301_1_0\", \"MainB_Pad_FCu_C301_2_0\", \"MainB_Pad_FCu_C402_1_0\", \"MainB_Pad_FCu_C402_2_0\", \"MainB_Pad_FCu_C403_1_0\", \"MainB_Pad_FCu_C403_2_0\", \"MainB_Pad_FCu_C404_1_0\", \"MainB_Pad_FCu_C404_2_0\", \"MainB_Pad_FCu_C405_1_0\", \"MainB_Pad_FCu_C405_2_0\", \"MainB_Pad_FCu_C406_1_0\", \"MainB_Pad_FCu_C406_2_0\", \"MainB_Pad_FCu_C407_1_0\", \"MainB_Pad_FCu_C407_2_0\", \"MainB_Pad_FCu_CI201_1_0\", \"MainB_Pad_FCu_CI201_2_0\", \"MainB_Pad_FCu_CI202_1_0\", \"MainB_Pad_FCu_CI202_2_0\", \"MainB_Pad_FCu_CP201_1_0\", \"MainB_Pad_FCu_CP201_2_0\", \"MainB_Pad_FCu_CP202_1_0\", \"MainB_Pad_FCu_CP202_2_0\", \"MainB_Pad_FCu_CP203_1_0\", \"MainB_Pad_FCu_CP203_2_0\", \"MainB_Pad_FCu_CP204_1_0\", \"MainB_Pad_FCu_CP204_2_0\", \"MainB_Pad_FCu_CV201_1_0\", \"MainB_Pad_FCu_CV201_2_0\", \"MainB_Pad_FCu_CV202_1_0\", \"MainB_Pad_FCu_CV202_2_0\", \"MainB_Pad_FCu_CX201_1_0\", \"MainB_Pad_FCu_CX201_2_0\", \"MainB_Pad_FCu_D101_1_0\", \"MainB_Pad_FCu_D101_2_0\", \"MainB_Pad_FCu_F501_1_0\", \"MainB_Pad_FCu_F501_2_0\", \"MainB_Pad_FCu_J102_1_0\", \"MainB_Pad_FCu_J102_2_0\", \"MainB_Pad_FCu_J104_1_0\", \"MainB_Pad_FCu_J104_2_0\", \"MainB_Pad_FCu_J104_3_0\", \"MainB_Pad_FCu_J104_4_0\", \"MainB_Pad_FCu_J104_5_0\", \"MainB_Pad_FCu_J201_1_0\", \"MainB_Pad_FCu_J201_2_0\", \"MainB_Pad_FCu_J403_1_0\", \"MainB_Pad_FCu_J403_2_0\", \"MainB_Pad_FCu_J403_3_0\", \"MainB_Pad_FCu_K101_11_0\", \"MainB_Pad_FCu_K101_11_001\", \"MainB_Pad_FCu_K101_12_0\", \"MainB_Pad_FCu_K101_12_001\", \"MainB_Pad_FCu_K101_14_0\", \"MainB_Pad_FCu_K101_14_001\", \"MainB_Pad_FCu_K101_A1_0\", \"MainB_Pad_FCu_K101_A2_0\", \"MainB_Pad_FCu_L101_1_0\", \"MainB_Pad_FCu_L101_2_0\", \"MainB_Pad_FCu_LED101_1_0\", \"MainB_Pad_FCu_LED101_2_0\", \"MainB_Pad_FCu_PS101_1_0\", \"MainB_Pad_FCu_PS101_2_0\", \"MainB_Pad_FCu_PS101_3_0\", \"MainB_Pad_FCu_PS101_4_0\", \"MainB_Pad_FCu_PS201_10_0\", \"MainB_Pad_FCu_PS201_11_0\", \"MainB_Pad_FCu_PS201_12_0\", \"MainB_Pad_FCu_PS201_13_0\", \"MainB_Pad_FCu_PS201_14_0\", \"MainB_Pad_FCu_PS201_15_0\", \"MainB_Pad_FCu_PS201_16_0\", \"MainB_Pad_FCu_PS201_1_0\", \"MainB_Pad_FCu_PS201_2_0\", \"MainB_Pad_FCu_PS201_3_0\", \"MainB_Pad_FCu_PS201_4_0\", \"MainB_Pad_FCu_PS201_5_0\", \"MainB_Pad_FCu_PS201_6_0\", \"MainB_Pad_FCu_PS201_7_0\", \"MainB_Pad_FCu_PS201_8_0\", \"MainB_Pad_FCu_PS201_9_0\", \"MainB_Pad_FCu_Q101_1_0\", \"MainB_Pad_FCu_Q101_2_0\", \"MainB_Pad_FCu_Q101_3_0\", \"MainB_Pad_FCu_Q401_1_0\", \"MainB_Pad_FCu_Q401_2_0\", \"MainB_Pad_FCu_Q401_3_0\", \"MainB_Pad_FCu_Q402_1_0\", \"MainB_Pad_FCu_Q402_2_0\", \"MainB_Pad_FCu_Q402_3_0\", \"MainB_Pad_FCu_Q403_1_0\", \"MainB_Pad_FCu_Q403_2_0\", \"MainB_Pad_FCu_Q403_3_0\", \"MainB_Pad_FCu_R101_1_0\", \"MainB_Pad_FCu_R101_2_0\", \"MainB_Pad_FCu_R102_1_0\", \"MainB_Pad_FCu_R102_2_0\", \"MainB_Pad_FCu_R103_1_0\", \"MainB_Pad_FCu_R103_2_0\", \"MainB_Pad_FCu_R104_1_0\", \"MainB_Pad_FCu_R104_2_0\", \"MainB_Pad_FCu_R105_1_0\", \"MainB_Pad_FCu_R105_2_0\", \"MainB_Pad_FCu_R106_1_0\", \"MainB_Pad_FCu_R106_2_0\", \"MainB_Pad_FCu_R107_1_0\", \"MainB_Pad_FCu_R107_2_0\", \"MainB_Pad_FCu_R108_1_0\", \"MainB_Pad_FCu_R108_2_0\", \"MainB_Pad_FCu_R110_1_0\", \"MainB_Pad_FCu_R110_2_0\", \"MainB_Pad_FCu_R111_1_0\", \"MainB_Pad_FCu_R111_2_0\", \"MainB_Pad_FCu_R201_1_0\", \"MainB_Pad_FCu_R201_2_0\", \"MainB_Pad_FCu_R202_1_0\", \"MainB_Pad_FCu_R202_2_0\", \"MainB_Pad_FCu_R203_1_0\", \"MainB_Pad_FCu_R203_2_0\", \"MainB_Pad_FCu_R204_1_0\", \"MainB_Pad_FCu_R204_2_0\", \"MainB_Pad_FCu_R205_1_0\", \"MainB_Pad_FCu_R205_2_0\", \"MainB_Pad_FCu_R206_1_0\", \"MainB_Pad_FCu_R206_2_0\", \"MainB_Pad_FCu_R301_1_0\", \"MainB_Pad_FCu_R301_2_0\", \"MainB_Pad_FCu_R302_1_0\", \"MainB_Pad_FCu_R302_2_0\", \"MainB_Pad_FCu_R303_1_0\", \"MainB_Pad_FCu_R303_2_0\", \"MainB_Pad_FCu_R304_1_0\", \"MainB_Pad_FCu_R304_2_0\", \"MainB_Pad_FCu_R305_1_0\", \"MainB_Pad_FCu_R305_2_0\", \"MainB_Pad_FCu_R402_1_0\", \"MainB_Pad_FCu_R402_2_0\", \"MainB_Pad_FCu_R403_1_0\", \"MainB_Pad_FCu_R403_2_0\", \"MainB_Pad_FCu_R404_1_0\", \"MainB_Pad_FCu_R404_2_0\", \"MainB_Pad_FCu_R405_1_0\", \"MainB_Pad_FCu_R405_2_0\", \"MainB_Pad_FCu_R407_1_0\", \"MainB_Pad_FCu_R407_2_0\", \"MainB_Pad_FCu_R409_1_0\", \"MainB_Pad_FCu_R409_2_0\", \"MainB_Pad_FCu_R410_1_0\", \"MainB_Pad_FCu_R410_2_0\", \"MainB_Pad_FCu_R411_1_0\", \"MainB_Pad_FCu_R411_2_0\", \"MainB_Pad_FCu_R412_1_0\", \"MainB_Pad_FCu_R412_2_0\", \"MainB_Pad_FCu_R413_1_0\", \"MainB_Pad_FCu_R413_2_0\", \"MainB_Pad_FCu_RS201_1_0\", \"MainB_Pad_FCu_RS201_2_0\", \"MainB_Pad_FCu_RS201_3_0\", \"MainB_Pad_FCu_RS201_4_0\", \"MainB_Pad_FCu_RV201_1_0\", \"MainB_Pad_FCu_RV201_2_0\", \"MainB_Pad_FCu_RV202_1_0\", \"MainB_Pad_FCu_RV202_2_0\", \"MainB_Pad_FCu_RV203_1_0\", \"MainB_Pad_FCu_RV203_2_0\", \"MainB_Pad_FCu_RV204_1_0\", \"MainB_Pad_FCu_RV204_2_0\", \"MainB_Pad_FCu_RV205_1_0\", \"MainB_Pad_FCu_RV205_2_0\", \"MainB_Pad_FCu_RV206_1_0\", \"MainB_Pad_FCu_RV206_2_0\", \"MainB_Pad_FCu_RV207_1_0\", \"MainB_Pad_FCu_RV207_2_0\", \"MainB_Pad_FCu_SW101_1_0\", \"MainB_Pad_FCu_SW101_1_001\", \"MainB_Pad_FCu_SW101_2_0\", \"MainB_Pad_FCu_SW101_2_001\", \"MainB_Pad_FCu_SW401_1_0\", \"MainB_Pad_FCu_SW401_1_001\", \"MainB_Pad_FCu_SW401_2_0\", \"MainB_Pad_FCu_SW401_2_001\", \"MainB_Pad_FCu_TP401_1_0\", \"MainB_Pad_FCu_TP402_1_0\", \"MainB_Pad_FCu_U101_10_0\", \"MainB_Pad_FCu_U101_11_0\", \"MainB_Pad_FCu_U101_12_0\", \"MainB_Pad_FCu_U101_13_0\", \"MainB_Pad_FCu_U101_14_0\", \"MainB_Pad_FCu_U101_15_0\", \"MainB_Pad_FCu_U101_16_0\", \"MainB_Pad_FCu_U101_17_0\", \"MainB_Pad_FCu_U101_18_0\", \"MainB_Pad_FCu_U101_19_0\", \"MainB_Pad_FCu_U101_19_001\", \"MainB_Pad_FCu_U101_19_002\", \"MainB_Pad_FCu_U101_19_003\", \"MainB_Pad_FCu_U101_19_004\", \"MainB_Pad_FCu_U101_19_005\", \"MainB_Pad_FCu_U101_19_006\", \"MainB_Pad_FCu_U101_19_007\", \"MainB_Pad_FCu_U101_19_008\", \"MainB_Pad_FCu_U101_19_009\", \"MainB_Pad_FCu_U101_19_010\", \"MainB_Pad_FCu_U101_19_011\", \"MainB_Pad_FCu_U101_19_012\", \"MainB_Pad_FCu_U101_1_0\", \"MainB_Pad_FCu_U101_2_0\", \"MainB_Pad_FCu_U101_3_0\", \"MainB_Pad_FCu_U101_4_0\", \"MainB_Pad_FCu_U101_5_0\", \"MainB_Pad_FCu_U101_6_0\", \"MainB_Pad_FCu_U101_7_0\", \"MainB_Pad_FCu_U101_8_0\", \"MainB_Pad_FCu_U101_9_0\", \"MainB_Pad_FCu_U102_1_0\", \"MainB_Pad_FCu_U102_2_0\", \"MainB_Pad_FCu_U102_3_0\", \"MainB_Pad_FCu_U102_4_0\", \"MainB_Pad_FCu_U102_5_0\", \"MainB_Pad_FCu_U102_6_0\", \"MainB_Pad_FCu_U103_1_0\", \"MainB_Pad_FCu_U103_2_0\", \"MainB_Pad_FCu_U103_3_0\", \"MainB_Pad_FCu_U103_4_0\", \"MainB_Pad_FCu_U103_5_0\", \"MainB_Pad_FCu_U103_6_0\", \"MainB_Pad_FCu_U201_10_0\", \"MainB_Pad_FCu_U201_11_0\", \"MainB_Pad_FCu_U201_12_0\", \"MainB_Pad_FCu_U201_13_0\", \"MainB_Pad_FCu_U201_14_0\", \"MainB_Pad_FCu_U201_15_0\", \"MainB_Pad_FCu_U201_16_0\", \"MainB_Pad_FCu_U201_17_0\", \"MainB_Pad_FCu_U201_18_0\", \"MainB_Pad_FCu_U201_19_0\", \"MainB_Pad_FCu_U201_1_0\", \"MainB_Pad_FCu_U201_20_0\", \"MainB_Pad_FCu_U201_21_0\", \"MainB_Pad_FCu_U201_22_0\", \"MainB_Pad_FCu_U201_23_0\", \"MainB_Pad_FCu_U201_24_0\", \"MainB_Pad_FCu_U201_25_0\", \"MainB_Pad_FCu_U201_26_0\", \"MainB_Pad_FCu_U201_27_0\", \"MainB_Pad_FCu_U201_28_0\", \"MainB_Pad_FCu_U201_2_0\", \"MainB_Pad_FCu_U201_3_0\", \"MainB_Pad_FCu_U201_4_0\", \"MainB_Pad_FCu_U201_5_0\", \"MainB_Pad_FCu_U201_6_0\", \"MainB_Pad_FCu_U201_7_0\", \"MainB_Pad_FCu_U201_8_0\", \"MainB_Pad_FCu_U201_9_0\", \"MainB_Pad_FCu_U202_10_0\", \"MainB_Pad_FCu_U202_11_0\", \"MainB_Pad_FCu_U202_12_0\", \"MainB_Pad_FCu_U202_13_0\", \"MainB_Pad_FCu_U202_14_0\", \"MainB_Pad_FCu_U202_15_0\", \"MainB_Pad_FCu_U202_16_0\", \"MainB_Pad_FCu_U202_1_0\", \"MainB_Pad_FCu_U202_2_0\", \"MainB_Pad_FCu_U202_3_0\", \"MainB_Pad_FCu_U202_4_0\", \"MainB_Pad_FCu_U202_5_0\", \"MainB_Pad_FCu_U202_6_0\", \"MainB_Pad_FCu_U202_7_0\", \"MainB_Pad_FCu_U202_8_0\", \"MainB_Pad_FCu_U202_9_0\", \"MainB_Pad_FCu_U301_1_0\", \"MainB_Pad_FCu_U301_2_0\", \"MainB_Pad_FCu_U301_3_0\", \"MainB_Pad_FCu_U301_4_0\", \"MainB_Pad_FCu_U301_5_0\", \"MainB_Pad_FCu_U301_6_0\", \"MainB_Pad_FCu_U301_7_0\", \"MainB_Pad_FCu_U301_8_0\", \"MainB_Pad_FCu_U402_1_0\", \"MainB_Pad_FCu_U402_2_0\", \"MainB_Pad_FCu_U402_3_0\", \"MainB_Pad_FCu_U402_4_0\", \"MainB_Pad_FCu_U402_5_0\", \"MainB_Pad_FCu_U403_1_0\", \"MainB_Pad_FCu_U403_2_0\", \"MainB_Pad_FCu_U403_3_0\", \"MainB_Pad_FCu_U403_4_0\", \"MainB_Pad_FCu_U403_5_0\", \"MainB_Pad_FCu_U403_6_0\", \"MainB_Pad_FCu_U404_1_0\", \"MainB_Pad_FCu_U404_2_0\", \"MainB_Pad_FCu_U404_3_0\", \"MainB_Pad_FCu_U404_4_0\", \"MainB_Pad_FCu_U404_5_0\", \"MainB_Pad_FCu_U404_6_0\", \"MainB_Pad_FCu_U404_7_0\", \"MainB_Pad_FCu_U404_8_0\", \"MainB_Pad_FCu_U405_1_0\", \"MainB_Pad_FCu_U405_2_0\", \"MainB_Pad_FCu_U405_3_0\", \"MainB_Pad_FCu_U405_4_0\", \"MainB_Pad_FCu_U405_5_0\", \"MainB_Pad_FCu_U406_1_0\", \"MainB_Pad_FCu_U406_2_0\", \"MainB_Pad_FCu_U406_3_0\", \"MainB_Pad_FCu_U406_4_0\", \"MainB_Pad_FCu_U406_5_0\", \"MainB_Pad_FCu_Y201_1_0\", \"MainB_Pad_FCu_Y201_2_0\", \"MainB_Pad_FCu_Y201_3_0\", \"MainB_Pad_FCu_Y201_4_0\", \"MainB_Pad_In1Cu_F501_1_0\", \"MainB_Pad_In1Cu_F501_2_0\", \"MainB_Pad_In1Cu_J102_1_0\", \"MainB_Pad_In1Cu_J102_2_0\", \"MainB_Pad_In1Cu_J104_1_0\", \"MainB_Pad_In1Cu_J104_2_0\", \"MainB_Pad_In1Cu_J104_3_0\", \"MainB_Pad_In1Cu_J104_4_0\", \"MainB_Pad_In1Cu_J104_5_0\", \"MainB_Pad_In1Cu_J201_1_0\", \"MainB_Pad_In1Cu_J201_2_0\", \"MainB_Pad_In1Cu_J403_1_0\", \"MainB_Pad_In1Cu_J403_2_0\", \"MainB_Pad_In1Cu_J403_3_0\", \"MainB_Pad_In1Cu_K101_11_0\", \"MainB_Pad_In1Cu_K101_11_001\", \"MainB_Pad_In1Cu_K101_12_0\", \"MainB_Pad_In1Cu_K101_12_001\", \"MainB_Pad_In1Cu_K101_14_0\", \"MainB_Pad_In1Cu_K101_14_001\", \"MainB_Pad_In1Cu_K101_A1_0\", \"MainB_Pad_In1Cu_K101_A2_0\", \"MainB_Pad_In1Cu_LED101_1_0\", \"MainB_Pad_In1Cu_LED101_2_0\", \"MainB_Pad_In1Cu_PS101_1_0\", \"MainB_Pad_In1Cu_PS101_2_0\", \"MainB_Pad_In1Cu_PS101_3_0\", \"MainB_Pad_In1Cu_PS101_4_0\", \"MainB_Pad_In1Cu_R301_1_0\", \"MainB_Pad_In1Cu_R301_2_0\", \"MainB_Pad_In1Cu_R302_1_0\", \"MainB_Pad_In1Cu_R302_2_0\", \"MainB_Pad_In1Cu_R303_1_0\", \"MainB_Pad_In1Cu_R303_2_0\", \"MainB_Pad_In1Cu_R304_1_0\", \"MainB_Pad_In1Cu_R304_2_0\", \"MainB_Pad_In1Cu_SW101_1_0\", \"MainB_Pad_In1Cu_SW101_1_001\", \"MainB_Pad_In1Cu_SW101_2_0\", \"MainB_Pad_In1Cu_SW101_2_001\", \"MainB_Pad_In1Cu_SW401_1_0\", \"MainB_Pad_In1Cu_SW401_1_001\", \"MainB_Pad_In1Cu_SW401_2_0\", \"MainB_Pad_In1Cu_SW401_2_001\", \"MainB_Pad_In1Cu_U101_19_0\", \"MainB_Pad_In1Cu_U101_19_001\", \"MainB_Pad_In1Cu_U101_19_002\", \"MainB_Pad_In1Cu_U101_19_003\", \"MainB_Pad_In1Cu_U101_19_004\", \"MainB_Pad_In1Cu_U101_19_005\", \"MainB_Pad_In1Cu_U101_19_006\", \"MainB_Pad_In1Cu_U101_19_007\", \"MainB_Pad_In1Cu_U101_19_008\", \"MainB_Pad_In1Cu_U101_19_009\", \"MainB_Pad_In1Cu_U101_19_010\", \"MainB_Pad_In1Cu_U101_19_011\", \"MainB_Pad_In2Cu_F501_1_0\", \"MainB_Pad_In2Cu_F501_2_0\", \"MainB_Pad_In2Cu_J102_1_0\", \"MainB_Pad_In2Cu_J102_2_0\", \"MainB_Pad_In2Cu_J104_1_0\", \"MainB_Pad_In2Cu_J104_2_0\", \"MainB_Pad_In2Cu_J104_3_0\", \"MainB_Pad_In2Cu_J104_4_0\", \"MainB_Pad_In2Cu_J104_5_0\", \"MainB_Pad_In2Cu_J201_1_0\", \"MainB_Pad_In2Cu_J201_2_0\", \"MainB_Pad_In2Cu_J403_1_0\", \"MainB_Pad_In2Cu_J403_2_0\", \"MainB_Pad_In2Cu_J403_3_0\", \"MainB_Pad_In2Cu_K101_11_0\", \"MainB_Pad_In2Cu_K101_11_001\", \"MainB_Pad_In2Cu_K101_12_0\", \"MainB_Pad_In2Cu_K101_12_001\", \"MainB_Pad_In2Cu_K101_14_0\", \"MainB_Pad_In2Cu_K101_14_001\", \"MainB_Pad_In2Cu_K101_A1_0\", \"MainB_Pad_In2Cu_K101_A2_0\", \"MainB_Pad_In2Cu_LED101_1_0\", \"MainB_Pad_In2Cu_LED101_2_0\", \"MainB_Pad_In2Cu_PS101_1_0\", \"MainB_Pad_In2Cu_PS101_2_0\", \"MainB_Pad_In2Cu_PS101_3_0\", \"MainB_Pad_In2Cu_PS101_4_0\", \"MainB_Pad_In2Cu_R301_1_0\", \"MainB_Pad_In2Cu_R301_2_0\", \"MainB_Pad_In2Cu_R302_1_0\", \"MainB_Pad_In2Cu_R302_2_0\", \"MainB_Pad_In2Cu_R303_1_0\", \"MainB_Pad_In2Cu_R303_2_0\", \"MainB_Pad_In2Cu_R304_1_0\", \"MainB_Pad_In2Cu_R304_2_0\", \"MainB_Pad_In2Cu_SW101_1_0\", \"MainB_Pad_In2Cu_SW101_1_001\", \"MainB_Pad_In2Cu_SW101_2_0\", \"MainB_Pad_In2Cu_SW101_2_001\", \"MainB_Pad_In2Cu_SW401_1_0\", \"MainB_Pad_In2Cu_SW401_1_001\", \"MainB_Pad_In2Cu_SW401_2_0\", \"MainB_Pad_In2Cu_SW401_2_001\", \"MainB_Pad_In2Cu_U101_19_0\", \"MainB_Pad_In2Cu_U101_19_001\", \"MainB_Pad_In2Cu_U101_19_002\", \"MainB_Pad_In2Cu_U101_19_003\", \"MainB_Pad_In2Cu_U101_19_004\", \"MainB_Pad_In2Cu_U101_19_005\", \"MainB_Pad_In2Cu_U101_19_006\", \"MainB_Pad_In2Cu_U101_19_007\", \"MainB_Pad_In2Cu_U101_19_008\", \"MainB_Pad_In2Cu_U101_19_009\", \"MainB_Pad_In2Cu_U101_19_010\", \"MainB_Pad_In2Cu_U101_19_011\", \"MainB_Via_1000\", \"MainB_Via_1001\", \"MainB_Via_1002\", \"MainB_Via_1003\", \"MainB_Via_1004\", \"MainB_Via_1005\", \"MainB_Via_1006\", \"MainB_Via_1007\", \"MainB_Via_1008\", \"MainB_Via_1009\", \"MainB_Via_1010\", \"MainB_Via_1011\", \"MainB_Via_1012\", \"MainB_Via_1013\", \"MainB_Via_1014\", \"MainB_Via_1015\", \"MainB_Via_1016\", \"MainB_Via_1017\", \"MainB_Via_1018\", \"MainB_Via_1019\", \"MainB_Via_1020\", \"MainB_Via_1021\", \"MainB_Via_1022\", \"MainB_Via_1023\", \"MainB_Via_1233\", \"MainB_Via_1234\", \"MainB_Via_1235\", \"MainB_Via_1236\", \"MainB_Via_1237\", \"MainB_Via_1238\", \"MainB_Via_1239\", \"MainB_Via_1240\", \"MainB_Via_1353\", \"MainB_Via_1354\", \"MainB_Via_1366\", \"MainB_Via_1367\", \"MainB_Via_1388\", \"MainB_Via_1389\", \"MainB_Via_1417\", \"MainB_Via_1418\", \"MainB_Via_1426\", \"MainB_Via_1427\", \"MainB_Via_1592\", \"MainB_Via_1593\", \"MainB_Via_1594\", \"MainB_Via_1595\", \"MainB_Via_1596\", \"MainB_Via_1597\", \"MainB_Via_1598\", \"MainB_Via_1599\", \"MainB_Via_1600\", \"MainB_Via_1601\", \"MainB_Via_1602\", \"MainB_Via_1603\", \"MainB_Via_1604\", \"MainB_Via_1605\", \"MainB_Via_1606\", \"MainB_Via_1607\", \"MainB_Via_1608\", \"MainB_Via_1609\", \"MainB_Via_1610\", \"MainB_Via_1611\", \"MainB_Via_1612\", \"MainB_Via_1613\", \"MainB_Via_1614\", \"MainB_Via_1615\", \"MainB_Via_1616\", \"MainB_Via_1617\", \"MainB_Via_1618\", \"MainB_Via_1619\", \"MainB_Via_1620\", \"MainB_Via_1621\", \"MainB_Via_1622\", \"MainB_Via_1623\", \"MainB_Via_1624\", \"MainB_Via_1625\", \"MainB_Via_1712\", \"MainB_Via_1713\", \"MainB_Via_1717\", \"MainB_Via_1718\", \"MainB_Via_1719\", \"MainB_Via_1720\", \"MainB_Via_1721\", \"MainB_Via_1722\", \"MainB_Via_1723\", \"MainB_Via_1724\", \"MainB_Via_1733\", \"MainB_Via_1734\", \"MainB_Via_1740\", \"MainB_Via_1741\", \"MainB_Via_1866\", \"MainB_Via_1867\", \"MainB_Via_1930\", \"MainB_Via_1931\", \"MainB_Via_1936\", \"MainB_Via_1937\", \"MainB_Via_1949\", \"MainB_Via_1950\", \"MainB_Via_1997\", \"MainB_Via_1998\", \"MainB_Via_2029\", \"MainB_Via_2030\", \"MainB_Via_2050\", \"MainB_Via_2051\", \"MainB_Via_206\", \"MainB_Via_207\", \"MainB_Via_2075\", \"MainB_Via_2076\", \"MainB_Via_208\", \"MainB_Via_209\", \"MainB_Via_210\", \"MainB_Via_211\", \"MainB_Via_2110\", \"MainB_Via_2111\", \"MainB_Via_212\", \"MainB_Via_2122\", \"MainB_Via_2123\", \"MainB_Via_213\", \"MainB_Via_2133\", \"MainB_Via_2134\", \"MainB_Via_2135\", \"MainB_Via_2136\", \"MainB_Via_214\", \"MainB_Via_215\", \"MainB_Via_216\", \"MainB_Via_2163\", \"MainB_Via_2164\", \"MainB_Via_2165\", \"MainB_Via_217\", \"MainB_Via_218\", \"MainB_Via_2183\", \"MainB_Via_2184\", \"MainB_Via_2185\", \"MainB_Via_219\", \"MainB_Via_220\", \"MainB_Via_221\", \"MainB_Via_2217\", \"MainB_Via_2218\", \"MainB_Via_2219\", \"MainB_Via_222\", \"MainB_Via_223\", \"MainB_Via_224\", \"MainB_Via_2243\", \"MainB_Via_2244\", \"MainB_Via_2245\", \"MainB_Via_2246\", \"MainB_Via_225\", \"MainB_Via_226\", \"MainB_Via_227\", \"MainB_Via_228\", \"MainB_Via_229\", \"MainB_Via_230\", \"MainB_Via_231\", \"MainB_Via_232\", \"MainB_Via_233\", \"MainB_Via_2331\", \"MainB_Via_2332\", \"MainB_Via_234\", \"MainB_Via_235\", \"MainB_Via_2352\", \"MainB_Via_2353\", \"MainB_Via_236\", \"MainB_Via_237\", \"MainB_Via_238\", \"MainB_Via_2383\", \"MainB_Via_2384\", \"MainB_Via_239\", \"MainB_Via_2397\", \"MainB_Via_2398\", \"MainB_Via_240\", \"MainB_Via_241\", \"MainB_Via_242\", \"MainB_Via_243\", \"MainB_Via_2430\", \"MainB_Via_2431\", \"MainB_Via_244\", \"MainB_Via_415\", \"MainB_Via_416\", \"MainB_Via_417\", \"MainB_Via_418\", \"MainB_Via_494\", \"MainB_Via_495\", \"MainB_Via_522\", \"MainB_Via_523\", \"MainB_Via_524\", \"MainB_Via_525\", \"MainB_Via_551\", \"MainB_Via_552\", \"MainB_Via_597\", \"MainB_Via_598\", \"MainB_Via_599\", \"MainB_Via_600\", \"MainB_Via_623\", \"MainB_Via_624\", \"MainB_Via_625\", \"MainB_Via_626\", \"MainB_Via_982\", \"MainB_Via_983\", \"MainB_Via_984\", \"MainB_Via_985\", \"MainB_Via_986\", \"MainB_Via_987\", \"MainB_Via_988\", \"MainB_Via_989\", \"MainB_Via_990\", \"MainB_Via_991\", \"MainB_Via_992\", \"MainB_Via_993\", \"MainB_Via_994\", \"MainB_Via_995\", \"MainB_Via_996\", \"MainB_Via_997\", \"MainB_Via_998\", \"MainB_Via_999\"]",
+        "representation": "Actual source geometry batched by material; not electrically connected by this display operation"
+      }
+    },
+    {
+      "id": "HeadB_R1_RC0603FR_0710KL",
+      "name": "HeadB_R1_RC0603FR_0710KL",
+      "node_index": 220,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "HeadB_thermal_sensor_FR4",
+      "name": "HeadB_thermal_sensor_FR4",
+      "node_index": 221,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "HeadB_U1_TMP302BDRLR",
+      "name": "HeadB_U1_TMP302BDRLR",
+      "node_index": 222,
+      "provenance": {
+        "source": "Common CAD/ECAD engineering model",
+        "development_status": "Engineering development; verification pending"
+      }
+    },
+    {
+      "id": "Brand / front pad print",
+      "name": "Brand / front pad print",
+      "node_index": 223,
+      "provenance": {}
+    },
+    {
+      "id": "Brand / Chinese",
+      "name": "Brand / Chinese",
+      "node_index": 224,
+      "provenance": {}
+    },
+    {
+      "id": "Control marking / local OFF",
+      "name": "Control marking / local OFF",
+      "node_index": 225,
+      "provenance": {}
+    },
+    {
+      "id": "Control marking / hardware REARM",
+      "name": "Control marking / hardware REARM",
+      "node_index": 226,
+      "provenance": {}
+    }
+  ],
+  "optimized": true,
+  "optimization": {
+    "tool": "@gltf-transform/functions",
+    "tool_version": "4.3.0",
+    "options": {
+      "quantizePosition": 16,
+      "quantizeNormal": 16,
+      "quantizationVolume": "mesh",
+      "cleanup": false,
+      "pattern": "^(POSITION|NORMAL)$"
+    },
+    "source_bytes": 30337768,
+    "bytes_saved": 8019752,
+    "position_tolerance_m": 1e-05,
+    "normal_tolerance_degrees": 0.01,
+    "max_world_position_error_m": 1.3779013533049413e-06,
+    "max_world_bounds_error_m": 6.53903672508116e-07,
+    "max_world_normal_error_degrees": 0.0014988350778026298,
+    "reports": {
+      "optimization.json": {
+        "path": "reports/optimization.json",
+        "sha256": "35880fef2fed1975a812850e7726dc828b2e31a01a3c55cafb248bc748aa87ee"
+      },
+      "validation.json": {
+        "path": "reports/validation.json",
+        "sha256": "2158b48dbfc047dd9ecfec7d1c9dd9deca8bb3d90acc8e3ba95723a9d91c8407"
+      },
+      "khronos-bound-validation.json": {
+        "path": "reports/khronos-bound-validation.json",
+        "sha256": "d80e78dda09723e4bc1fcbc6aacc340361df67d8e3e2f036d876f46cef226454"
+      }
+    },
+    "geometry_qualification": false
+  },
+  "materials_preserved": true,
+  "extensions": [
+    "KHR_materials_emissive_strength",
+    "KHR_materials_transmission",
+    "KHR_mesh_quantization"
+  ],
+  "physical_qualification": false,
+  "device_binding": false,
+  "provenance": "Validated loss-bounded display quantization of the pinned source; authoritative CAD/ECAD remains upstream",
+  "license": "No repository-wide redistribution license was declared in the inspected source; review before external redistribution",
+  "limitations": [
+    "Product reference only; not the placement of a registered device",
+    "Engineering development; physical verification remains pending",
+    "No mains safety, calibration or voltage-absence proof",
+    "Optional display asset; load only after an explicit user action",
+    "No frame-rate or browser-memory claim without a measured viewer test"
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbentra.invalid/contracts/device-wire-v2.schema.json",
+  "title": "CARBENTRA device telemetry v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "device_id",
+    "boot_epoch",
+    "sample_seq",
+    "board_revision",
+    "calibrated",
+    "valid",
+    "monotonic_ms",
+    "measurement_monotonic_ms",
+    "time_quality",
+    "unix_s",
+    "unix_lower_s",
+    "unix_upper_s",
+    "fault_latched",
+    "board_temperature_valid",
+    "desired_on",
+    "feedback_valid",
+    "output_present",
+    "output_sensing",
+    "voltage_absence_proven",
+    "ram_buffer_dropped",
+    "command_dropped",
+    "energy_status",
+    "known_forward_wh_since_boot",
+    "known_reverse_wh_since_boot",
+    "energy_uncertain_intervals"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,47}$"
+    },
+    "boot_epoch": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "sample_seq": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{0,19}$"
+    },
+    "board_revision": {
+      "const": "CARBENTRA-P16-EVT-B"
+    },
+    "calibrated": {
+      "type": "boolean"
+    },
+    "valid": {
+      "type": "boolean"
+    },
+    "monotonic_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "measurement_monotonic_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "time_quality": {
+      "enum": [
+        "authenticated",
+        "unknown"
+      ]
+    },
+    "unix_s": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unix_lower_s": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unix_upper_s": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "fault_latched": {
+      "type": "boolean"
+    },
+    "board_temperature_valid": {
+      "type": "boolean"
+    },
+    "desired_on": {
+      "type": "boolean"
+    },
+    "feedback_valid": {
+      "type": "boolean"
+    },
+    "output_present": {
+      "type": "boolean"
+    },
+    "output_sensing": {
+      "enum": [
+        "AC_PRESENT",
+        "NO_AC_PULSES_DETECTED",
+        "PRESENT_OR_STUCK_LOW_FAULT",
+        "UNKNOWN"
+      ]
+    },
+    "voltage_absence_proven": {
+      "const": false
+    },
+    "ram_buffer_dropped": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "command_dropped": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "energy_status": {
+      "enum": [
+        "calibrated_counts_known_intervals_since_boot_not_billing_certified",
+        "uncalibrated_no_energy_result"
+      ]
+    },
+    "known_forward_wh_since_boot": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "known_reverse_wh_since_boot": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "energy_uncertain_intervals": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "voltage_v": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "current_a": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "active_w": {
+      "type": "number",
+      "minimum": -1000000.0,
+      "maximum": 1000000.0
+    },
+    "reactive_var": {
+      "type": "number",
+      "minimum": -1000000.0,
+      "maximum": 1000000.0
+    },
+    "apparent_va": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000000.0
+    },
+    "pf": {
+      "type": "number",
+      "minimum": -1.01,
+      "maximum": 1.01
+    },
+    "frequency_hz": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "board_temperature_c": {
+      "type": "number",
+      "minimum": -100,
+      "maximum": 200
+    },
+    "device_type": {
+      "const": "smart_plug"
+    },
+    "channel_id": {
+      "const": "relay.1"
+    },
+    "control_mode": {
+      "enum": [
+        "auto",
+        "manual",
+        "maintenance",
+        "protected"
+      ]
+    },
+    "actuation_enabled": {
+      "type": "boolean"
+    },
+    "maintenance": {
+      "type": "boolean"
+    },
+    "manual_hold_until_uptime_ms": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$"
+    },
+    "last_local_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "channel",
+        "event_seq",
+        "uptime_ms",
+        "pressed",
+        "result"
+      ],
+      "properties": {
+        "channel": {
+          "const": 1
+        },
+        "event_seq": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,19})$"
+        },
+        "uptime_ms": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,19})$"
+        },
+        "pressed": {
+          "type": "boolean"
+        },
+        "result": {
+          "type": "string",
+          "maxLength": 48
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "valid": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "voltage_v",
+          "current_a",
+          "active_w",
+          "reactive_var",
+          "apparent_va",
+          "pf",
+          "frequency_hz"
+        ],
+        "properties": {
+          "calibrated": {
+            "const": true
+          }
+        }
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "voltage_v"
+              ]
+            },
+            {
+              "required": [
+                "current_a"
+              ]
+            },
+            {
+              "required": [
+                "active_w"
+              ]
+            },
+            {
+              "required": [
+                "reactive_var"
+              ]
+            },
+            {
+              "required": [
+                "apparent_va"
+              ]
+            },
+            {
+              "required": [
+                "pf"
+              ]
+            },
+            {
+              "required": [
+                "frequency_hz"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "board_temperature_valid": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "board_temperature_c"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "board_temperature_c"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "time_quality": {
+            "const": "unknown"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "unix_s": {
+            "type": "null"
+          },
+          "unix_lower_s": {
+            "type": "null"
+          },
+          "unix_upper_s": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "unix_s": {
+            "type": "integer",
+            "minimum": 1700000000,
+            "maximum": 4102444799
+          },
+          "unix_lower_s": {
+            "type": "integer",
+            "minimum": 1700000000,
+            "maximum": 4102444799
+          },
+          "unix_upper_s": {
+            "type": "integer",
+            "minimum": 1700000000,
+            "maximum": 4102444799
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "calibrated": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "energy_status": {
+            "const": "calibrated_counts_known_intervals_since_boot_not_billing_certified"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "energy_status": {
+            "const": "uncalibrated_no_energy_result"
+          }
+        }
+      }
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "output_sensing": {
+              "const": "AC_PRESENT"
+            },
+            "feedback_valid": {
+              "const": true
+            },
+            "output_present": {
+              "const": true
+            }
+          }
+        },
+        {
+          "properties": {
+            "output_sensing": {
+              "const": "NO_AC_PULSES_DETECTED"
+            },
+            "feedback_valid": {
+              "const": true
+            },
+            "output_present": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "output_sensing": {
+              "enum": [
+                "PRESENT_OR_STUCK_LOW_FAULT",
+                "UNKNOWN"
+              ]
+            },
+            "feedback_valid": {
+              "const": false
+            },
+            "output_present": {
+              "const": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "$comment": "Additional semantic gates: uint64 sequence maximum, measurement_monotonic_ms <= monotonic_ms and <=10s old if valid; authenticated lower <= unix_s <= upper with upper-lower <=5s. See edge/wire.py. Measurement units V,A,W,var,VA,Hz,C,Wh; Wh accumulators reset per boot and never summed."
+}

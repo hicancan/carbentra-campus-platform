@@ -1,0 +1,71 @@
+name: Verify platform
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  frontend:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      # Immutable official action release commits; see docs/CONTINUOUS_VERIFICATION.md.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.16.0'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+        working-directory: frontend
+      - run: npm test && npm run build
+        working-directory: frontend
+      - run: npm audit --audit-level=moderate
+        working-directory: frontend
+
+  backend:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgis/postgis:17-3.6-alpine@sha256:a8ffa9afeea4ad6eada171fa2afdb57cd3eb90f92ce20156aa2cb8411d70e0cd
+        env:
+          POSTGRES_USER: qa
+          POSTGRES_DB: acceptance
+          # Disposable CI fixture, never reuse this configuration for deployment.
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U qa -d acceptance"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      PYTHONPATH: backend
+      ACCEPTANCE_DATABASE_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
+      ACCEPTANCE_DOMAIN_DATABASE_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
+      PRICING_TEST_DATABASE_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
+      FORECAST_TEST_POSTGRES_URL: postgresql+psycopg://qa@127.0.0.1:5432/acceptance
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: '0.11.17'
+          python-version: '3.12.13'
+          enable-cache: true
+      - run: uv venv --python 3.12 .venv
+      - run: uv sync --locked --all-groups
+      - run: uv run --locked --all-groups pytest backend/tests tests/acceptance tests/test_infrastructure.py tests/system_upgrade/test_packaging.py
+      - run: uv run --locked --all-groups pytest edge/tests -r s
+      - run: uv run --locked python -m unittest discover -s packages/spatial/tests -p 'test_*.py' -v

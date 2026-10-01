@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "test-command-1",
+  "device_id": "virtual-switch-a101",
+  "product_family": "SWITCH",
+  "channel_id": "relay.1",
+  "capability": "relay.commanded",
+  "value": true,
+  "sequence": "1",
+  "issued_at": "2027-01-15T08:00:00Z",
+  "expires_at": "2027-01-15T08:00:20Z",
+  "boot_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "source_mode": "SIMULATED",
+  "authority": {
+    "kind": "cloud",
+    "lease_id": "fixture-lease",
+    "lease_expires_at": "2027-01-15T08:00:30Z"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "event_id": "b17164b8f7fbf37e881e13d3c850a7ecf53d30b60eb59be6a289ef75b3c98f85",
+  "device_id": "virtual-sense-a101",
+  "product_family": "PRESENCE",
+  "boot_id": "90abcdef",
+  "sequence": "1",
+  "observed_at": null,
+  "received_at": "2027-01-15T08:00:00Z",
+  "monotonic_ms": 60000,
+  "source_mode": "SIMULATED",
+  "source_protocol": "presence-gatt-v1",
+  "time_quality": "gateway_received",
+  "quality": "valid",
+  "readings": [
+    {
+      "capability": "presence.radar",
+      "channel_id": "sensor.radar",
+      "value": true,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "continuous_occupancy": true,
+        "sample_only": false,
+        "radar_error": 0,
+        "driver_ready": true,
+        "authenticity": "authenticated_gatt_hmac_sha256",
+        "measurement_age_ms": 101
+      }
+    },
+    {
+      "capability": "illuminance.raw",
+      "channel_id": "sensor.light",
+      "value": 1200,
+      "unit": "raw_count",
+      "quality": "uncalibrated",
+      "details": {
+        "calibrated": false,
+        "not_lux": true,
+        "authenticity": "authenticated_gatt_hmac_sha256",
+        "measurement_age_ms": 1501
+      }
+    },
+    {
+      "capability": "buffer.voltage",
+      "channel_id": "sensor.buffer",
+      "value": 3300,
+      "unit": "mV",
+      "quality": "valid",
+      "details": {
+        "authenticity": "authenticated_gatt_hmac_sha256"
+      }
+    },
+    {
+      "capability": "button.local",
+      "channel_id": "button.1",
+      "value": false,
+      "unit": "boolean",
+      "quality": "valid",
+      "details": {
+        "semantics": "sample_event_flag",
+        "authenticity": "authenticated_gatt_hmac_sha256"
+      }
+    },
+    {
+      "capability": "device.health",
+      "channel_id": "device",
+      "value": "ok",
+      "unit": "status",
+      "quality": "valid",
+      "details": {
+        "warming": false,
+        "low_buffer": false,
+        "radar_driver_ready": true,
+        "radar_error": 0,
+        "authenticity": "authenticated_gatt_hmac_sha256"
+      }
+    }
+  ],
+  "raw": {
+    "version": 2,
+    "flags": 208,
+    "radar": 2,
+    "radar_error": 0,
+    "identity": 305419896,
+    "boot": 2427178479,
+    "sample_seq": 1,
+    "light_raw": 1200,
+    "buffer_mv": 3300,
+    "monotonic_s": 60,
+    "manufacturer_data_hex": "02d0020078563412efcdab9001000000b004e40c3c000000",
+    "manufacturer_company_id": 65535,
+    "pir_age_ms": 4294967295,
+    "radar_age_ms": 100,
+    "light_age_ms": 1500,
+    "evidence_flags": 29,
+    "challenge_round_trip_ms": 1,
+    "response_hex": "0102d0020078563412efcdab9001000000b004e40c3c0000004266cb4633af0c98169ea64ccc0dd21affffffff64000000dc0500001d4d8755d02ebd1864c3275cf7df21925d4f7609f2174f662fe532c0f3a5c67ecf",
+    "authentication": "hmac-sha256-nonce-v1",
+    "proof_sha256": "03bb2052ee13d2c9f88b5c325d9bef999ac0fb9e013a612bc438a9b6f22a69bd"
+  }
+}

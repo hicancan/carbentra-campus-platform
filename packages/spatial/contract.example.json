@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "format": "carbentra-spatial-seed",
+  "source_version": "content-addressed-package-id",
+  "campuses": [{"id":"campus:campus-0d7550977cd648ac5ea5","name":"仙林","source_namespace":"njupt-search","source_id":"campus-0d7550977cd648ac5ea5","source_version":"snapshot-id","synthetic":false,"geometry_status":"schematic"}],
+  "buildings": [{"id":"building:map:osm_way_223699451","campus_id":"campus:campus-0d7550977cd648ac5ea5","name":"教1","asset_id":"osm_way_223699451","source_namespace":"njupt-map","source_id":"osm_way_223699451","source_version":"gpkg-sha256","search_building_id":"building-a064affcc7dfa4184db2","synthetic":false,"geometry_status":"mapped_outline","center_local_m":[0,0,0],"centroid_wgs84":null,"height_m":18.5,"height_source":"source field; not measured","levels":5}],
+  "floors": [{"id":"floor:search:floor-2016f3bb70134f08ff6c","campus_id":"campus:campus-0d7550977cd648ac5ea5","building_id":"building:map:osm_way_223699451","level":"1","name":"1层","geometry_url":"search/geometry-floor-2016f3bb70134f08ff6c.json","source_namespace":"njupt-search","source_id":"floor-2016f3bb70134f08ff6c","source_version":"snapshot-id","synthetic":false,"geometry_status":"schematic_from_evacuation_plan","coordinate_frame":"reconstructed_crop_normalized_top_left","metric_transform":null}],
+  "space_families": [],
+  "spaces": [{"id":"space:search:<unit-id>","family_id":"family:search:<family-id>","campus_id":"campus:campus-0d7550977cd648ac5ea5","building_id":"building:map:osm_way_223699451","floor_id":"floor:search:<floor-id>","name":"source canonical label","kind":"classroom","confidence":"reviewed_schematic","source_namespace":"njupt-search","source_id":"<unit-id>","source_version":"snapshot-id","geometry_status":"schematic_polygon_visually_reviewed","synthetic":false,"observed_occupancy":"unknown","planned_occupancy":"unknown","polygon_normalized":null,"label_point_normalized":null,"region_ids":[]}],
+  "crosswalk":[],
+  "provenance": {"note":"Illustrative contract only; centroid placeholder is not a source measurement. Use dist/seed.json for actual data."}
+}

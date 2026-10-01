@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "device_id": "CM-001122334455",
+  "boot_epoch": "00000000000000010011223344550000",
+  "id": "synthetic-hold-001",
+  "seq": "1",
+  "status": "OBSERVED_VERIFIED",
+  "terminal": true,
+  "desired_on": false,
+  "fault_latched": false,
+  "voltage_absence_proven": false,
+  "requested_monotonic_ms": 10000,
+  "deadline_monotonic_ms": 15000,
+  "observed_monotonic_ms": 10100,
+  "feedback_valid": true,
+  "output_present": false,
+  "output_sensing": "NO_AC_PULSES_DETECTED"
+}

@@ -1,0 +1,6 @@
+# Use only for first production startup; remove after the initial admin is provisioned.
+services:
+  api:
+    environment:
+      CARBENTRA_ADMIN_PASSWORD_FILE: /run/secrets/admin_password
+    secrets: [admin_password]

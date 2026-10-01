@@ -1,0 +1,1 @@
+{"name":"@carbentra/iot-contract","version":"1.0.0","private":true,"type":"module","types":"typescript/index.ts","exports":{".":{"types":"./typescript/index.ts"},"./schemas/*":"./schemas/*","./capabilities":"./capabilities.json"}}

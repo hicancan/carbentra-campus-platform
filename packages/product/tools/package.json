@@ -1,0 +1,15 @@
+{
+  "name": "carbentra-product-display-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test optimize-display.test.mjs"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "4.3.0",
+    "@gltf-transform/extensions": "4.3.0",
+    "@gltf-transform/functions": "4.3.0",
+    "gltf-validator": "2.0.0-dev.3.10"
+  }
+}
