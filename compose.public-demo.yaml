@@ -181,7 +181,8 @@ networks:
   private:
     internal: true
     ipam:
-      config: [{subnet: '${CARBENTRA_DEMO_NETWORK_PREFIX:-172.30.88}.0/24'}]
+      # Keep automatic assignments away from the gateway's fixed trusted address.
+      config: [{subnet: '${CARBENTRA_DEMO_NETWORK_PREFIX:-172.30.88}.0/24', ip_range: '${CARBENTRA_DEMO_NETWORK_PREFIX:-172.30.88}.128/25'}]
   ingress: {driver: bridge}
 volumes:
   database: {}

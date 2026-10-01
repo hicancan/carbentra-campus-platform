@@ -14,6 +14,7 @@ from cryptography.x509.oid import ExtendedKeyUsageOID, NameOID
 parser = argparse.ArgumentParser()
 parser.add_argument('--directory', type=Path, required=True)
 parser.add_argument('--mqtt-port', type=int, default=8884)
+parser.add_argument('--public-demo', action='store_true', help='Use the isolated public simulation database identity')
 parser.add_argument('--disposable-fixture', action='store_true', required=True)
 args = parser.parse_args()
 root = args.directory.resolve()
@@ -57,12 +58,18 @@ for name, cn, server in [('broker', 'broker', True), ('platform', 'platform-tls'
     write(name + '.key', key.private_bytes(serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8,
                                          serialization.NoEncryption()))
 db_password = secrets.token_urlsafe(36)
+database = 'carbentra_public_demo' if args.public_demo else 'carbentra'
 for name, value in {
     'postgres_password': secrets.token_urlsafe(36), 'database_password': db_password,
-    'database_url': f'postgresql+psycopg://carbentra:{db_password}@db:5432/carbentra',
+    'database_url': f'postgresql+psycopg://{database}:{db_password}@db:5432/{database}',
     'admin_password': secrets.token_urlsafe(36), 'adapter_token': secrets.token_urlsafe(36),
 }.items():
     write(name, value + '\n')
+if args.public_demo:
+    for name in ('demo_visitor_password', 'demo_operator_password'):
+        write(name, secrets.token_urlsafe(36) + '\n')
+    write('fullchain.pem', (root / 'platform.crt').read_bytes())
+    write('privkey.pem', (root / 'platform.key').read_bytes())
 write('devices.json', json.dumps({'enrollments': [{'device_id': 'VIRTUAL-QA-01', 'product_family': 'PLUG',
     'protocol': 'plug-wire-v2', 'source_mode': 'SIMULATED'}]}) + '\n')
 write('mosquitto.acl', '''user edge-qa

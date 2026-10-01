@@ -1,5 +1,6 @@
 """Static public-demo packaging assertions, never a Docker cold-start claim."""
 from pathlib import Path
+import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +21,14 @@ def test_standalone_public_demo_is_isolated_and_bounded():
         if name != "db":
             assert service["read_only"] and service["cap_drop"] == ["ALL"]
     assert compose["networks"]["private"]["internal"]
+    import ipaddress
+    addressing = compose['networks']['private']['ipam']['config'][0]
+    def resolved(value):
+        return value.replace('${CARBENTRA_DEMO_NETWORK_PREFIX:-172.30.88}', '172.30.88')
+    subnet = ipaddress.ip_network(resolved(addressing['subnet']))
+    dynamic = ipaddress.ip_network(resolved(addressing['ip_range']))
+    gateway = ipaddress.ip_address(resolved(services['gateway']['networks']['private']['ipv4_address']))
+    assert dynamic.subnet_of(subnet) and gateway in subnet and gateway not in dynamic
     assert "carbentra-public-demo-${CARBENTRA_PUBLIC_DEMO_ID" in compose["name"]
     assert all("127.0.0.1" in port for port in services["gateway"]["ports"])
     assert services["db"]["environment"]["POSTGRES_DB"] == "carbentra_public_demo"
@@ -81,10 +90,17 @@ def test_public_demo_checks_are_in_default_ci_and_local_verification():
 
 def test_secret_helper_is_exclusive_external_and_private(tmp_path):
     import importlib.util
+    import os
     import stat
+    import pytest
     spec = importlib.util.spec_from_file_location("demo_secrets", ROOT / "tools/public-demo-secrets.py")
     helper = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(helper)
+    if os.name != 'posix':
+        with pytest.raises(ValueError, match='POSIX permission enforcement'):
+            helper.provision(tmp_path / 'test-only-secrets')
+        assert not (tmp_path / 'test-only-secrets').exists()
+        return
     directory = helper.provision(tmp_path / "test-only-secrets")
     assert stat.S_IMODE(directory.stat().st_mode) == 0o700
     assert len(list(directory.iterdir())) == 6
@@ -92,8 +108,38 @@ def test_secret_helper_is_exclusive_external_and_private(tmp_path):
     assert len(set(values.values())) == 6
     assert all(stat.S_IMODE(path.stat().st_mode) == 0o444 for path in directory.iterdir())
     assert values["database_password"] in values["database_url"]
-    import pytest
     with pytest.raises(FileExistsError):
         helper.provision(directory)
     with pytest.raises(ValueError, match="outside"):
         helper.provision(ROOT / "forbidden-test-secrets")
+
+
+@pytest.mark.parametrize('failure', ['network', 'malformed_json'])
+def test_public_demo_smoke_partial_execution_never_reports_passed(tmp_path, monkeypatch, failure):
+    import json
+    import runpy
+    import ssl
+    import sys
+    from types import SimpleNamespace
+    from urllib.error import URLError
+    import urllib.request
+    output = tmp_path / 'partial-smoke.json'
+    calls = []
+    class Opener:
+        def open(self, request, timeout=None):
+            calls.append(request.full_url)
+            if len(calls) == 1:
+                return SimpleNamespace(status=200, headers={'Content-Type': 'text/html'}, read=lambda: b'<html>fixture</html>')
+            if failure == 'network':
+                raise URLError('synthetic connection failure')
+            return SimpleNamespace(status=200, headers={'Content-Type': 'application/json'}, read=lambda: b'not-json')
+    monkeypatch.setattr(urllib.request, 'build_opener', lambda *_: Opener())
+    monkeypatch.setattr(ssl, 'create_default_context', lambda **_: None)
+    monkeypatch.setattr(sys, 'argv', ['public_demo_smoke.py', '--base-url', 'https://localhost:18444',
+        '--fixture-directory', str(tmp_path), '--output', str(output), '--disposable-fixture'])
+    with pytest.raises((URLError, json.JSONDecodeError)):
+        runpy.run_path(str(ROOT / 'tests/deployment/public_demo_smoke.py'), run_name='__main__')
+    result = json.loads(output.read_text(encoding='utf-8'))
+    assert len(result['checks']) == 1 and result['checks'][0]['passed']
+    assert result['completed'] is False and result['passed'] is False
+    assert result['error_type'] in {'URLError', 'JSONDecodeError'}

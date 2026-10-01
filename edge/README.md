@@ -87,6 +87,24 @@ drift and is tightened by subsequent receipts; it survives restart and seeds fro
 the original snapshot when upgrading. New boot IDs reset only that boot's timing
 bounds; a retired boot still cannot replace the current snapshot.
 
+Only coherent clock evidence updates those persistent bounds. A Plug sample whose
+authenticated UTC lies wholly after its receipt (for example during a temporary
+gateway clock rollback) remains in the historical outbox, but cannot lower the
+boot-origin bound or raise a clock highwater. After the gateway recovers, a new
+valid same-boot sample can become fresh without restarting the device. Reopening
+the store or reseeding from its cached event applies the same check. This prevents
+new contamination; it does not silently erase bounds already written by older
+versions. A previously contaminated boot remains fail-closed until independently
+re-established through a new device boot.
+An additive store upgrade also retains the last trusted receipt time for each boot.
+This rejects gateway receipt rollback for clockless Switch telemetry without
+inventing device UTC, and rejects the cached rollback sample after reopening. A
+later valid receipt recovers naturally; stalled uptime and device-clock rollback
+still use the original persistent bounds.
+Only a receipt meeting the default ten-second control freshness limit advances
+that receipt highwater. A gateway forward jump or delayed packet cannot freeze
+recovery after UTC is corrected; coherent device-clock history is still retained.
+
 Switch does not provide authenticated UTC: its live, non-retained state publication,
 receipt age and same-boot monotonic progress remain the supported timing evidence.
 These cannot prove an unknown first publication's absolute generation time. Its

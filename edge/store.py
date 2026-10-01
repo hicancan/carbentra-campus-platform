@@ -40,7 +40,8 @@ class EdgeStore:
             event_id TEXT NOT NULL, received REAL NOT NULL, payload TEXT NOT NULL);
         CREATE TABLE IF NOT EXISTS observation_clocks(
             device TEXT NOT NULL, boot TEXT NOT NULL, origin_upper REAL NOT NULL,
-            monotonic_highwater INTEGER NOT NULL, utc_low_highwater REAL, PRIMARY KEY(device,boot));
+            monotonic_highwater INTEGER NOT NULL, utc_low_highwater REAL,
+            received_highwater REAL, PRIMARY KEY(device,boot));
         CREATE TABLE IF NOT EXISTS known_boots(
             device TEXT NOT NULL, boot TEXT NOT NULL, retired INTEGER NOT NULL DEFAULT 0,
             PRIMARY KEY(device,boot));
@@ -51,6 +52,11 @@ class EdgeStore:
         CREATE TABLE IF NOT EXISTS ingress_health(
             key TEXT PRIMARY KEY, value TEXT NOT NULL, updated REAL NOT NULL);
         ''')
+        # Extend older stores without resetting any established clock bound. The
+        # write transaction serializes concurrent opens during this additive upgrade.
+        self.db.execute('BEGIN IMMEDIATE')
+        if 'received_highwater' not in {row[1] for row in self.db.execute('PRAGMA table_info(observation_clocks)')}:
+            self.db.execute('ALTER TABLE observation_clocks ADD COLUMN received_highwater REAL')
         self.db.commit()
         self.legacy_telemetry = self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='telemetry'").fetchone() is not None
 
@@ -136,7 +142,7 @@ class EdgeStore:
                 or type(maximum_age) not in (int, float) or not math.isfinite(maximum_age) or maximum_age <= 0):
             raise ValueError('finite time and positive maximum age required')
         value = json.loads(row[1])
-        bound = self.db.execute('SELECT origin_upper,monotonic_highwater,utc_low_highwater FROM observation_clocks WHERE device=? AND boot=?',
+        bound = self.db.execute('SELECT origin_upper,monotonic_highwater,utc_low_highwater,received_highwater FROM observation_clocks WHERE device=? AND boot=?',
                                 (device, value['boot_id'])).fetchone()
         return {'event': value, **observation_freshness(value, now, maximum_age, bound)}
 
@@ -144,18 +150,34 @@ class EdgeStore:
         mono = value['monotonic_ms']
         if value['product_family'] not in {'PLUG', 'SWITCH'} or mono is None:
             return
-        origin = timestamp(value['received_at']).timestamp() - mono / 1000 / MONOTONIC_RATE_FLOOR
+        received = timestamp(value['received_at']).timestamp()
+        bound = self.db.execute('SELECT origin_upper,monotonic_highwater,utc_low_highwater,received_highwater FROM observation_clocks WHERE device=? AND boot=?',
+                                (value['device_id'], value['boot_id'])).fetchone()
+        # Clock coherence is checked against the previous trusted bound before any
+        # durable update, including when seeding from a cached pre-upgrade event.
+        # No age cutoff here: valid delayed observations still tighten history, but
+        # future/inconsistent/reversed/untrusted clocks must not poison later data.
+        if not observation_freshness(value, received, math.inf, bound)['fresh']:
+            return
+        # An old packet or a forward jump of the gateway clock cannot establish
+        # trusted receipt time. Retain coherent device bounds, but do not make a
+        # corrected gateway wait for the erroneous future highwater to catch up.
+        trusted_received = received if observation_freshness(value, received, 10, bound)['fresh'] else None
+        origin = received - mono / 1000 / MONOTONIC_RATE_FLOOR
         low = value['raw'].get('unix_lower_s') if value['time_quality'] == 'authenticated' else None
         if type(low) not in (int, float):
             low = None
-        self.db.execute('''INSERT INTO observation_clocks VALUES(?,?,?,?,?)
+        self.db.execute('''INSERT INTO observation_clocks VALUES(?,?,?,?,?,?)
             ON CONFLICT(device,boot) DO UPDATE SET
             origin_upper=min(origin_upper,excluded.origin_upper),
             monotonic_highwater=max(monotonic_highwater,excluded.monotonic_highwater),
             utc_low_highwater=CASE WHEN utc_low_highwater IS NULL THEN excluded.utc_low_highwater
                 WHEN excluded.utc_low_highwater IS NULL THEN utc_low_highwater
-                ELSE max(utc_low_highwater,excluded.utc_low_highwater) END''',
-            (value['device_id'], value['boot_id'], origin, mono, low))
+                ELSE max(utc_low_highwater,excluded.utc_low_highwater) END,
+            received_highwater=CASE WHEN received_highwater IS NULL THEN excluded.received_highwater
+                WHEN excluded.received_highwater IS NULL THEN received_highwater
+                ELSE max(received_highwater,excluded.received_highwater) END''',
+            (value['device_id'], value['boot_id'], origin, mono, low, trusted_received))
 
     def active_manual_hold(self, device, channel, now=None):
         now=time.time() if now is None else now

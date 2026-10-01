@@ -29,7 +29,10 @@ def observation_freshness(event, now, maximum_age, clock_bound=None):
     if clock_bound is not None and mono is not None:
         # Earliest receipt-minus-uptime bounds the latest possible boot origin.
         # A delayed/stalled sample cannot reset that bound on a new arrival.
-        origin_upper, highwater, utc_low_highwater = clock_bound
+        origin_upper, highwater, utc_low_highwater, received_highwater = clock_bound
+        if received_highwater is not None and received < received_highwater:
+            reversed_clock = True
+            reason = reason or 'gateway_clock_reversed'
         age = max(age, now - (origin_upper + mono / 1000 / MONOTONIC_RATE_FLOOR))
         if mono < highwater:
             reversed_clock = True

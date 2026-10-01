@@ -205,3 +205,9 @@ images, target-mounted production TLS, public DNS/network reachability, and the 
 browser journey must still be accepted on the chosen target. Read the release evidence for exact executed results; absent stages
 are not passes. This document/package is preparation, not a claim that a public URL
 has been provisioned or that any physical hardware has been released.
+
+The later [follow-up verification](FIX_VERIFICATION_2026-10-01.md) records an actual
+Windows-hosted Docker Desktop cold start of the pinned images, the gateway address
+pool fix, trusted local-test-CA HTTPS and restart checks. Its browser run used a
+separate development HTTP stack. These local results do not replace public-target
+acceptance, production TLS or a public-demo HTTPS browser journey.

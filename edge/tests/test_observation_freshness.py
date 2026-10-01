@@ -70,6 +70,7 @@ class ObservationFreshnessTests(unittest.TestCase):
         self.assertEqual(snapshot['observation_age_seconds'], 301)
         self.assertFalse(snapshot['fresh'])
         self.assertEqual(self.store.status()['outbox_pending'], 1)
+        self.assertEqual(self.store.db.execute('SELECT count(*) FROM observation_clocks').fetchone()[0], 1)
         evaluation = self.rule().once(connected=False, now=NOW)[0]
         self.assertEqual(evaluation['reason'], 'target_unknown_or_stale')
         self.assertIsNone(evaluation['command'])
@@ -117,6 +118,102 @@ class ObservationFreshnessTests(unittest.TestCase):
         self.assertEqual(snapshot['freshness_reason'], 'future_observation')
         self.assertFalse(self.store.snapshot(REAL_PLUG.device_id, NOW-1)['fresh'])
 
+    def test_gateway_rollback_does_not_poison_persisted_clock_recovery(self):
+        self.assertTrue(self.accept(timed_plug())['fresh'])
+        clock_query = 'SELECT origin_upper,monotonic_highwater,utc_low_highwater FROM observation_clocks'
+        original = self.store.db.execute(clock_query).fetchone()
+        # The device clock advances normally while the gateway briefly loses UTC.
+        invalid = timed_plug(seq=2, observed=NOW+1, mono=6000)
+        snapshot = self.accept(invalid, NOW-299)
+        self.assertEqual(snapshot['freshness_reason'], 'gateway_clock_reversed')
+        self.assertEqual(self.store.db.execute(clock_query).fetchone(), original)
+        self.assertEqual(self.store.status()['outbox_pending'], 2)
+        self.store.close()
+        self.store = EdgeStore(self.db)
+        self.assertFalse(self.store.snapshot(REAL_PLUG.device_id, NOW+2)['fresh'])
+        # Reseeding the previous cached event must not poison the bound either.
+        recovered = self.accept(timed_plug(seq=3, observed=NOW+2, mono=7000), NOW+2)
+        self.assertTrue(recovered['fresh'])
+        self.assertEqual(recovered['observation_age_seconds'], 0)
+        self.assertEqual(recovered['control_age_seconds'], 0)
+        self.assertEqual(self.store.status()['outbox_pending'], 3)
+        # A duplicate remains historical with its original, rejected receipt time.
+        duplicate = self.store.accept_event(PlugAdapter.telemetry(REAL_PLUG, invalid, NOW+3))
+        self.assertTrue(duplicate['duplicate'])
+        self.assertEqual(self.store.snapshot(REAL_PLUG.device_id, NOW+3)['event']['sequence'], '3')
+        self.store.close()
+        self.store = EdgeStore(self.db)
+        self.assertTrue(self.store.snapshot(REAL_PLUG.device_id, NOW+3)['fresh'])
+        stalled = self.accept(timed_plug(seq=4, observed=NOW+20, mono=7000), NOW+20)
+        self.assertFalse(stalled['fresh'])
+        self.assertEqual(stalled['freshness_reason'], 'observation_stale')
+
+    def test_invalid_first_clock_does_not_become_an_upgrade_seed(self):
+        snapshot = self.accept(timed_plug(observed=NOW+300), NOW)
+        self.assertEqual(snapshot['freshness_reason'], 'future_observation')
+        self.assertEqual(self.store.db.execute('SELECT count(*) FROM observation_clocks').fetchone()[0], 0)
+        self.store.close()
+        self.store = EdgeStore(self.db)
+        recovered = self.accept(timed_plug(seq=2, observed=NOW+1, mono=6000), NOW+1)
+        self.assertTrue(recovered['fresh'])
+        self.assertEqual(self.store.status()['outbox_pending'], 2)
+
+    def test_clockless_switch_receipt_rollback_recovers_without_resetting_bounds(self):
+        real = replace(SWITCH, source_mode='REAL')
+        def accept(seq, uptime, received):
+            raw = switch_raw(seq=seq, uptime_ms=uptime)
+            raw.update(source_mode='REAL', actuation_enabled=True)
+            self.store.accept_event(SwitchAdapter.telemetry(real, raw, received))
+            return self.store.snapshot(real.device_id, received)
+        self.assertTrue(accept(1, 100000, NOW)['fresh'])
+        query = 'SELECT origin_upper,monotonic_highwater,utc_low_highwater,received_highwater FROM observation_clocks'
+        original = self.store.db.execute(query).fetchone()
+        self.assertEqual(accept(2, 101000, NOW-299)['freshness_reason'], 'gateway_clock_reversed')
+        self.assertEqual(self.store.db.execute(query).fetchone(), original)
+        self.store.close()
+        self.store = EdgeStore(self.db)
+        self.assertFalse(self.store.snapshot(real.device_id, NOW+2)['fresh'])
+        self.assertTrue(accept(3, 102000, NOW+2)['fresh'])
+        self.assertEqual(accept(4, 102000, NOW+20)['freshness_reason'], 'observation_stale')
+        self.assertEqual(accept(5, 101000, NOW+21)['freshness_reason'], 'device_monotonic_reversed')
+        self.assertEqual(self.store.status()['outbox_pending'], 5)
+
+    def test_additive_clock_table_upgrade_preserves_old_bound(self):
+        self.accept(timed_plug())
+        original = self.store.db.execute('SELECT origin_upper,monotonic_highwater,utc_low_highwater FROM observation_clocks').fetchone()
+        self.store.db.execute('ALTER TABLE observation_clocks DROP COLUMN received_highwater')
+        self.store.db.commit()
+        self.store.close()
+        self.store = EdgeStore(self.db)
+        upgraded = self.store.db.execute('SELECT origin_upper,monotonic_highwater,utc_low_highwater,received_highwater FROM observation_clocks').fetchone()
+        self.assertEqual(upgraded, (*original, None))
+        # The retained current snapshot seeds the new receipt highwater safely.
+        self.assertEqual(self.accept(timed_plug(seq=2, observed=NOW+1, mono=6000), NOW-299)['freshness_reason'], 'gateway_clock_reversed')
+        self.assertEqual(self.store.db.execute('SELECT received_highwater FROM observation_clocks').fetchone()[0], NOW)
+        self.assertTrue(self.accept(timed_plug(seq=3, observed=NOW+2, mono=7000), NOW+2)['fresh'])
+
+    def test_gateway_forward_jump_does_not_authorize_or_poison_recovery(self):
+        real_switch = replace(SWITCH, source_mode='REAL')
+        for family, device in (('PLUG', REAL_PLUG), ('SWITCH', real_switch)):
+            with self.subTest(family=family):
+                def event(seq, elapsed, received):
+                    mono = 100000 + elapsed * 1000
+                    if family == 'PLUG':
+                        return PlugAdapter.telemetry(device, timed_plug(seq=seq, observed=NOW+elapsed, mono=mono), received)
+                    raw = switch_raw(seq=seq, uptime_ms=mono)
+                    raw.update(source_mode='REAL', actuation_enabled=True)
+                    return SwitchAdapter.telemetry(device, raw, received)
+                self.store.accept_event(event(1, 0, NOW))
+                self.store.accept_event(event(2, 1, NOW+3600))
+                self.assertFalse(self.store.snapshot(device.device_id, NOW+3600)['fresh'])
+                self.assertEqual(self.store.db.execute('SELECT received_highwater FROM observation_clocks WHERE device=?',
+                                                       (device.device_id,)).fetchone()[0], NOW)
+                self.store.close()
+                self.store = EdgeStore(self.db)
+                self.assertFalse(self.store.snapshot(device.device_id, NOW+2)['fresh'])
+                self.store.accept_event(event(3, 2, NOW+2))
+                self.assertTrue(self.store.snapshot(device.device_id, NOW+2)['fresh'])
+
     def test_untrusted_or_inconsistent_canonical_clock_does_not_authorize(self):
         for case in ('device_clock', 'mismatched_observed', 'wide_interval', 'mismatched_monotonic'):
             with self.subTest(case=case):
@@ -129,6 +226,7 @@ class ObservationFreshnessTests(unittest.TestCase):
                 try:
                     store.accept_event(event)
                     self.assertFalse(store.snapshot(REAL_PLUG.device_id, NOW)['fresh'])
+                    self.assertEqual(store.db.execute('SELECT count(*) FROM observation_clocks').fetchone()[0], 0)
                 finally:
                     store.close()
 
@@ -182,3 +280,4 @@ class ObservationFreshnessTests(unittest.TestCase):
         replayed = replace(REAL_PLUG, source_mode='REPLAYED')
         self.store.accept_event(PlugAdapter.telemetry(replayed, timed_plug(), NOW))
         self.assertFalse(self.store.snapshot(replayed.device_id, NOW)['fresh'])
+        self.assertEqual(self.store.db.execute('SELECT count(*) FROM observation_clocks').fetchone()[0], 0)
